@@ -1,4 +1,4 @@
-// JS Переменные
+//===================== JS Переменные===============================
 // let num = 3;
 // console.log(num);
 
@@ -27,10 +27,18 @@
 // console.log(result);
 
 // JSR
-let admin;
-let name;
-name = 'Джон';
-admin = name;
-console.log(admin);
+// let admin;
+// let name;
+// name = 'Джон';
+// admin = name;
+// console.log(admin);
 
+//===================== JS Типы данных ===============================
+// console.log(NaN ** 0);
+// let name = 'Ilya';
+// console.log(`hello ${1}`);
+// console.log(`hello ${'name'}`);
+// console.log(`hello ${name}`);
+let name;
+console.log(name);
 

@@ -57,5 +57,6 @@
 // undefined + 1 // NaN
 // " \t \n" - 2
 
-
-
+// console.log(10 % 6 === 1 ? true : false);
+let a = 30 % 2;
+console.log(a);

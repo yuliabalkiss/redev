@@ -71,9 +71,19 @@
 // console.log(null === +"\n0\n");//false
 
 //===================== JS  Условные операторы ===============================
-let value = prompt('Какое "официальное" название Java Script?');
-if (value == 'ECMAScript') {
-    alert('Верно!');
-} else {
-    alert('ECMAScript');
+// let value = prompt('Какое "официальное" название Java Script?');
+// if (value == 'ECMAScript') {
+//     alert('Верно!');
+// } else {
+//     alert('ECMAScript');
+// }
+
+let value = prompt('Введи число!');
+if (value > 0) {
+    alert(1);
+} else if (value < 0) {
+    alert(-1);
+} else if (value == 0) {
+    alert(0)
 }
+

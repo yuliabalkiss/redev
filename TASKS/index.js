@@ -41,7 +41,7 @@
 // console.log(`hello ${name}`);
 // let name;
 // console.log(name);
-
+//===================== JS Операторы ===============================
 // "" + 1 + 0 // '10'
 // "" - 1 + 0 // -1
 // true + false //1
@@ -62,10 +62,12 @@
 // console.log(a);
 // console.log(null == undefined);
 // console.log(null === undefined);
-console.log(5 > 4); //true
-console.log("ананас" > "яблоко");// false
-console.log("2" > "12"); //false
-console.log(undefined == null);//true
-console.log(undefined === null); //false
-console.log(null == "\n0\n");// false
-console.log(null === +"\n0\n");//false
+// console.log(5 > 4); //true
+// console.log("ананас" > "яблоко");// false
+// console.log("2" > "12"); //false
+// console.log(undefined == null);//true
+// console.log(undefined === null); //false
+// console.log(null == "\n0\n");// false
+// console.log(null === +"\n0\n");//false
+
+

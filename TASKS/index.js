@@ -56,7 +56,7 @@
 // null + 1 // 1
 // undefined + 1 // NaN
 // " \t \n" - 2
-
+//===================== JS Операторы сравнения ===============================
 // console.log(10 % 6 === 1 ? true : false);
 // let a = 30 % 2;
 // console.log(a);
@@ -70,4 +70,10 @@
 // console.log(null == "\n0\n");// false
 // console.log(null === +"\n0\n");//false
 
-
+//===================== JS  Условные операторы ===============================
+let nameJS = 'ECMAScript';
+if ('ECMAScript') {
+    return 'Верно!'
+} else {
+    return 'ECMAScript'
+}

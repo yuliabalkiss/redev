@@ -78,12 +78,19 @@
 //     alert('ECMAScript');
 // }
 
-let value = prompt('Введи число!');
-if (value > 0) {
-    alert(1);
-} else if (value < 0) {
-    alert(-1);
-} else {
-    alert(0)
-}
+// let value = prompt('Введи число!');
+// if (value > 0) {
+//     alert(1);
+// } else if (value < 0) {
+//     alert(-1);
+// } else {
+//     alert(0)
+// }
+
+resalt = (a + b < 4) ? 'Мало' : 'Много'
+
+let message = (login == 'Сотрудник') ? 'Привет' :
+    (login == 'Директор') ? 'Здравствуйте' :
+        (login == '') ? 'Нет логина' :
+            "";
 

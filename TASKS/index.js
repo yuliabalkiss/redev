@@ -87,10 +87,20 @@
 //     alert(0)
 // }
 
-resalt = (a + b < 4) ? 'Мало' : 'Много'
+// resalt = (a + b < 4) ? 'Мало' : 'Много'
 
-let message = (login == 'Сотрудник') ? 'Привет' :
-    (login == 'Директор') ? 'Здравствуйте' :
-        (login == '') ? 'Нет логина' :
-            "";
+// let message = (login == 'Сотрудник') ? 'Привет' :
+//     (login == 'Директор') ? 'Здравствуйте' :
+//         (login == '') ? 'Нет логина' :
+//             "";
 
+// let test = true;
+// if (test) {
+//     console.log('Верно');
+// } else {
+//     console.log('Неверно');
+// }
+
+let test = false;
+console.log(test ? "Верно" : "Неверно");
+console.log(test != true ? "Верно" : "Неверно");

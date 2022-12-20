@@ -196,3 +196,11 @@
 //     num = prompt(' Введите число  больше 100!', 0)
 // } while (num <= 100 && num)
 
+// for (let i = 11; i <= 33; i++) {
+//     console.log(i)
+// }
+let sum = 0;
+for (let i = 1; i <= 100; i++) {
+    sum += i;
+}
+console.log(sum);

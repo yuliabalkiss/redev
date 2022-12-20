@@ -184,8 +184,19 @@
 
 // }
 
-let i = 0;
-while (i < 3) {
-    console.log(`number: ${i}`);
-    i++;
+// let i = 0;
+// while (i < 3) {
+//     console.log(`number: ${i}`);
+//     i++;
+// }
+
+
+// let num;
+// do {
+//     num = prompt(' Введите число  больше 100!', 0)
+// } while (num <= 100 && num)
+
+let n = 10;
+for (let i = 2; i <= n; i++) {
+
 }

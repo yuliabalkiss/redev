@@ -125,22 +125,53 @@
 //     console.log("!")
 // }
 
-let userName = prompt("Кто там?", '');
+// let userName = prompt("Кто там?", '');
 
-if (userName === 'Админ') {
+// if (userName === 'Админ') {
 
-    let pass = prompt('Пароль?', '');
+//     let pass = prompt('Пароль?', '');
 
-    if (pass === 'Я главный') {
-        alert('Здравствуйте!');
-    } else if (pass === '' || pass === null) {
-        alert('Отменено');
-    } else {
-        alert('Неверный пароль');
-    }
+//     if (pass === 'Я главный') {
+//         alert('Здравствуйте!');
+//     } else if (pass === '' || pass === null) {
+//         alert('Отменено');
+//     } else {
+//         alert('Неверный пароль');
+//     }
 
-} else if (userName === '' || userName === null) {
-    alert('Отменено');
-} else {
-    alert("Я вас не знаю");
-}
+// } else if (userName === '' || userName === null) {
+//     alert('Отменено');
+// } else {
+//     alert("Я вас не знаю");
+// }
+
+// let a = 5;
+// if (a > 0 && a < 5) {
+//     console.log('Верно!')
+// } else {
+//     console.log('Неверно!')
+// }
+
+// let a = 3;
+// let b = 5;
+// if (a >= 1 && b >= 3) {
+//     console.log(a + b)
+// } else {
+//     console.log(b - a)
+// }
+
+// let a = 5;
+// let b = 6;
+// if (a > 2 && a < 11 || b >= 6 && b < 14) {
+//     console.log('Верно!')
+
+// } else {
+//     console.log('Неверно!')
+// }
+
+console.log(5 && 3);
+console.log(0 && 3);
+console.log(5 || 3);
+console.log(0 || 3);
+console.log(0 || 3 && 6);
+console.log(0 && 3 || 6);

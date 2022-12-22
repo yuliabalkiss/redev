@@ -204,3 +204,30 @@
 //     sum += i;
 // }
 // console.log(sum);
+//===================== JS Конструкция "switch" ===============================
+// let num = 5;
+// switch (num) {
+//     case 1: console.log('зима');
+//         break;
+//     case 2: console.log('весна');
+//         break;
+//     case 3: console.log('лето');
+//         break;
+//     case 4: console.log('осень');
+//         break;
+
+
+//     default: console.log('Нет совпадений');
+// }
+
+let browser = "Chrome";
+if (browser === 'Edge') {
+    console.log("You've got the Edge!")
+} else if (browser === 'Edge' || browser === 'Chrome'
+    || browser === 'Firefox'
+    || browser === 'Safari'
+    || browser === "Opera") {
+    console.log('Okay we support these browsers too')
+} else {
+    console.log('We hope that this page looks ok!')
+}

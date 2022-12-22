@@ -220,14 +220,49 @@
 //     default: console.log('Нет совпадений');
 // }
 
-let browser = "Chrome";
-if (browser === 'Edge') {
-    console.log("You've got the Edge!")
-} else if (browser === 'Edge' || browser === 'Chrome'
-    || browser === 'Firefox'
-    || browser === 'Safari'
-    || browser === "Opera") {
-    console.log('Okay we support these browsers too')
-} else {
-    console.log('We hope that this page looks ok!')
+// let browser = "Chrome";
+// if (browser === 'Edge') {
+//     console.log("You've got the Edge!")
+// } else if (browser === 'Edge' || browser === 'Chrome'
+//     || browser === 'Firefox'
+//     || browser === 'Safari'
+//     || browser === "Opera") {
+//     console.log('Okay we support these browsers too')
+// } else {
+//     console.log('We hope that this page looks ok!')
+// }
+
+// let number = +prompt('Введите число между 0 и 3', '');
+// switch (number) {
+//     case 0: console.log('Вы ввели число 0');
+//         break;
+//     case 1: console.log('Вы ввели число 0');
+//         break;
+//     case 2:
+//     case 3:
+//         console.log('Вы ввели число 2, а может и 3')
+//         break;
+// }
+
+//===================== JS Функции ===============================
+
+function countEvenNumber(num) {
+    let arrayNum = [];
+    let count = 0;
+    for (let i = 1; i < num; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+            arrayNum.push(i);
+            count++;
+            if (count === 10) {
+                break;
+            }
+        }
+    }
+
+    return arrayNum;
 }
+countEvenNumber(34);
+
+
+

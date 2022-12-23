@@ -246,23 +246,49 @@
 
 //===================== JS Функции ===============================
 
-function countEvenNumber(num) {
-    let arrayNum = [];
-    let count = 0;
-    for (let i = 1; i < num; i++) {
-        if (i % 2 === 0) {
-            console.log(i);
-            arrayNum.push(i);
-            count++;
-            if (count === 10) {
-                break;
-            }
-        }
+// function countEvenNumber(num) {
+//     let arrayNum = [];
+//     let count = 0;
+//     for (let i = 1; i < num; i++) {
+//         if (i % 2 === 0) {
+//             console.log(i);
+//             arrayNum.push(i);
+//             count++;
+//             if (count === 10) {
+//                 break;
+//             }
+//         }
+//     }
+
+//     return arrayNum;
+// }
+// countEvenNumber(34);
+
+
+
+// let n;
+// function findNextSquare(sq) {
+//     n = Math.sqrt(sq);// находим квадратный корень числа и присваиваем значение переменной n
+//     console.log(n);
+//     if (n % 2 === 0) {// проверяем, что полученное n тоже является целым числом
+//         ++n; // делаем шаг, что бы получить следующее число, возведя которое в квадрат, получим целочисленный идеальный квадрат.
+//         console.log(Math.pow(n, 2)) // возводим число в квадрат
+//     } else if (n % 2 !== 0) { //если полученное n не является целым, возвращаем строку is not perfect
+//         console.log((`-1 since ${sq} is not a perfect`))
+//     }
+// }
+// findNextSquare(12);
+let n;
+function findNextSquare(sq) {
+    n = Math.sqrt(sq);// находим квадратный корень числа и присваиваем значение переменной n
+    console.log(n);
+    if (Math.sqrt(n) % 2 == 0) {// проверяем, что полученное корень квадратный из n тоже является целым числом
+        ++n; // делаем шаг, что бы получить следующее число, возведя которое в квадрат, получим целочисленный идеальный квадрат.
+        console.log(Math.pow(n, 2)) // возводим число в квадрат
+    } else if (Math.sqrt(n) % 2 !== 0) { //если полученной корень квадратный из n не является целым, возвращаем строку is not perfect
+        console.log((`-1 since ${sq} is not a perfect`))
     }
-
-    return arrayNum;
 }
-countEvenNumber(34);
-
+findNextSquare(22);
 
 

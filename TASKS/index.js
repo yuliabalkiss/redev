@@ -307,4 +307,14 @@
 // let num = 89;
 // console.log(typeof (typeof num));
 
-console.log('3' != 3)
+// console.log('3' != 3)
+let num = prompt(" Введи число");
+switch (num == 100) {
+    case 20: console.log('Тепло!');
+        break;
+    case 50: console.log("Горячо!!");
+        break;
+    case 100: console.log(" В точку!!");
+        break;
+    default: console.log(" Введи число, а не эту ерунду!")
+}

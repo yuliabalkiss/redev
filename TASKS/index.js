@@ -291,11 +291,20 @@
 // }
 // findNextSquare(22);
 
-function findNextSquare(sq) {
-    let n = Math.sqrt(sq);
-    if (n % 1 == 0) {
-        console.log(Math.pow(n + 1, 2));
-    } else {
-        console.log(`-1 since ${sq} is not a perfect`);
-    }
-}
+// function findNextSquare(sq) {
+//     let n = Math.sqrt(sq);
+//     if (n % 1 == 0) {
+//         console.log(Math.pow(n + 1, 2));
+//     } else {
+//         console.log(`-1 since ${sq} is not a perfect`);
+//     }
+// }
+// findNextSquare(144);
+
+
+// let a = 5;
+// console.log(a <= 5 ? true : false);  
+// let num = 89;
+// console.log(typeof (typeof num));
+
+console.log('3' != 3)

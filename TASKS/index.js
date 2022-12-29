@@ -325,3 +325,5 @@ function sum(a = 166, b = 56, c = 56) {
 sum();
 // let sum = (a, b, c) => console.log(a + b + c);
 // sum(23, 45, 56);
+// let sum = (a, b, c) => console.log(a + b + c);
+// sum(23, 45, 56);

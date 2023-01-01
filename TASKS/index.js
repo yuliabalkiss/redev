@@ -319,11 +319,8 @@
 //     default: console.log(" Введи число, а не эту ерунду!")
 // }
 
-function sum(a = 166, b = 56, c = 56) {
-    console.log(a + b + c);
-}
-sum();
-// let sum = (a, b, c) => console.log(a + b + c);
-// sum(23, 45, 56);
-// let sum = (a, b, c) => console.log(a + b + c);
-// sum(23, 45, 56);
+// function sum(a = 166, b = 56, c = 56) {
+//     console.log(a + b + c);
+// }
+// sum();
+//===================== JS Объекты ===============================

@@ -324,8 +324,26 @@
 // }
 // sum();
 //===================== JS Объекты ===============================
-let user = {};
-user.name = 'John';
-user.surname = 'Smith';
-user.name = 'Piter';
-delete user.name;
+// let user = {};
+// user.name = 'John';
+// user.surname = 'Smith';
+// user.name = 'Piter';
+// delete user.name;
+
+let salaries = {
+    // John: 100,
+    // Ann: 160,
+    // Pete: 130
+}
+function findSum(obj) {
+    let sum = 0;
+    for (let key in obj) {
+        sum += salaries[key]
+    }
+    console.log(sum);
+    if (salaries == {}) {
+        console.log(0)
+    }
+}
+
+findSum(salaries);

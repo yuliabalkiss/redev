@@ -330,20 +330,36 @@
 // user.name = 'Piter';
 // delete user.name;
 
-let salaries = {
-    John: 100,
-    Ann: 160,
-    Pete: 130
-}
-function findSum(obj) {
-    let sum = 0;
-    for (let key in obj) {
-        sum += salaries[key]
-    }
-    console.log(sum);
-    if (salaries == {}) {
-        console.log(0)
-    }
-}
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
+// }
+// function findSum(obj) {
+//     let sum = 0;
+//     for (let key in obj) {
+//         sum += salaries[key]
+//     }
+//     console.log(sum);
+//     if (salaries == {}) {
+//         console.log(0)
+//     }
+// }
 
-findSum(salaries);
+// findSum(salaries);
+
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] == 'number') {
+            obj[key] *= 2;
+        }
+
+    }
+    console.log(obj)
+}
+multiplyNumeric(menu);

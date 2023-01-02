@@ -331,9 +331,9 @@
 // delete user.name;
 
 let salaries = {
-    // John: 100,
-    // Ann: 160,
-    // Pete: 130
+    John: 100,
+    Ann: 160,
+    Pete: 130
 }
 function findSum(obj) {
     let sum = 0;

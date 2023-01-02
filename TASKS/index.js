@@ -324,3 +324,8 @@
 // }
 // sum();
 //===================== JS Объекты ===============================
+let user = {};
+user.name = 'John';
+user.surname = 'Smith';
+user.name = 'Piter';
+delete user.name;

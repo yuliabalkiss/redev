@@ -348,18 +348,27 @@
 
 // findSum(salaries);
 
-let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
-};
-function multiplyNumeric(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] == 'number') {
-            obj[key] *= 2;
-        }
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+// };
+// function multiplyNumeric(obj) {
+//     for (let key in obj) {
+//         if (typeof obj[key] == 'number') {
+//             obj[key] *= 2;
+//         }
 
-    }
-    console.log(obj)
-}
-multiplyNumeric(menu);
+//     }
+//     console.log(obj)
+// }
+// multiplyNumeric(menu);
+
+// let obj = {
+//     a: 1,
+//     b: 2,
+//     c: 3
+// };
+// console.log(obj['c']);
+// console.log(obj.c);
+

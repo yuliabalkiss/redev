@@ -379,14 +379,51 @@
 // };
 // console.log(`${obj.Коля} ${obj.Петя}`)
 
-let obj = {
-    1: 'понедельник',
-    2: 'вторник',
-    3: 'среда',
-    4: 'четверг',
-    5: 'пятница',
-    6: 'суббота',
-    7: 'воскресенье',
+// let obj = {
+//     1: 'понедельник',
+//     2: 'вторник',
+//     3: 'среда',
+//     4: 'четверг',
+//     5: 'пятница',
+//     6: 'суббота',
+//     7: 'воскресенье',
+// }
+// let day = 2;
+// console.log(obj[day]);
+
+// ---------------------------// Объекты-----------------------------------
+// Object.assign()
+const userInfo = {
+    name: "Вася",
+    age: 34,
 }
-let day = 2;
-console.log(obj[day]);
+console.log(userInfo);
+
+userInfo.name = 'Юля';
+let obj1 = userInfo;
+console.log(userInfo);
+let obj2 = userInfo;
+console.log(obj2);
+obj2.name = 'Петя';
+obj1.name = 'Оля'
+console.log(userInfo);
+console.log(obj1);
+console.log(obj2);
+console.log(obj1 === obj2);
+console.log(obj1 === userInfo);
+console.log(obj2 === userInfo);
+console.log(obj2['name'] === userInfo['name']);
+
+// ---------------------------// Дублирование объектов-----------------------------------
+
+
+let user = userInfo;
+// user.age = 26;
+
+let user2 = Object.assign({}, userInfo);
+user2.age = 18;
+console.log(user);
+console.log(user2);
+console.log(userInfo);
+console.log(user === userInfo);
+console.log(user2 === userInfo);

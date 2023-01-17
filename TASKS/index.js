@@ -392,7 +392,7 @@
 // console.log(obj[day]);
 
 // ---------------------------// Объекты-----------------------------------
-Object.assign()
+// Object.assign()
 const userInfo = {
     name: "Вася",
     age: 34,

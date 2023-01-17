@@ -392,7 +392,7 @@
 // console.log(obj[day]);
 
 // ---------------------------// Объекты-----------------------------------
-// Object.assign()
+Object.assign()
 const userInfo = {
     name: "Вася",
     age: 34,
@@ -415,15 +415,33 @@ console.log(obj2 === userInfo);
 console.log(obj2['name'] === userInfo['name']);
 
 // ---------------------------// Дублирование объектов-----------------------------------
+// const userInfo = {
+//     name: "Вася",
+//     age: 34,
+// }
 
-
-let user = userInfo;
+// let user = userInfo;
 // user.age = 26;
 
-let user2 = Object.assign({}, userInfo);
-user2.age = 18;
-console.log(user);
-console.log(user2);
-console.log(userInfo);
-console.log(user === userInfo);
-console.log(user2 === userInfo);
+// let user2 = Object.assign({}, userInfo);
+// user2.age = 18;
+// console.log(user);
+// console.log(user2);
+// console.log(userInfo);
+// console.log(user === userInfo);
+// console.log(user2 === userInfo);
+// console.log(user2 === user);
+
+let userInfo = {
+    name: "Юля",
+    age: 30,
+    57: ' значение свойства'
+    // showInfo() {
+    //     console.log(`${this.name}`)
+    // }
+}
+for (let key in userInfo) {
+    const value = userInfo[key];
+    console.log(value)
+}
+

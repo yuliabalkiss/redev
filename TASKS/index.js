@@ -393,26 +393,26 @@
 
 // ---------------------------// Объекты-----------------------------------
 // Object.assign()
-const userInfo = {
-    name: "Вася",
-    age: 34,
-}
-console.log(userInfo);
+// const userInfo = {
+//     name: "Вася",
+//     age: 34,
+// }
+// console.log(userInfo);
 
-userInfo.name = 'Юля';
-let obj1 = userInfo;
-console.log(userInfo);
-let obj2 = userInfo;
-console.log(obj2);
-obj2.name = 'Петя';
-obj1.name = 'Оля'
-console.log(userInfo);
-console.log(obj1);
-console.log(obj2);
-console.log(obj1 === obj2);
-console.log(obj1 === userInfo);
-console.log(obj2 === userInfo);
-console.log(obj2['name'] === userInfo['name']);
+// userInfo.name = 'Юля';
+// let obj1 = userInfo;
+// console.log(userInfo);
+// let obj2 = userInfo;
+// console.log(obj2);
+// obj2.name = 'Петя';
+// obj1.name = 'Оля'
+// console.log(userInfo);
+// console.log(obj1);
+// console.log(obj2);
+// console.log(obj1 === obj2);
+// console.log(obj1 === userInfo);
+// console.log(obj2 === userInfo);
+// console.log(obj2['name'] === userInfo['name']);
 
 // ---------------------------// Дублирование объектов-----------------------------------
 // const userInfo = {
@@ -440,8 +440,17 @@ let userInfo = {
     //     console.log(`${this.name}`)
     // }
 }
-for (let key in userInfo) {
-    const value = userInfo[key];
-    console.log(value)
+let myArray = []
+for (let key of userInfo) {
+    // myArray.push(key)
+    console.log(key)
+
 }
+console.log(Object.fromEntries(myArray)) // преобразовали массив в объект
+console.log(myArray.map(el => el + '__'))// 
+// let myArray = Object.entries(userInfo);
+// console.log(Object.keys(userInfo));
+// console.log(Object.values(userInfo));
+// console.log(typeof myArray);
+
 

@@ -445,7 +445,7 @@
 
 // }
 // console.log(Object.fromEntries(myArray)) // преобразовали массив в объект
-// console.log(myArray.map(el => el + '__'))// 
+// console.log(myArray.map(el => el + '__'))//
 // let myArray = Object.entries(userInfo);
 // console.log(Object.keys(userInfo));
 // console.log(Object.values(userInfo));
@@ -455,20 +455,30 @@
 let salaries = {
     "John": 100,
     "Pete": 300,
-    "Mary": 250
+    "Mary": 250,
+    "Pete2": 300,
+    "Pete3": 300,
 };
 
+function count(obj) {
+    console.log(Object.keys(obj).length)
 
-function sumSalaries(obj) {
-    let sum = 0;
-    let valuesObj = Object.values(obj);
-    if (Object.keys(obj).length == 0) {
-        console.log(0);
-    }
-    for (let value of valuesObj) {
-
-        sum += value;
-    }
-    console.log(sum);
 }
-sumSalaries(salaries);
+count(salaries);
+
+
+
+// function sumSalaries(obj) {
+//     let sum = 0;
+//     for (let value of Object.values(obj)) {
+//         if (Object.keys(obj).length == 0) {
+//             console.log(0);
+//         } else {
+//             sum += value;
+//         }
+//     }
+//     console.log(sum);
+// }
+// sumSalaries(salaries);
+
+

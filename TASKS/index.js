@@ -432,25 +432,43 @@
 // console.log(user2 === userInfo);
 // console.log(user2 === user);
 
-let userInfo = {
-    name: "Юля",
-    age: 30,
-    57: ' значение свойства'
-    // showInfo() {
-    //     console.log(`${this.name}`)
-    // }
-}
-let myArray = []
-for (let key of userInfo) {
-    // myArray.push(key)
-    console.log(key)
+// let userInfo = {
+//     name: "Юля",
+//     age: 30,
+//     57: ' значение свойства'
 
-}
-console.log(Object.fromEntries(myArray)) // преобразовали массив в объект
-console.log(myArray.map(el => el + '__'))// 
+// }
+// let myArray = []
+// for (let key in userInfo) {
+
+//     console.log(key)
+
+// }
+// console.log(Object.fromEntries(myArray)) // преобразовали массив в объект
+// console.log(myArray.map(el => el + '__'))// 
 // let myArray = Object.entries(userInfo);
 // console.log(Object.keys(userInfo));
 // console.log(Object.values(userInfo));
 // console.log(typeof myArray);
 
 
+let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+};
+
+
+function sumSalaries(obj) {
+    let sum = 0;
+    let valuesObj = Object.values(obj);
+    if (Object.keys(obj).length == 0) {
+        console.log(0);
+    }
+    for (let value of valuesObj) {
+
+        sum += value;
+    }
+    console.log(sum);
+}
+sumSalaries(salaries);

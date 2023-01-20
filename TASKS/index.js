@@ -577,4 +577,3 @@ function User(name, age, adress) {
 let userOne = new User('Yulia', 34, "Minsk")
 console.log(userOne);
 
-console.log(User());

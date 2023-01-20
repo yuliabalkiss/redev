@@ -533,14 +533,40 @@
 // checkSpan('free xxxxx');
 // checkSpan("innocent rabbit");
 
-function truncate(str, maxLength) {
-    let newStr = ''
-    if (str.length > maxLength) {
-        newStr = str.slice(0, maxLength - 1)
-        console.log(`${newStr} ...`)
-    } else {
-        console.log(str)
-    }
-}
+// function truncate(str, maxLength) {
+//     let newStr = ''
+//     if (str.length > maxLength) {
+//         newStr = str.slice(0, maxLength - 1)
+//         console.log(`${newStr} ...`)
+//     } else {
+//         console.log(str)
+//     }
+// }
 
-truncate('ddgf tggrth trgetrhteh thtrh', 5)
+// function extractCurrencyValue(str) {
+//     console.log(parseInt(str.match(/\d+/)))
+// }
+
+// extractCurrencyValue('pgjh120')
+
+// let str = 'Привет, Мир!'
+// console.log(str)
+
+// let str1 = "Привет,"
+// let str2 = "Мир!"
+// console.log(`${str1} ${str2}`)
+
+// let userName = 'Yulia';
+// console.log(`Привет, %${userName}%!`)
+
+// let userAge = 34;
+// console.log(`Мне %${userAge}% года!`)
+
+let str = 'Я люблю маму';
+console.log(str.slice(2, 7));
+console.log(str.substring(2, 7));
+console.log(str.substr(2, 5));
+
+
+
+

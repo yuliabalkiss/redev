@@ -452,19 +452,19 @@
 // console.log(typeof myArray);
 
 
-let salaries = {
-    "John": 100,
-    "Pete": 300,
-    "Mary": 250,
-    "Pete2": 300,
-    "Pete3": 300,
-};
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250,
+//     "Pete2": 300,
+//     "Pete3": 300,
+// };
 
-function count(obj) {
-    console.log(Object.keys(obj).length)
+// function count(obj) {
+//     console.log(Object.keys(obj).length)
 
-}
-count(salaries);
+// }
+// count(salaries);
 
 
 
@@ -480,5 +480,59 @@ count(salaries);
 //     console.log(sum);
 // }
 // sumSalaries(salaries);
+
+
+//====================================== Число=============================================
+
+// let num1 = +prompt('Введите первое  число! ')
+// let num2 = +prompt('Введите второе  число! ')
+// console.log(num1 + num2)
+// let num = 6.35;
+// console.log(Math.floor(num));
+// console.log(Math.ceil(num));
+// console.log(Math.round(num));
+// console.log(Math.trunc(num));
+// console.log((num * 10).toFixed(20));
+// console.log(Math.round(6.35 * 10) / 10);
+
+// function readNumber(num) {
+//     if (!isFinite(num)) {
+//         console.log('Введите число')
+
+//     } else {
+//         console.log(num)
+//     }
+
+// }
+
+// let num = 58.858;
+// console.log(Math.floor(num));
+// console.log(Math.ceil(num));
+// console.log(Math.round(num));
+
+// ====================================Строки==================================================
+// let str = 'Привет, я хочу стать разработчиком!'
+// console.log(str.indexOf('хочу', 0))
+// console.log(str.includes('я', 9))
+// console.log(str.startsWith('П'))
+// console.log(str.endsWith('!'))
+// console.log(str.slice(0, 4))
+// console.log(str.substring(0, 4))
+// console.log(str.substr(0))
+
+
+// function checkSpan(str) {
+//     let newStr = str.toLowerCase()
+//     if (newStr.includes('viagra', 0) || newStr.includes('xxx', 0)) {
+//         console.log(true)
+//     } else {
+//         console.log(false)
+//     }
+// }
+// checkSpan('buy ViAgRA now');
+// checkSpan('free xxxxx');
+// checkSpan("innocent rabbit");
+
+
 
 

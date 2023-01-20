@@ -533,6 +533,14 @@
 // checkSpan('free xxxxx');
 // checkSpan("innocent rabbit");
 
+function truncate(str, maxLength) {
+    let newStr = ''
+    if (str.length > maxLength) {
+        newStr = str.slice(0, maxLength - 1)
+        console.log(`${newStr} ...`)
+    } else {
+        console.log(str)
+    }
+}
 
-
-
+truncate('ddgf tggrth trgetrhteh thtrh', 5)

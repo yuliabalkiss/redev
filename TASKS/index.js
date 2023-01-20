@@ -562,11 +562,19 @@
 // let userAge = 34;
 // console.log(`Мне %${userAge}% года!`)
 
-let str = 'Я люблю маму';
-console.log(str.slice(2, 7));
-console.log(str.substring(2, 7));
-console.log(str.substr(2, 5));
+// let str = 'Я люблю маму';
+// console.log(str.slice(2, 7));
+// console.log(str.substring(2, 7));
+// console.log(str.substr(2, 5));
 
+function User(name, age, adress) {
+    this.name = name;
+    this.age = age;
+    this.adress = adress;
 
+};
 
+let userOne = new User('Yulia', 34, "Minsk")
+console.log(userOne);
 
+console.log(User());

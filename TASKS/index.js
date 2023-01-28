@@ -393,26 +393,28 @@
 
 // ---------------------------// Объекты-----------------------------------
 // Object.assign()
-// const userInfo = {
-//     name: "Вася",
-//     age: 34,
-// }
-// console.log(userInfo);
 
-// userInfo.name = 'Юля';
-// let obj1 = userInfo;
+const userInfo = {
+    name: "Вася",
+    age: 34,
+}
+
 // console.log(userInfo);
-// let obj2 = userInfo;
+userInfo.name = 'Юля';
+
+let obj1 = userInfo;
+// console.log(userInfo);
+let obj2 = userInfo;
 // console.log(obj2);
-// obj2.name = 'Петя';
+obj2.name = 'Петя';
 // obj1.name = 'Оля'
-// console.log(userInfo);
-// console.log(obj1);
-// console.log(obj2);
-// console.log(obj1 === obj2);
-// console.log(obj1 === userInfo);
-// console.log(obj2 === userInfo);
-// console.log(obj2['name'] === userInfo['name']);
+console.log(userInfo);
+console.log(obj1);
+console.log(obj2);
+console.log(obj1 === obj2);
+console.log(obj1 === userInfo);
+console.log(obj2 === userInfo);
+console.log(obj2['name'] === userInfo['name']);
 
 // ---------------------------// Дублирование объектов-----------------------------------
 // const userInfo = {
@@ -567,13 +569,44 @@
 // console.log(str.substring(2, 7));
 // console.log(str.substr(2, 5));
 
-function User(name, age, adress) {
-    this.name = name;
-    this.age = age;
-    this.adress = adress;
+// ============================================Конструктор ==========================================
+// function User(name, age, adress) {
+//     this.name = name;
+//     this.age = age;
+//     this.adress = adress;
+//     this.sayHi = function () {
+//         console.log(`Привет, меня зовут ${this.name}, мне ${this.age} года! Я живу в ${this.adress}.`)
+//     }
+//     return;
+// };
+// let user = User('Юля', 34, 'Минск')
+// console.log(user.sayHi());
 
-};
+// let userOne = new User('Yulia', 34, "Minsk")
+// console.log(userOne);
 
-let userOne = new User('Yulia', 34, "Minsk")
-console.log(userOne);
+// function Accumulator(startingValue) {
+//     this.value = startingValue;
+//     this.read = function () {
+//         this.value += this.value;
+//     }
+// }
+// let accumulator = new Accumulator(2);
+// console.log(accumulator.read());
 
+// function Calculator(a, b) {
+//     this.read = function () {
+//         this.a = a;
+//         this.b = b;
+//     };
+//     this.sum = function () {
+//         return this.a + this.b
+//     };
+//     this.mul = function () {
+//         return this.a * this.b
+//     }
+// }
+// let calculator = new Calculator(30, 50);
+// console.log(calculator.read());
+// console.log(calculator.sum());
+// console.log(calculator.mul());

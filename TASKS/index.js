@@ -394,27 +394,27 @@
 // ---------------------------// Объекты-----------------------------------
 // Object.assign()
 
-const userInfo = {
-    name: "Вася",
-    age: 34,
-}
+// const userInfo = {
+//     name: "Вася",
+//     age: 34,
+// }
 
 // console.log(userInfo);
-userInfo.name = 'Юля';
+// userInfo.name = 'Юля';
 
-let obj1 = userInfo;
+// let obj1 = userInfo;
+// // console.log(userInfo);
+// let obj2 = userInfo;
+// // console.log(obj2);
+// obj2.name = 'Петя';
+// // obj1.name = 'Оля'
 // console.log(userInfo);
-let obj2 = userInfo;
+// console.log(obj1);
 // console.log(obj2);
-obj2.name = 'Петя';
-// obj1.name = 'Оля'
-console.log(userInfo);
-console.log(obj1);
-console.log(obj2);
-console.log(obj1 === obj2);
-console.log(obj1 === userInfo);
-console.log(obj2 === userInfo);
-console.log(obj2['name'] === userInfo['name']);
+// console.log(obj1 === obj2);
+// console.log(obj1 === userInfo);
+// console.log(obj2 === userInfo);
+// console.log(obj2['name'] === userInfo['name']);
 
 // ---------------------------// Дублирование объектов-----------------------------------
 // const userInfo = {
@@ -446,7 +446,7 @@ console.log(obj2['name'] === userInfo['name']);
 //     console.log(key)
 
 // }
-// console.log(Object.fromEntries(myArray)) // преобразовали массив в объект
+// console.log(Object.fromEntries(myArray)) // преобразовали массив в объект==========================
 // console.log(myArray.map(el => el + '__'))//
 // let myArray = Object.entries(userInfo);
 // console.log(Object.keys(userInfo));
@@ -579,11 +579,11 @@ console.log(obj2['name'] === userInfo['name']);
 //     }
 //     return;
 // };
-// let user = User('Юля', 34, 'Минск')
+// let user = new User('Юля', 34, 'Минск')
 // console.log(user.sayHi());
 
 // let userOne = new User('Yulia', 34, "Minsk")
-// console.log(userOne);
+// console.log(userOne.sayHi());
 
 // function Accumulator(startingValue) {
 //     this.value = startingValue;
@@ -610,3 +610,151 @@ console.log(obj2['name'] === userInfo['name']);
 // console.log(calculator.read());
 // console.log(calculator.sum());
 // console.log(calculator.mul());
+
+
+
+
+// function add(num1, num2) {
+//     num1 = num1.toString().split('').reverse();
+//     num2 = num2.toString().split('').reverse();
+
+//     let max = Math.max(num1.length, num2.length)
+//     let newArr = [];
+
+//     for (let i = max - 1; i >= 0; i--) {
+
+//         newArr.push(Number(num1[i] || 0) + Number(num2[i] || 0))
+
+//     }
+
+//     let sum = newArr.reduce((acc, el) => acc.toString() + el.toString())
+
+//     return Number(sum)
+
+// }
+// add(122, 81);
+
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250,
+//     "Pete2": 300,
+//     "Pete3": 300,
+//     'sayHi': () => {
+//         console.log('Гав-гав!');
+//     }
+// };
+// console.log(`Привет, я создала объект ${salaries}`);
+// let user = salaries;
+// salaries.sayHi();
+// let newArr = Object.assign({}, salaries);
+// let newArr2 = { ...salaries };
+// let newArr3 = JSON.parse(JSON.stringify(salaries));
+
+
+// console.log(newArr3 === salaries);
+// console.log(user === salaries);
+// console.log(newArr === salaries);
+// console.log(newArr2 === salaries);
+// // console.log(newArr);
+// // console.log(salaries);
+// let arrKey = Object.keys(salaries);
+// let arrVal = Object.values(salaries);
+// let arrEntries = Object.entries(salaries);
+
+// // console.log(arrKey);
+// // console.log(arrVal);
+// console.log(isNaN(NaN));
+// console.log(45645634346n);
+
+// function sayHi() {
+//     return "ГАв-гав"
+// }
+// console.log(sayHi());
+
+
+// function strCount(obj) {
+//     let count = 0;
+//     let newArr = [];
+//     for (let key in obj) {
+//         if (typeof obj[key] == 'string') {
+//             newArr.push(obj[key])
+//             // console.log(obj[key]);
+//             // count++;
+//         } else if (typeof obj[key] == 'object') {
+//             for (let i in obj[key]) {
+//                 newArr.push(obj[key][i])
+//                 // if (typeof obj[key][i] == 'string')
+
+//                 // console.log(obj[key][i]);
+
+//             }
+//         }
+//         for (let value of newArr) {
+//             if (typeof value == 'string') {
+//                 // console.log(value)
+//                 count++
+
+//             }
+//         }
+
+
+//     }
+
+//     console.log(newArr)
+
+//     return count;
+
+
+// }
+
+// strCount({
+//     first: '1',
+//     second: '2',
+//     third: false,
+//     fourth: ['anytime', 2, 3, 4],
+//     fifth: null,
+//     sixth: undefined,
+//     seventh: {}
+// }
+// ['1', 2, '3', '4']
+// [
+//     '1',
+//     2,
+//     '3',
+//     ['and another', 2, 'and again', [undefined, 'and again'], false],
+//     '4'
+// ])
+
+const user = {
+    name: 'Yulia',
+    age: 34,
+    phone: 54840540650,
+    adress: 'Minsk',
+    sayhi: function () {
+        console.log('Hi')
+    }
+}
+
+function User(name, phone, adress) {
+    this.name
+}
+
+const user2 = Object.assign(user);
+const user3 = Object.assign({}, user);
+const user4 = { ...user }
+const user5 = JSON.parse(JSON.stringify(user))
+const user6 = Object.keys(user)
+const user7 = Object.values(user)
+const user8 = Object.entries(user)
+console.log(user === user2);
+console.log(user === user3);
+console.log(user === user4);
+console.log(user === user5);
+console.log(user6);
+console.log(user7);
+console.log(user8);
+console.log(user);
+
+

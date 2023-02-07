@@ -774,8 +774,6 @@
 // Задача 14
 // const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
 // console.log(reversString('This is an example!'));
-
-let arr = ['a', 'b', 'c']
 console.log(arr);
 
 console.log(arr.map((item) => item).join(''));

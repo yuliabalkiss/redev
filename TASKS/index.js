@@ -772,5 +772,20 @@
 // console.log(simple('Привет, я Юля!'));
 
 // Задача 14
-const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
-console.log(reversString('This is an example!'));
+// const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
+// console.log(reversString('This is an example!'));
+
+let arr = ['a', 'b', 'c']
+console.log(arr);
+
+console.log(arr.map((item) => item).join(''));
+
+let arr2 = ['a', 'b', 'c', 'd']
+console.log(arr2.map((item) => item).join('+').split('').fill(',', 3, 4).join(' '));
+
+let arr3 = [2, 5, 3, 9]
+let arg1 = (`${arr3[0]} * ${arr3[1]}`)
+let arg2 = (` ${arr3[2]} * ${arr3[3]}`)
+let result = Number(arg1) + Number(arg2)
+console.log(result);
+// console.log(getSumArg2(arr3));

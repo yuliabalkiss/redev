@@ -763,9 +763,7 @@
 // const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
 // console.log(accum('abcd'));
 // Задача 21
-const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
-
-
-console.log(createDreamTeam(['Matt', 'Ann', 66, 'Dmitry', 'Max']))
+// const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
+// console.log(createDreamTeam(['Matt', 'Ann', 66, 'Dmitry', 'Max']))
 
 

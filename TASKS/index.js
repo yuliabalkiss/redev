@@ -727,34 +727,39 @@
 //     '4'
 // ])
 
-const user = {
-    name: 'Yulia',
-    age: 34,
-    phone: 54840540650,
-    adress: 'Minsk',
-    sayhi: function () {
-        console.log('Hi')
-    }
-}
+// const user = {
+//     name: 'Yulia',
+//     age: 34,
+//     phone: 54840540650,
+//     adress: 'Minsk',
+//     sayhi: function () {
+//         console.log('Hi')
+//     }
+// }
 
-function User(name, phone, adress) {
-    this.name
-}
+// function User(name, phone, adress) {
+//     this.name
+// }
 
-const user2 = Object.assign(user);
-const user3 = Object.assign({}, user);
-const user4 = { ...user }
-const user5 = JSON.parse(JSON.stringify(user))
-const user6 = Object.keys(user)
-const user7 = Object.values(user)
-const user8 = Object.entries(user)
-console.log(user === user2);
-console.log(user === user3);
-console.log(user === user4);
-console.log(user === user5);
-console.log(user6);
-console.log(user7);
-console.log(user8);
-console.log(user);
+// const user2 = Object.assign(user);
+// const user3 = Object.assign({}, user);
+// const user4 = { ...user }
+// const user5 = JSON.parse(JSON.stringify(user))
+// const user6 = Object.keys(user)
+// const user7 = Object.values(user)
+// const user8 = Object.entries(user)
+// console.log(user === user2);
+// console.log(user === user3);
+// console.log(user === user4);
+// console.log(user === user5);
+// console.log(user6);
+// console.log(user7);
+// console.log(user8);
+// console.log(user);
 
+
+//================================== Массивы. Методы массивов=======================================
+// Задача 4
+const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
+console.log(accum('abcd'));
 

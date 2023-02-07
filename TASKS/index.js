@@ -762,8 +762,15 @@
 // Задача 4
 // const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
 // console.log(accum('abcd'));
+
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
 // console.log(createDreamTeam(['Matt', 'Ann', 66, 'Dmitry', 'Max']))
 
+// Задача 9
+// const simple = (str) => Math.min(...str.split(' ').map(item => item.length));
+// console.log(simple('Привет, я Юля!'));
 
+// Задача 14
+const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
+console.log(reversString('This is an example!'));

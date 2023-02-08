@@ -759,9 +759,27 @@
 
 
 //================================== Массивы. Методы массивов=======================================
+// Зададча 2,4,10,11,12,16
+//  Зададча 2
+// function deleteVowels(str) {
+//     let phrase = str.replace(/[а,у,о,е,ё,и,о,ы,э,я]/gi, '')
+//     console.log(phrase)
+// }
+
+// deleteVowels('Этот сайт для лузеров ЛОЛ!')
 // Задача 4
 // const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
 // console.log(accum('abcd'));
+
+// Задача 10
+// const findNeedle = (array) => {
+//     let indexNeedle = array.indexOf('needle')
+//     return (`"Нашел иголку на позиции ${indexNeedle}"`)
+// }
+// console.log(findNeedle(["bla", "wekmvever", "needle", "bntyn", "qwd", "qfverv", "rtbrtb"]))
+
+// Задача 11
+
 
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
@@ -774,16 +792,33 @@
 // Задача 14
 // const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
 // console.log(reversString('This is an example!'));
-console.log(arr);
+// console.log(arr);
 
-console.log(arr.map((item) => item).join(''));
+// console.log(arr.map((item) => item).join(''));
 
-let arr2 = ['a', 'b', 'c', 'd']
-console.log(arr2.map((item) => item).join('+').split('').fill(',', 3, 4).join(' '));
+// let arr2 = ['a', 'b', 'c', 'd']
+// console.log(arr2.map((item) => item).join('+').split('').fill(',', 3, 4).join(' '));
 
-let arr3 = [2, 5, 3, 9]
-let arg1 = (`${arr3[0]} * ${arr3[1]}`)
-let arg2 = (` ${arr3[2]} * ${arr3[3]}`)
-let result = Number(arg1) + Number(arg2)
-console.log(result);
+// let arr3 = [2, 5, 3, 9]
+// let arg1 = (`${arr3[0]} * ${arr3[1]}`)
+// let arg2 = (` ${arr3[2]} * ${arr3[3]}`)
+// let result = Number(arg1) + Number(arg2)
+// console.log(result);
 // console.log(getSumArg2(arr3));
+
+// ================================================Массивы. Методы массивов===========================================================
+
+// let styles = ['Джаз', "Блюз", ''];
+// styles.push('Рок-н-ролл');
+// console.log(styles.length)
+// console.log(styles);
+// const foundHalfLength = (styles) => {
+//     let ind = 0;
+//     for (let i = 0; i < styles.length; i++) {
+//         console.log(styles[styles.length - 1] / 2)
+//     }
+
+// }
+
+// console.log(foundHalfLength())
+// styles[1] = 'Классика';

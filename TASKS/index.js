@@ -806,16 +806,5 @@
 // console.log(result);
 // console.log(getSumArg2(arr3));
 
-// ================================================Массивы. Методы массивов===========================================================
 
-let arr = [];
-function sumInput() {
-    let value = (prompt('Введите число'));
-    if (typeof value !== 'number' || value === "")
-        break;
-    arr.push(+value);
 
-    return arr.reduce((acc, item) => acc + item, 0)
-
-}
-sumInput(value)

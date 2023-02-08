@@ -808,17 +808,14 @@
 
 // ================================================Массивы. Методы массивов===========================================================
 
-// let styles = ['Джаз', "Блюз", ''];
-// styles.push('Рок-н-ролл');
-// console.log(styles.length)
-// console.log(styles);
-// const foundHalfLength = (styles) => {
-//     let ind = 0;
-//     for (let i = 0; i < styles.length; i++) {
-//         console.log(styles[styles.length - 1] / 2)
-//     }
+let arr = [];
+function sumInput() {
+    let value = (prompt('Введите число'));
+    if (typeof value !== 'number' || value === "")
+        break;
+    arr.push(+value);
 
-// }
+    return arr.reduce((acc, item) => acc + item, 0)
 
-// console.log(foundHalfLength())
-// styles[1] = 'Классика';
+}
+sumInput(value)

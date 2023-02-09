@@ -779,7 +779,23 @@
 // console.log(findNeedle(["bla", "wekmvever", "needle", "bntyn", "qwd", "qfverv", "rtbrtb"]))
 
 // Задача 11
+// let myArr = [-1, 2, -3, 4, -5]
+// function invert(arr) {
+//     let newArr = []
+//     for (let value of arr) {
+//         if (value < 0) {
+//             newArr.push(value * -1)
+//         } else {
+//             newArr.push(value * -1)
+//         }
 
+//     }
+//     return newArr
+
+// }
+// console.log(invert(myArr))
+// const invert = (arr) => arr.map((item) => item < 0 ? item * -1 : item * -1)
+// console.log(invert([1, -2, 4, -5]));
 
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');

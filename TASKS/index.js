@@ -760,13 +760,14 @@
 
 //================================== Массивы. Методы массивов=======================================
 // Зададча 2,4,10,11,12,16
+
 //  Зададча 2
 // function deleteVowels(str) {
 //     let phrase = str.replace(/[а,у,о,е,ё,и,о,ы,э,я]/gi, '')
 //     console.log(phrase)
 // }
-
 // deleteVowels('Этот сайт для лузеров ЛОЛ!')
+
 // Задача 4
 // const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
 // console.log(accum('abcd'));
@@ -796,6 +797,17 @@
 // console.log(invert(myArr))
 // const invert = (arr) => arr.map((item) => item < 0 ? item * -1 : item * -1)
 // console.log(invert([1, -2, 4, -5]));
+
+//  Задача 12
+const arrayDiff = (arr1, arr2) => arr1.map((item) => item == arr2.includes(item) ? item : 1
+)
+
+console.log(arrayDiff([1, 2], [2]))
+
+//  Задача 16
+// const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
+// console.log(reversString('This is an example!'));
+// console.log(arr);
 
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');

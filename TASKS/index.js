@@ -799,10 +799,11 @@
 // console.log(invert([1, -2, 4, -5]));
 
 //  Задача 12
-const arrayDiff = (arr1, arr2) => arr1.map((item) => item == arr2.includes(item) ? item : 1
-)
 
-console.log(arrayDiff([1, 2], [2]))
+const arrayDiff = (arr1, arr2) => arr1.filter((el) => !arr2.includes(el))
+console.log(arrayDiff([1, 2, 2, 2, 3, 4], [2, 3]))
+console.log(arrayDiff([1, 2], [1]))
+
 
 //  Задача 16
 // const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')

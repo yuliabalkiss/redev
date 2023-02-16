@@ -829,8 +829,17 @@
 // console.log(arr2.map((item) => item).join('+').split('').fill(',', 3, 4).join(' '));
 // console.log((`${arr2[0]} + ${arr2[1]}, ${arr2[2]} + ${arr2[3]}`));
 
-let arr3 = [2, 5, 3, 9]
-let newArr = []
-newArr.push(arr3[0] * arr3[1], arr3[2] * arr3[3]);
-let result = newArr.reduce((acc, val) => acc + val)
-console.log(result);
+// let arr3 = [2, 5, 3, 9]
+// let newArr = []
+// newArr.push(arr3[0] * arr3[1], arr3[2] * arr3[3]);
+// let result = newArr.reduce((acc, val) => acc + val)
+// console.log(result);
+
+
+// Задача 27
+let str = 'abc def lom abc abc def'
+
+const replaceAll = (find, replace, string) => {
+    return str.split(' ').map((item) => item == find ? replace : item)
+}
+console.log(replaceAll('abc', 'X', str))

@@ -795,14 +795,14 @@
 
 // }
 // console.log(invert(myArr))
-// const invert = (arr) => arr.map((item) => item < 0 ? item * -1 : item * -1)
+// const invert = (arr) => arr.map((item) => item < 0 ? item * (-1) : item * (-1))
 // console.log(invert([1, -2, 4, -5]));
 
 //  Задача 12
 
-const arrayDiff = (arr1, arr2) => arr1.filter((el) => !arr2.includes(el))
-console.log(arrayDiff([1, 2, 2, 2, 3, 4], [2, 3]))
-console.log(arrayDiff([1, 2], [1]))
+// const arrayDiff = (arr1, arr2) => arr1.filter((el) => !arr2.includes(el))
+// console.log(arrayDiff([1, 2, 2, 2, 3, 4], [2, 3]))
+// console.log(arrayDiff([1, 2], [1]))
 
 
 //  Задача 16
@@ -827,13 +827,10 @@ console.log(arrayDiff([1, 2], [1]))
 
 // let arr2 = ['a', 'b', 'c', 'd']
 // console.log(arr2.map((item) => item).join('+').split('').fill(',', 3, 4).join(' '));
+// console.log((`${arr2[0]} + ${arr2[1]}, ${arr2[2]} + ${arr2[3]}`));
 
-// let arr3 = [2, 5, 3, 9]
-// let arg1 = (`${arr3[0]} * ${arr3[1]}`)
-// let arg2 = (` ${arr3[2]} * ${arr3[3]}`)
-// let result = Number(arg1) + Number(arg2)
-// console.log(result);
-// console.log(getSumArg2(arr3));
-
-
-
+let arr3 = [2, 5, 3, 9]
+let newArr = []
+newArr.push(arr3[0] * arr3[1], arr3[2] * arr3[3]);
+let result = newArr.reduce((acc, val) => acc + val)
+console.log(result);

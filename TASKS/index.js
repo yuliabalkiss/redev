@@ -856,12 +856,20 @@
 
 
 const myArr = [-1, -2, -3, -4, -5, -6, -7, -8]
-let myArr3 = myArr.slice()
+// console.log(myArr.push('Yulia'));
+// console.log(myArr);
+// console.log(myArr.pop());
+// console.log(myArr);
+console.log(myArr.unshift('Balkis'));
+console.log(myArr);
+console.log(myArr.shift());
+console.log(myArr);
+
+
 
 // console.log(myArr3)
-console.log(myArr3.length = 0)
-console.log(myArr)
-console.log(myArr3)
+
+// console.log(myArr3)
 // console.log(myArr[myArr.length - 1])
 // console.log(myArr.at(1));
 // console.log(myArr[2]);

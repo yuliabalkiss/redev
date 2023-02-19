@@ -780,23 +780,24 @@
 // console.log(findNeedle(["bla", "wekmvever", "needle", "bntyn", "qwd", "qfverv", "rtbrtb"]))
 
 // Задача 11
-// let myArr = [-1, 2, -3, 4, -5]
-// function invert(arr) {
-//     let newArr = []
-//     for (let value of arr) {
-//         if (value < 0) {
-//             newArr.push(value * -1)
-//         } else {
-//             newArr.push(value * -1)
-//         }
+let myArr = [-1, 2, -3, 4, 5]
+function invert(arr) {
+    let newArr = []
+    for (let value of arr) {
+        if (value < 0) {
+            newArr.push(value * -1)
+        } else {
+            newArr.push(value * -1)
+        }
 
-//     }
-//     return newArr
+    }
+    return newArr
 
-// }
-// console.log(invert(myArr))
-// const invert = (arr) => arr.map((item) => item < 0 ? item * (-1) : item * (-1))
-// console.log(invert([1, -2, 4, -5]));
+}
+console.log(invert(myArr))
+
+const invert2 = (arr) => arr.map((item) => item < 0 ? item * (-1) : item * (-1))
+console.log(invert2(myArr));
 
 //  Задача 12
 
@@ -823,7 +824,11 @@
 // console.log(reversString('This is an example!'));
 // console.log(arr);
 
-// console.log(arr.map((item) => item).join(''));
+// let arr = ['a', 'b', 'c']
+// console.log(arr.map((item) => item));
+// for (let i of arr) {
+//     console.log(i)
+// }
 
 // let arr2 = ['a', 'b', 'c', 'd']
 // console.log(arr2.map((item) => item).join('+').split('').fill(',', 3, 4).join(' '));
@@ -837,9 +842,14 @@
 
 
 // Задача 27
-let str = 'abc def lom abc abc def'
+// let str = 'abc def lom abc abc def'
+// const replaceAll = (find, replace, string) => {
+//     return str.split(' ').map((item) => item == find ? replace : item)
+// }
+// console.log(replaceAll('abc', 'X', str))
 
-const replaceAll = (find, replace, string) => {
-    return str.split(' ').map((item) => item == find ? replace : item)
-}
-console.log(replaceAll('abc', 'X', str))
+
+// Задача 50
+// const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
+
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));

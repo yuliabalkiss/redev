@@ -780,24 +780,24 @@
 // console.log(findNeedle(["bla", "wekmvever", "needle", "bntyn", "qwd", "qfverv", "rtbrtb"]))
 
 // Задача 11
-let myArr = [-1, 2, -3, 4, 5]
-function invert(arr) {
-    let newArr = []
-    for (let value of arr) {
-        if (value < 0) {
-            newArr.push(value * -1)
-        } else {
-            newArr.push(value * -1)
-        }
+// let myArr = [-1, 2, -3, 4, 5]
+// function invert(arr) {
+//     let newArr = []
+//     for (let value of arr) {
+//         if (value < 0) {
+//             newArr.push(value * -1)
+//         } else {
+//             newArr.push(value * -1)
+//         }
 
-    }
-    return newArr
+//     }
+//     return newArr
 
-}
-console.log(invert(myArr))
+// }
+// console.log(invert(myArr))
 
-const invert2 = (arr) => arr.map((item) => item < 0 ? item * (-1) : item * (-1))
-console.log(invert2(myArr));
+// const invert2 = (arr) => arr.map((item) => item < 0 ? item * (-1) : item * (-1))
+// console.log(invert2(myArr));
 
 //  Задача 12
 
@@ -853,3 +853,15 @@ console.log(invert2(myArr));
 // const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
 
 // console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+
+
+const myArr = [-1, -2, -3, -4, -5, -6, -7, -8]
+let myArr3 = myArr.slice()
+
+// console.log(myArr3)
+console.log(myArr3.length = 0)
+console.log(myArr)
+console.log(myArr3)
+// console.log(myArr[myArr.length - 1])
+// console.log(myArr.at(1));
+// console.log(myArr[2]);

@@ -880,7 +880,9 @@ let myString = 'I am a developer !'
 // console.log(myArr2.slice(0, 5));// возвращает копию массива от start  до end(включая end ),======= НЕ МЕНЯЕТ СТАРЫЙ МАССИВ ==========
 
 // console.log(myArr4.sort((a, b) => b - a));//  принимает параметры ткущий элемент и следующий элемент . сортирует по UNICODE
-// console.log(myArr4.reduce((acc, item) => acc + item, 400));  соединяет все элементы в одно значение, вернет сумму всех чисел
+// console.log(myArr4.reduce((acc, item,index, array) => acc + item, 400));  соединяет все элементы в одно значение, вернет сумму всех чисел
+
+// console.log(Array.isArray(myString));
 // const concatArray = myArr2.concat(myArr3).reverse()
 // console.log(concatArray)
 

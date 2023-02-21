@@ -858,7 +858,7 @@
 // const myArr = ['yulia', 'rita', 'alise', 'raf']
 const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 const myArr3 = [10, 11, 12, 13, 14]
-const myArr4 = [15, 16, 17, 18, 'yes', 19, 20]
+const myArr4 = [15, 16, 17, 18, 19, 120]
 let myString = 'I am a developer !'
 // myArr4[0] = 33
 // console.log(myArr4.toString());
@@ -876,9 +876,11 @@ let myString = 'I am a developer !'
 // console.log(myString.split(',')); //  из строки делает массив, принимает разделитель
 // console.log(myArr3.fill('9', 0));// заполняет массив определенным элементом от индекса до индекса
 
-console.log(myArr4.splice(4, 2, 1111));// возвращает массив из удленыых элементов, изменяет массив
-console.log(myArr4);
-//методы reverse(), concat()
+// console.log(myArr4.splice(4, 2, 1111));// возвращает массив из удленыых элементов,======= МЕНЯЕТ СТАРЫЙ МАССИВ ==========
+// console.log(myArr2.slice(0, 5));// возвращает копию массива от start  до end(включая end ),======= НЕ МЕНЯЕТ СТАРЫЙ МАССИВ ==========
+
+// console.log(myArr4.sort((a, b) => b - a));//  принимает параметры ткущий элемент и следующий элемент . сортирует по UNICODE
+// console.log(myArr4.reduce((acc, item) => acc + item, 400));  соединяет все элементы в одно значение, вернет сумму всех чисел
 // const concatArray = myArr2.concat(myArr3).reverse()
 // console.log(concatArray)
 

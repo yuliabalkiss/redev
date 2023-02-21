@@ -855,21 +855,35 @@
 // console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
 
 
-const myArr = [-1, -2, -3, -4, -5, -6, -7, -8]
-// console.log(myArr.push('Yulia'));
+// const myArr = ['yulia', 'rita', 'alise', 'raf']
+// const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// console.log(myArr.toString())
+//  перебор массива цикл for
+// for (let i = 0; i < myArr.length; i++) {
+//     console.log(myArr[i]);
+// }
+
+// // пербор массива цикл for of
+// for (let i of myArr) {
+//     console.log(i);
+// }
+
+// myArr.forEach((item, index, array) => {
+//     console.log({ item, index });
+//     console.log(item);
+// })
+
+// перебор массива и замена первой буквы на заглавную
+// for (let i = 0; i < myArr.length; i++) {
+//     console.log(myArr[i] = myArr[i][0].toUpperCase() + myArr[i].slice(1).toLowerCase());
+// }
+
+// метод forEach
+// myArr.forEach((item, index, arr) => console.log(item[0].toUpperCase() + item.slice(1).toLowerCase()))
+
+//  метод map()
+// let correctName = myArr.map((item, index, arr) => item[0].toUpperCase() + item.slice(1).toLowerCase())
+// console.log(correctName);
 // console.log(myArr);
-// console.log(myArr.pop());
-// console.log(myArr);
-console.log(myArr.unshift('Balkis'));
-console.log(myArr);
-console.log(myArr.shift());
-console.log(myArr);
 
 
-
-// console.log(myArr3)
-
-// console.log(myArr3)
-// console.log(myArr[myArr.length - 1])
-// console.log(myArr.at(1));
-// console.log(myArr[2]);

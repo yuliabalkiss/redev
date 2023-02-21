@@ -856,8 +856,36 @@
 
 
 // const myArr = ['yulia', 'rita', 'alise', 'raf']
-// const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-// console.log(myArr.toString())
+const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const myArr3 = [10, 11, 12, 13, 14]
+const myArr4 = [15, 16, 17, 18, 'yes', 19, 20]
+let myString = 'I am a developer !'
+// myArr4[0] = 33
+// console.log(myArr4.toString());
+//   =======================================================методы============================================================
+// console.log(myArr4.includes('yes'))// ищет элемент с позиции и возвращает  true/false
+// console.log(myArr4.indexOf('yes'))// ищет элемент с позиции и возвращает  true/false
+
+
+// console.log(myArr4.find((item, index, array) => item > 4)) // возвращает первый элемент, удовлетворяющий условию, в противном случаи undefined
+// console.log(myArr4.forEach((item, index, array) => item )) // перебирает элементы, никогда ничего не возращает undefined
+// console.log(myArr4.filter((item, index, array) => item >= 17))// возвращает массив элементов, удовлетворяющих условию
+// console.log(myArr4.map((item, index, array) => item + item)) //возвращает новый массив с  новыми
+
+// console.log(myArr4.join(' ')); из массива делает строку, параметр разделитель
+// console.log(myString.split(',')); //  из строки делает массив, принимает разделитель
+// console.log(myArr3.fill('9', 0));// заполняет массив определенным элементом от индекса до индекса
+
+console.log(myArr4.splice(4, 2, 1111));// возвращает массив из удленыых элементов, изменяет массив
+console.log(myArr4);
+//методы reverse(), concat()
+// const concatArray = myArr2.concat(myArr3).reverse()
+// console.log(concatArray)
+
+
+
+// console.log(typeof myArr2.toString())
+
 //  перебор массива цикл for
 // for (let i = 0; i < myArr.length; i++) {
 //     console.log(myArr[i]);
@@ -868,7 +896,7 @@
 //     console.log(i);
 // }
 
-// myArr.forEach((item, index, array) => {
+// myArr2.forEach((item, index, array) => {
 //     console.log({ item, index });
 //     console.log(item);
 // })

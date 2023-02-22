@@ -738,8 +738,26 @@
 // }
 
 // function User(name, phone, adress) {
-//     this.name
+//     this.name = name
 // }
+
+// let user = {
+//     name: 'Blad',
+//     age: 23,
+//     talents: ['js', 'html', 'css'],
+//     sayName: () => this.name,
+//     sayAge: function () {
+//         return this.age
+//     },
+//     sayTalents: function () {
+//         let fn = () => this.talents;
+//         return fn()
+//     },
+
+// };
+// console.log(user.sayAge());
+// console.log(user.sayName());
+// console.log(user.sayTalents());
 
 // const user2 = Object.assign(user);
 // const user3 = Object.assign({}, user);

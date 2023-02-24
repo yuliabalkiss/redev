@@ -874,21 +874,21 @@
 
 
 // const myArr = ['yulia', 'rita', 'alise', 'raf']
-const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-const myArr3 = [10, 11, 12, 13, 14]
-const myArr4 = [15, 16, 17, 18, 19, 120]
-let myString = 'I am a developer !'
+// const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const myArr3 = [10, 11, 12, 13, 14]
+// const myArr4 = [15, 16, 17, 18, 19, 120]
+// let myString = 'I am a developer !'
 // myArr4[0] = 33
 // console.log(myArr4.toString());
 //   =======================================================методы============================================================
 // console.log(myArr4.includes('yes'))// ищет элемент с позиции и возвращает  true/false
-// console.log(myArr4.indexOf('yes'))// ищет элемент с позиции и возвращает  true/false
+// console.log(myArr4.indexOf(16))// ищет элемент с позиции и возвращает  индекс элемента или -1, если такого нет!
 
 
 // console.log(myArr4.find((item, index, array) => item > 4)) // возвращает первый элемент, удовлетворяющий условию, в противном случаи undefined
 // console.log(myArr4.forEach((item, index, array) => item )) // перебирает элементы, никогда ничего не возращает undefined
-// console.log(myArr4.filter((item, index, array) => item >= 17))// возвращает массив элементов, удовлетворяющих условию
-// console.log(myArr4.map((item, index, array) => item + item)) //возвращает новый массив с  новыми
+// console.log(myArr4.filter((item, index, array) => item < 15))// возвращает массив элементов, удовлетворяющих условию или []
+// console.log(myArr4.map((item, index, array) => item + item)) //возвращает новый массив с  новыми элементами
 
 // console.log(myArr4.join(' ')); из массива делает строку, параметр разделитель
 // console.log(myString.split(',')); //  из строки делает массив, принимает разделитель
@@ -897,7 +897,7 @@ let myString = 'I am a developer !'
 // console.log(myArr4.splice(4, 2, 1111));// возвращает массив из удленыых элементов,======= МЕНЯЕТ СТАРЫЙ МАССИВ ==========
 // console.log(myArr2.slice(0, 5));// возвращает копию массива от start  до end(включая end ),======= НЕ МЕНЯЕТ СТАРЫЙ МАССИВ ==========
 
-// console.log(myArr4.sort((a, b) => b - a));//  принимает параметры ткущий элемент и следующий элемент . сортирует по UNICODE
+// console.log(myArr4.sort((a, b) => b - a));//  принимает параметры тeкущий элемент и следующий элемент . сортирует по UNICODE
 // console.log(myArr4.reduce((acc, item,index, array) => acc + item, 400));  соединяет все элементы в одно значение, вернет сумму всех чисел
 
 // console.log(Array.isArray(myString));
@@ -936,4 +936,35 @@ let myString = 'I am a developer !'
 // console.log(correctName);
 // console.log(myArr);
 
+// const user = {
+//     name: "Yulia",
+//     age: 34,
+//     phone: 845034583,
+//     sayHi: function sayHi(){
+        
+//     }
+// }
+// const user2 = Object.assign({}, user)
+// console.log(user2 === user);
+// let str = 'привет, я хочу стать front-end разработчиком!'
+// let a = []
+// user.forEach((item) => {
+//     a.push(item + 1)
+// })
+// console.log(a);
 
+// console.log(user.slice(-4))
+// console.log(user.splice(0, 2, '4444'))
+// console.log(user)
+// let user2 = user.concat(user)
+// console.log(user2);
+// console.log(user.indexOf(87, 2))
+// console.log(user.includes(87))
+// console.log(user.find((item, index, array) => item > 80))
+// console.log(user.filter((item, index, array) => item > 100))
+// console.log(user.map((item, index, array) => item * 2))
+// console.log(user.sort((a, b) => b - a))
+// console.log(str.split('-').length)
+// console.log(user.join('======'))
+// console.log(user.fill('======='));
+// console.log(Array.isArray(str));

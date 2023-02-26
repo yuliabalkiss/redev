@@ -777,70 +777,7 @@
 
 
 //================================== Массивы. Методы массивов=======================================
-// Зададча 2,4,10,11,12,16
 
-//  Зададча 2
-// function deleteVowels(str) {
-//     let phrase = str.replace(/[а,у,о,е,ё,и,о,ы,э,я]/gi, '')
-//     console.log(phrase)
-// }
-// deleteVowels('Этот сайт для лузеров ЛОЛ!')
-
-// Задача 4
-// const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
-// console.log(accum('abcd'));
-
-// Задача 10
-// const findNeedle = (array) => {
-//     let indexNeedle = array.indexOf('needle')
-//     return (`"Нашел иголку на позиции ${indexNeedle}"`)
-// }
-// console.log(findNeedle(["bla", "wekmvever", "needle", "bntyn", "qwd", "qfverv", "rtbrtb"]))
-
-// Задача 11
-// let myArr = [-1, 2, -3, 4, 5]
-// function invert(arr) {
-//     let newArr = []
-//     for (let value of arr) {
-//         if (value < 0) {
-//             newArr.push(value * -1)
-//         } else {
-//             newArr.push(value * -1)
-//         }
-
-//     }
-//     return newArr
-
-// }
-// console.log(invert(myArr))
-
-// const invert2 = (arr) => arr.map((item) => item < 0 ? item * (-1) : item * (-1))
-// console.log(invert2(myArr));
-
-//  Задача 12
-
-// const arrayDiff = (arr1, arr2) => arr1.filter((el) => !arr2.includes(el))
-// console.log(arrayDiff([1, 2, 2, 2, 3, 4], [2, 3]))
-// console.log(arrayDiff([1, 2], [1]))
-
-
-//  Задача 16
-// const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
-// console.log(reversString('This is an example!'));
-// console.log(arr);
-
-// Задача 21
-// const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
-// console.log(createDreamTeam(['Matt', 'Ann', 66, 'Dmitry', 'Max']))
-
-// Задача 9
-// const simple = (str) => Math.min(...str.split(' ').map(item => item.length));
-// console.log(simple('Привет, я Юля!'));
-
-// Задача 14
-// const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
-// console.log(reversString('This is an example!'));
-// console.log(arr);
 
 // let arr = ['a', 'b', 'c']
 // console.log(arr.map((item) => item));
@@ -859,20 +796,6 @@
 // console.log(result);
 
 
-// Задача 27
-// let str = 'abc def lom abc abc def'
-// const replaceAll = (find, replace, string) => {
-//     return str.split(' ').map((item) => item == find ? replace : item)
-// }
-// console.log(replaceAll('abc', 'X', str))
-
-
-// Задача 50
-// const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
-
-// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
-
-
 // const myArr = ['yulia', 'rita', 'alise', 'raf']
 // const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // const myArr3 = [10, 11, 12, 13, 14]
@@ -880,6 +803,8 @@
 // let myString = 'I am a developer !'
 // myArr4[0] = 33
 // console.log(myArr4.toString());
+
+
 //   =======================================================методы============================================================
 // console.log(myArr4.includes('yes'))// ищет элемент с позиции и возвращает  true/false
 // console.log(myArr4.indexOf(16))// ищет элемент с позиции и возвращает  индекс элемента или -1, если такого нет!
@@ -941,7 +866,7 @@
 //     age: 34,
 //     phone: 845034583,
 //     sayHi: function sayHi(){
-        
+
 //     }
 // }
 // const user2 = Object.assign({}, user)
@@ -968,3 +893,98 @@
 // console.log(user.join('======'))
 // console.log(user.fill('======='));
 // console.log(Array.isArray(str));
+
+
+
+// ======================================================Задачи========================================================================
+
+
+//  Зададча 2
+// function deleteVowels(str) {
+//     let phrase = str.replace(/[а,у,о,е,ё,и,о,ы,э,я]/gi, '')
+//     console.log(phrase)
+// }
+// deleteVowels('Этот сайт для лузеров ЛОЛ!')
+
+// Задача 3
+
+let list = "4 5 29 54 4 0 -123 666 -64 1 -3 6 -6"
+let a = list.split(' ').sort((a, b) => b - a)
+console.log(a[0], a.at(-1))
+
+console.log(Math.max(...a).toString(), Math.min(...a).toString());
+
+// console.log(Math.max(...a));
+// Задача 4
+// const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
+// console.log(accum('abcd'));
+
+// Задача 9
+// const simple = (str) => Math.min(...str.split(' ').map(item => item.length));
+// console.log(simple('Привет, я Юля!'));
+
+// Задача 10
+// const findNeedle = (array) => {
+//     let indexNeedle = array.indexOf('needle')
+//     return (`"Нашел иголку на позиции ${indexNeedle}"`)
+// }
+// console.log(findNeedle(["bla", "wekmvever", "needle", "bntyn", "qwd", "qfverv", "rtbrtb"]))
+
+// Задача 11
+// let myArr = [-1, 2, -3, 4, 5]
+// function invert(arr) {
+//     let newArr = []
+//     for (let value of arr) {
+//         if (value < 0) {
+//             newArr.push(value * -1)
+//         } else {
+//             newArr.push(value * -1)
+//         }
+
+//     }
+//     return newArr
+
+// }
+// console.log(invert(myArr))
+
+// const invert2 = (arr) => arr.map((item) => item < 0 ? item * (-1) : item * (-1))
+// console.log(invert2(myArr));
+
+//  Задача 12
+
+// const arrayDiff = (arr1, arr2) => arr1.filter((el) => !arr2.includes(el))
+// console.log(arrayDiff([1, 2, 2, 2, 3, 4], [2, 3]))
+// console.log(arrayDiff([1, 2], [1]))
+
+
+// Задача 14
+// const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
+// console.log(reversString('This is an example!'));
+// console.log(arr);
+
+
+//  Задача 16
+// const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
+// console.log(reversString('This is an example!'));
+// console.log(arr);
+
+// Задача 21
+// const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
+// console.log(createDreamTeam(['Matt', 'Ann', 66, 'Dmitry', 'Max']))
+
+
+
+
+
+// Задача 27
+// let str = 'abc def lom abc abc def'
+// const replaceAll = (find, replace, string) => {
+//     return str.split(' ').map((item) => item == find ? replace : item)
+// }
+// console.log(replaceAll('abc', 'X', str))
+
+
+// Задача 50
+// const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
+
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));

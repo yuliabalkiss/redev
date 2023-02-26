@@ -908,17 +908,40 @@
 
 // Задача 3
 
-let list = "4 5 29 54 4 0 -123 666 -64 1 -3 6 -6"
-let a = list.split(' ').sort((a, b) => b - a)
-console.log(a[0], a.at(-1))
+// let list = "4 5 29 54 4 0 -123 666 -64 1 -3 6 -6"
+// let a = list.split(' ').sort((a, b) => b - a)
+// console.log(a[0], a.at(-1))
 
-console.log(Math.max(...a).toString(), Math.min(...a).toString());
+// console.log(Math.max(...a).toString(), Math.min(...a).toString());
 
 // console.log(Math.max(...a));
 // Задача 4
 // const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
 // console.log(accum('abcd'));
 
+// Задача 5
+// let correctPin = (str) => (str.split(' ').map((item) => item)).length === 4 ? true : false
+// function correctPin(str) {
+//     str.split(' ')
+//     if (str.length === 4 || str.length === 6) {
+//         return true
+//     } else {
+//         return false
+//     }
+
+// }
+// console.log(correctPin('5000'))
+
+// Задача 6
+// Задача 8
+// function minMaxItem(arr) {
+//     let newArr = []
+//     newArr.push(Math.min(...arr))
+//     newArr.push(Math.max(...arr))
+//     return newArr
+// }
+
+// console.log(minMaxItem([-5, -7, -2, 5]))
 // Задача 9
 // const simple = (str) => Math.min(...str.split(' ').map(item => item.length));
 // console.log(simple('Привет, я Юля!'));
@@ -956,6 +979,15 @@ console.log(Math.max(...a).toString(), Math.min(...a).toString());
 // console.log(arrayDiff([1, 2, 2, 2, 3, 4], [2, 3]))
 // console.log(arrayDiff([1, 2], [1]))
 
+// Задача 13
+// function getString(n) {
+//     let arr = []
+//     for (let i = n; i >= 1; i--) {
+//         arr.push(i)
+//     }
+//     return arr.join(',')
+// }
+// console.log(getString(5))
 
 // Задача 14
 // const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')

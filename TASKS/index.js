@@ -909,11 +909,10 @@
 // Задача 3
 
 let list = "4 5 29 54 4 0 -123 666 -64 1 -3 6 -6"
-list.split(' ').sort((a, b) => b - a)
-// let a = list.split(' ').sort((a, b) => b - a)
+let a = list.split(' ')
 // console.log(a[0], a.at(-1))
 
-// console.log(Math.max(...a).toString(), Math.min(...a).toString());
+console.log(Math.max(...a).toString(), Math.min(...a).toString());
 
 // console.log(Math.max(...a));
 // Задача 4

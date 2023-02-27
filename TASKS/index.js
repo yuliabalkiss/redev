@@ -908,11 +908,11 @@
 
 // Задача 3
 
-let list = "4 5 29 54 4 0 -123 666 -64 1 -3 6 -6"
-let a = list.split(' ')
+// let list = "4 5 29 54 4 0 -123 666 -64 1 -3 6 -6"
+// let a = list.split(' ')
 // console.log(a[0], a.at(-1))
 
-console.log(Math.max(...a).toString(), Math.min(...a).toString());
+// console.log(Math.max(...a).toString(), Math.min(...a).toString());
 
 // console.log(Math.max(...a));
 // Задача 4
@@ -989,10 +989,6 @@ console.log(Math.max(...a).toString(), Math.min(...a).toString());
 // }
 // console.log(getString(5))
 
-// Задача 14
-// const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
-// console.log(reversString('This is an example!'));
-// console.log(arr);
 
 
 //  Задача 16
@@ -1002,18 +998,19 @@ console.log(Math.max(...a).toString(), Math.min(...a).toString());
 
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
-// console.log(createDreamTeam(['Matt', 'Ann', 66, 'Dmitry', 'Max']))
+// console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max']))
+// console.log(createDreamTeam(['Olivia', 'Lily', 'Oscar']))
 
 
 
 
 
 // Задача 27
-// let str = 'abc def lom abc abc def'
-// const replaceAll = (find, replace, string) => {
-//     return str.split(' ').map((item) => item == find ? replace : item)
-// }
-// console.log(replaceAll('abc', 'X', str))
+let str = 'abc def lom abc abc def'
+const replaceAll = (find, replace, string) => {
+    return str.split(' ').map((item) => item == find ? replace : item)
+}
+console.log(replaceAll('abc', 'X', str))
 
 
 // Задача 50

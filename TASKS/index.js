@@ -921,16 +921,22 @@
 
 // Задача 5
 // let correctPin = (str) => (str.split(' ').map((item) => item)).length === 4 ? true : false
-// function correctPin(str) {
-//     str.split(' ')
-//     if (str.length === 4 || str.length === 6) {
-//         return true
-//     } else {
-//         return false
-//     }
+function correctPin(str) {
+    let arr = str.split('')
+    console.log(arr)
+    for (let i of arr) {
 
-// }
-// console.log(correctPin('5000'))
+        if (Number.isNaN(i) && str.length === 4 || str.length === 6) {
+            return true
+        } else {
+            return false
+        }
+
+    }
+
+
+}
+console.log(correctPin('5f0940'))
 
 // Задача 6
 // Задача 8
@@ -1006,11 +1012,11 @@
 
 
 // Задача 27
-let str = 'abc def lom abc abc def'
-const replaceAll = (find, replace, string) => {
-    return str.split(' ').map((item) => item == find ? replace : item)
-}
-console.log(replaceAll('abc', 'X', str))
+// let str = 'abc def lom abc abc def'
+// const replaceAll = (find, replace, string) => {
+//     return str.split(' ').map((item) => item == find ? replace : item)
+// }
+// console.log(replaceAll('abc', 'X', str))
 
 
 // Задача 50

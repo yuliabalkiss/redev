@@ -1024,8 +1024,8 @@
 
 
 // Задача 30
-const alphabetize = str => str.split('').sort().join('')
-console.log(alphabetize('Europe'))
+// const alphabetize = str => str.split('').sort().join('')
+// console.log(alphabetize('Europe'))
 
 // Задача 35
 
@@ -1049,6 +1049,12 @@ console.log(alphabetize('Europe'))
 
 // console.log(removeDuplicates(arr));
 
+// Задача 44
+// function squareDigits(num) {
+//     let digit = num.toString().split('').map((item) => item ** 2).join('')
+//     return Number(digit)
+// }
+// console.log(squareDigits(9119))
 // Задача 50
 // const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
 

@@ -1009,7 +1009,7 @@
 // }
 // console.log(solition('redevCourses'))
 
-// Задача 19
+// Задача 19 методами решить !!!
 // function countCats(arr) {
 //     let count = 0
 //     let newArr = arr.flat(Infinity)
@@ -1024,11 +1024,11 @@
 //     return count
 // }
 // console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
+
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
 // console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max']))
 // console.log(createDreamTeam(['Olivia', 'Lily', 'Oscar']))
-
 
 // задача 25
 // function capitalizeFirstLetter(str) {
@@ -1050,9 +1050,7 @@
 // console.log(alphabetize('Europe'))
 
 // Задача 35
-
 // let vegetables = ['Капуста', 'Репа', 'Редиска'];
-
 // function arrayClone(arr) {
 //     let newArr = arr.slice()
 //     return newArr
@@ -1090,6 +1088,7 @@
 //     return newArr.toString()
 // }
 // console.log(expand(arr2))
+
 // Задача 43
 // function maskify(str) {
 //     return str.split('').fill('#', 0, -4).join('')

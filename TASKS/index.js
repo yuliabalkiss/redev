@@ -1010,20 +1010,20 @@
 // console.log(solition('redevCourses'))
 
 // Задача 19
-function countCats(arr) {
-    let count = 0
-    let newArr = arr.flat(Infinity)
-    for (let key of newArr) {
-        if (key === '^^') {
-            count++
-        } else if (key !== '^^') {
-            count
-        }
-    }
+// function countCats(arr) {
+//     let count = 0
+//     let newArr = arr.flat(Infinity)
+//     for (let key of newArr) {
+//         if (key === '^^') {
+//             count++
+//         } else if (key !== '^^') {
+//             count
+//         }
+//     }
 
-    return count
-}
-console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
+//     return count
+// }
+// console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
 // console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max']))

@@ -1002,6 +1002,28 @@
 // console.log(reversString('This is an example!'));
 // console.log(arr);
 
+// Задача 17!!!!!!!!!!!!!!!!!!
+// let solition = (str) => {
+// let a = str.split('').find((item, ind) => {item: item, index: ind })
+
+// }
+// console.log(solition('redevCourses'))
+
+// Задача 19
+function countCats(arr) {
+    let count = 0
+    let newArr = arr.flat(Infinity)
+    for (let key of newArr) {
+        if (key === '^^') {
+            count++
+        } else if (key !== '^^') {
+            count
+        }
+    }
+
+    return count
+}
+console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
 // console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max']))
@@ -1044,6 +1066,15 @@
 // ];
 
 // function removeDuplicates(arr) {
+//     let a = []
+//     for (let key of arr) {
+//         if (!a.includes(key)) {
+//             a.push(key)
+//         } else {
+
+//         }
+//         return a
+//     }
 
 // }
 

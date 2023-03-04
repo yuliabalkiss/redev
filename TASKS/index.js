@@ -1008,8 +1008,12 @@
 // console.log(createDreamTeam(['Olivia', 'Lily', 'Oscar']))
 
 
+// задача 25
+// function capitalizeFirstLetter(str) {
+//     return str.slice(0, 1).toUpperCase() + str.slice(1)
+// }
 
-
+// console.log(capitalizeFirstLetter('пример строки'))
 
 // Задача 27
 // let str = 'abc def lom abc abc def'
@@ -1018,6 +1022,10 @@
 // }
 // console.log(replaceAll('abc', 'X', str))
 
+
+// Задача 30
+const alphabetize = str => str.split('').sort().join('')
+console.log(alphabetize('Europe'))
 
 // Задача 35
 
@@ -1028,6 +1036,19 @@
 //     return newArr
 // }
 // console.log(arrayClone(vegetables))
+
+
+// Задача 37!!!!!!!!!!!!!!!!!!!!!
+// let arr = ["php", "php", "css", "css",
+//     "script", "script", "html", "html", "java"
+// ];
+
+// function removeDuplicates(arr) {
+
+// }
+
+// console.log(removeDuplicates(arr));
+
 // Задача 50
 // const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
 

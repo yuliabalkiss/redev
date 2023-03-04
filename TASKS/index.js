@@ -919,24 +919,24 @@
 // const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
 // console.log(accum('abcd'));
 
-// Задача 5
+// Задача 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // let correctPin = (str) => (str.split(' ').map((item) => item)).length === 4 ? true : false
-function correctPin(str) {
-    let arr = str.split('')
-    console.log(arr)
-    for (let i of arr) {
+// function correctPin(str) {
+//     let arr = str.split('')
+//     console.log(arr)
+//     for (let i of arr) {
 
-        if (Number.isNaN(i) && str.length === 4 || str.length === 6) {
-            return true
-        } else {
-            return false
-        }
+//         if (Number.isNaN(i) && str.length === 4 || str.length === 6) {
+//             return true
+//         } else {
+//             return false
+//         }
 
-    }
+//     }
 
 
-}
-console.log(correctPin('5f0940'))
+// }
+// console.log(correctPin('5f0940'))
 
 // Задача 6
 // Задача 8
@@ -1019,6 +1019,15 @@ console.log(correctPin('5f0940'))
 // console.log(replaceAll('abc', 'X', str))
 
 
+// Задача 35
+
+// let vegetables = ['Капуста', 'Репа', 'Редиска'];
+
+// function arrayClone(arr) {
+//     let newArr = arr.slice()
+//     return newArr
+// }
+// console.log(arrayClone(vegetables))
 // Задача 50
 // const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
 

@@ -1049,12 +1049,34 @@
 
 // console.log(removeDuplicates(arr));
 
+// Задача 39
+// let arr1 = [1, [2, [3, [4]]]];
+
+// let arr2 = [1, [2], [3, [[4]]], [5, 6]];
+
+// function expand(arr) {
+//     let newArr = arr.flat(Infinity)
+//     return newArr.toString()
+// }
+// console.log(expand(arr2))
+// Задача 43
+// function maskify(str) {
+//     return str.split('').fill('#', 0, -4).join('')
+// }
+// console.log(maskify('4556364607935616'))
+
 // Задача 44
 // function squareDigits(num) {
 //     let digit = num.toString().split('').map((item) => item ** 2).join('')
 //     return Number(digit)
 // }
 // console.log(squareDigits(9119))
+
+// Задача 45
+// function findUniqueCharacter(str1, str2) {
+//     str1.split('').map((item) => str2.split('').map)
+// }
+
 // Задача 50
 // const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
 

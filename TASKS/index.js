@@ -921,22 +921,12 @@
 
 // Задача 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // let correctPin = (str) => (str.split(' ').map((item) => item)).length === 4 ? true : false
-// function correctPin(str) {
-//     let arr = str.split('')
-//     console.log(arr)
-//     for (let i of arr) {
+const correctPin = (str) => {
+    let a = str.split('')
+    return a.map((item) => +item === Number(item) && a.length === 4 || a.length === 6 ? true : false)
 
-//         if (Number.isNaN(i) && str.length === 4 || str.length === 6) {
-//             return true
-//         } else {
-//             return false
-//         }
-
-//     }
-
-
-// }
-// console.log(correctPin('5f0940'))
+}
+console.log(correctPin('5t40'))
 
 // Задача 6
 // Задача 8

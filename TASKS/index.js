@@ -921,12 +921,12 @@
 
 // Задача 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // let correctPin = (str) => (str.split(' ').map((item) => item)).length === 4 ? true : false
-const correctPin = (str) => {
-    let a = str.split('')
-    return a.map((item) => +item === Number(item) && a.length === 4 || a.length === 6 ? true : false)
+// const correctPin = (str) => {
+//     let a = str.split('')
+//     return a.map((item) => +item === Number(item) && a.length === 4 || a.length === 6 ? true : false)
 
-}
-console.log(correctPin('5t40'))
+// }
+// console.log(correctPin('5t40'))
 
 // Задача 6
 // Задача 8
@@ -1080,10 +1080,22 @@ console.log(correctPin('5t40'))
 // console.log(expand(arr2))
 
 // Задача 43
-// function maskify(str) {
-//     return str.split('').fill('#', 0, -4).join('')
-// }
-// console.log(maskify('4556364607935616'))
+function maskify(str) {
+    let numbersItem = str.split('')
+    for (let i = 0; i < numbersItem.length - 4; i++) {
+
+        numbersItem[i] = +[i]
+        if (typeof numbersItem[i] === 'number') {
+            numbersItem[i] = '#'
+
+        } else {
+            return 'item  not a number!'
+        }
+
+    }
+    return numbersItem.join('')
+}
+console.log(maskify('4556364607935616'))
 
 // Задача 44
 // function squareDigits(num) {

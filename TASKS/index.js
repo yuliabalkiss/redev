@@ -919,15 +919,18 @@
 // const accum = (str) => str.split('').map((el, index) => el.toUpperCase() + el.repeat(index)).join('-');
 // console.log(accum('abcd'));
 
-// Задача 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// let correctPin = (str) => (str.split(' ').map((item) => item)).length === 4 ? true : false
-// const correctPin = (str) => {
-//     let a = str.split('')
-//     return a.map((item) => +item === Number(item) && a.length === 4 || a.length === 6 ? true : false)
+// Задача 5
+let correctPin = (str) => str == +str && (str.length === 4 || str.length === 6)
 
+
+
+// function correctPin(str) {
+//     let b = str.length
+//     let a = str.split('').map((item) => isFinite(item))
+//     return a
 // }
-// console.log(correctPin('5t40'))
 
+console.log(correctPin('12736'))
 // Задача 6
 // Задача 8
 // function minMaxItem(arr) {
@@ -999,7 +1002,7 @@
 // }
 // console.log(solition('redevCourses'))
 
-// Задача 19 методами решить !!!
+// Задача 19
 // function countCats(arr) {
 //     let count = 0
 //     let newArr = arr.flat(Infinity)
@@ -1015,11 +1018,23 @@
 // }
 // console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
 
+// function countCats(arr) {
+//     let newArr = arr.flat(Infinity).filter((item) => item === '^^')
+//     return newArr.length
+
+// }
+// console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
+
+
 // Задача 21
 // const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
 // console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max']))
 // console.log(createDreamTeam(['Olivia', 'Lily', 'Oscar']))
 
+
+// Задача 24
+// const isUpperCase = (str, character) => str[character] === str[character].toUpperCase() ? true : false
+// console.log(isUpperCase('tasks Java Script', 6))
 // задача 25
 // function capitalizeFirstLetter(str) {
 //     return str.slice(0, 1).toUpperCase() + str.slice(1)
@@ -1080,22 +1095,22 @@
 // console.log(expand(arr2))
 
 // Задача 43
-function maskify(str) {
-    let numbersItem = str.split('')
-    for (let i = 0; i < numbersItem.length - 4; i++) {
+// function maskify(str) {
+//     let numbersItem = str.split('')
+//     for (let i = 0; i < numbersItem.length - 4; i++) {
 
-        numbersItem[i] = +[i]
-        if (typeof numbersItem[i] === 'number') {
-            numbersItem[i] = '#'
+//         numbersItem[i] = +[i]
+//         if (typeof numbersItem[i] === 'number') {
+//             numbersItem[i] = '#'
 
-        } else {
-            return 'item  not a number!'
-        }
+//         } else {
+//             return 'item  not a number!'
+//         }
 
-    }
-    return numbersItem.join('')
-}
-console.log(maskify('4556364607935616'))
+//     }
+//     return numbersItem.join('')
+// }
+// console.log(maskify('4556364607935616'))
 
 // Задача 44
 // function squareDigits(num) {

@@ -920,18 +920,12 @@
 // console.log(accum('abcd'));
 
 // Задача 5
-let correctPin = (str) => str == +str && (str.length === 4 || str.length === 6)
+// let correctPin = (str) => str == +str && (str.length === 4 || str.length === 6)
+// console.log(correctPin('12736'))
 
-
-
-// function correctPin(str) {
-//     let b = str.length
-//     let a = str.split('').map((item) => isFinite(item))
-//     return a
-// }
-
-console.log(correctPin('12736'))
 // Задача 6
+// Задача 7
+
 // Задача 8
 // function minMaxItem(arr) {
 //     let newArr = []
@@ -997,8 +991,14 @@ console.log(correctPin('12736'))
 
 // Задача 17!!!!!!!!!!!!!!!!!!
 // let solition = (str) => {
-// let a = str.split('').find((item, ind) => {item: item, index: ind })
+//     let a = str.split('').filter((item, index) => {
+//         if (item === item.toUpperCase()) {
+//             return index
+//         }
 
+//     })
+//     a.fill('_', index)
+//     console.log(a)
 // }
 // console.log(solition('redevCourses'))
 
@@ -1027,9 +1027,24 @@ console.log(correctPin('12736'))
 
 
 // Задача 21
-// const createDreamTeam = (array) => array.find(item => typeof item !== 'string') ? false : array.map(item => item[0]).sort().join('');
-// console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max']))
-// console.log(createDreamTeam(['Olivia', 'Lily', 'Oscar']))
+// const createDreamTeam = array => {
+//     const arrStrings = array.filter((item) => typeof item === 'string');
+//     console.log(arrStrings)
+//     const arrFirstLetters = arrStrings.map((item) => item[0])
+//     return arrFirstLetters
+//         ? arrFirstLetters.sort().join('')
+//         : false
+// }
+
+
+
+console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', null, 'Max']))
+console.log(createDreamTeam(['Olivia', true, 1111, NaN, 'Lily', 'Oscar']))
+// console.log(typeof NaN)
+// console.log(typeof null)
+// console.log(typeof true)
+// console.log(typeof undefined)
+// console.log(typeof Infinity)
 
 
 // Задача 24
@@ -1125,6 +1140,6 @@ console.log(correctPin('12736'))
 // }
 
 // Задача 50
-// const moveZeros = (arr) => arr.map((item) => typeof item == 'number' ? arr.push() : item)
+// const moveZeros = (arr) => arr.map((item, index) => item === 0 ? index : item)
 
 // console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));

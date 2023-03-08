@@ -1069,6 +1069,24 @@
 // const alphabetize = str => str.split('').sort().join('')
 // console.log(alphabetize('Europe'))
 
+
+// Задача 31
+// let str = "Сила тяжести приложена к центру масс тела";
+
+// function cutString(str, n) {
+//     return str.split(' ').splice(0, n).join(' ')
+// };
+
+// console.log(cutString(str, 5))
+
+//  Задача 32
+let str = "    Pasha is a good      boy     "
+
+function strip(str) {
+    return str.split(' ').filter((item) => !item == ' ').join(' ')
+};
+
+console.log(strip(str))
 // Задача 35
 // let vegetables = ['Капуста', 'Репа', 'Редиска'];
 // function arrayClone(arr) {
@@ -1167,13 +1185,26 @@
 // }
 // console.log(a(arrv))
 
+// Задание на мини конкурс
+// let phrase = "С 8 марта, прекрасные женщины! Желаем вам радости, любви и успехов во всех начинаниях!"
+// let phrase2 = "С праздником, дорогие женщины! Желаем вам счастья, здоровья и исполнения всех желаний!"
 
-let phrase = "С 8 марта, прекрасные женщины! Желаем вам радости, любви и успехов во всех начинаниях!"
-let phrase2 = "С праздником, дорогие женщины! Желаем вам счастья, здоровья и исполнения всех желаний!"
+// function getData(str) {
+//     let congratulation = str.split('-').find((item) => +item === 08) ? phrase : phrase2
+//     return congratulation
+// }
 
-function getData(str) {
-    let congratulation = str.split('-').find((item) => +item === 08) ? phrase : phrase2
-    return congratulation
-}
+// console.log(getData('2023-03-08'))
 
-console.log(getData('2023-03-08'))
+
+// =================================================Коллекции Set и Map==============================================================
+// function unique(arr) {
+//     let newValues = new Set(values)
+//     return Array.from(newValues)
+// }
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+
+// console.log(unique(values)); // Hare,Krishna,:-O

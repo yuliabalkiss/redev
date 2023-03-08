@@ -1038,8 +1038,8 @@
 
 
 
-console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', null, 'Max']))
-console.log(createDreamTeam(['Olivia', true, 1111, NaN, 'Lily', 'Oscar']))
+// console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', null, 'Max']))
+// console.log(createDreamTeam(['Olivia', true, 1111, NaN, 'Lily', 'Oscar']))
 // console.log(typeof NaN)
 // console.log(typeof null)
 // console.log(typeof true)
@@ -1139,7 +1139,41 @@ console.log(createDreamTeam(['Olivia', true, 1111, NaN, 'Lily', 'Oscar']))
 //     str1.split('').map((item) => str2.split('').map)
 // }
 
+// Задача 49
+// function findMissingLetter(arr) {
+
+
+//     return arr.includes(3)
+
+
+
+// }
+// console.log(findMissingLetter([1, 2, 3]))
+
 // Задача 50
-// const moveZeros = (arr) => arr.map((item, index) => item === 0 ? index : item)
+// function moveZeros(arr) {
+//     const zeroItems = arr.map((item) => item === 0);
+//     console.log(zeroItems)
+
+
+// }
 
 // console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+
+
+// const arrv = [1, 2, 3]
+// function a(arr) {
+//     return arr.map((item) => item >= 2)
+// }
+// console.log(a(arrv))
+
+
+let phrase = "С 8 марта, прекрасные женщины! Желаем вам радости, любви и успехов во всех начинаниях!"
+let phrase2 = "С праздником, дорогие женщины! Желаем вам счастья, здоровья и исполнения всех желаний!"
+
+function getData(str) {
+    let congratulation = str.split('-').find((item) => +item === 08) ? phrase : phrase2
+    return congratulation
+}
+
+console.log(getData('2023-03-08'))

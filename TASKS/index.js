@@ -989,18 +989,13 @@
 // console.log(reversString('This is an example!'));
 // console.log(arr);
 
-// Задача 17!!!!!!!!!!!!!!!!!!
-// let solition = (str) => {
-//     let a = str.split('').filter((item, index) => {
-//         if (item === item.toUpperCase()) {
-//             return index
-//         }
-
-//     })
-//     a.fill('_', index)
-//     console.log(a)
-// }
-// console.log(solition('redevCourses'))
+// Задача 17
+const solition = (str) => {
+let letter =  str.split('').find((item)=>item === item.toUpperCase())
+let str2 = str.replace(/[A-Z]/g, '_' + letter.toLowerCase())
+return str2
+}
+console.log(solition('redevCourses'))
 
 // Задача 19
 // function countCats(arr) {
@@ -1163,19 +1158,19 @@
 // console.log(squareDigits(9119))
 
 // Задача 45
-function findUniqueCharacter(str1, str2) {
-    let longest = str1 + str2
-    longest.split('')
-    let set = new Set(longest)
-    let newArray = Array.from(set)
-    return newArray.sort().join('')
-}
+// function findUniqueCharacter(str1, str2) {
+//     let longest = str1 + str2
+//     longest.split('')
+//     let set = new Set(longest)
+//     let newArray = Array.from(set)
+//     return newArray.sort().join('')
+// }
 
-console.log(findUniqueCharacter("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
+// console.log(findUniqueCharacter("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
 
 // Задача 49
 // function findMissingLetter(arr) {
-
+    
 
 //     return arr.includes(3)
 

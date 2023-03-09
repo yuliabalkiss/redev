@@ -1080,13 +1080,21 @@
 // console.log(cutString(str, 5))
 
 //  Задача 32
-let str = "    Pasha is a good      boy     "
+// let str = "    Pasha is a good      boy     "
 
-function strip(str) {
-    return str.split(' ').filter((item) => !item == ' ').join(' ')
-};
+// function strip(str) {
+//     return str.split(' ').filter((item) => !item == ' ').join(' ')
+// };
 
-console.log(strip(str))
+// console.log(strip(str))
+
+// Задача 33
+
+// function comparison(str1, str2) {
+//     return str1.toLowerCase() === str2.toLowerCase()
+// };
+
+// console.log(comparison('string', 'StRiNg'))
 // Задача 35
 // let vegetables = ['Капуста', 'Репа', 'Редиска'];
 // function arrayClone(arr) {
@@ -1096,22 +1104,14 @@ console.log(strip(str))
 // console.log(arrayClone(vegetables))
 
 
-// Задача 37!!!!!!!!!!!!!!!!!!!!!
+// Задача 37
 // let arr = ["php", "php", "css", "css",
 //     "script", "script", "html", "html", "java"
 // ];
 
 // function removeDuplicates(arr) {
-//     let a = []
-//     for (let key of arr) {
-//         if (!a.includes(key)) {
-//             a.push(key)
-//         } else {
-
-//         }
-//         return a
-//     }
-
+//     let array = new Set(arr);
+//     return Array.from(array)
 // }
 
 // console.log(removeDuplicates(arr));

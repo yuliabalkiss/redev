@@ -1127,6 +1127,16 @@
 // }
 // console.log(expand(arr2))
 
+// Задача 40
+// let array = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 7];
+
+// function func(arr) {
+
+// }
+
+// console.log(func(array))
+
+
 // Задача 43
 // function maskify(str) {
 //     let numbersItem = str.split('')
@@ -1153,9 +1163,15 @@
 // console.log(squareDigits(9119))
 
 // Задача 45
-// function findUniqueCharacter(str1, str2) {
-//     str1.split('').map((item) => str2.split('').map)
-// }
+function findUniqueCharacter(str1, str2) {
+    let longest = str1 + str2
+    longest.split('')
+    let set = new Set(longest)
+    let newArray = Array.from(set)
+    return newArray.sort().join('')
+}
+
+console.log(findUniqueCharacter("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
 
 // Задача 49
 // function findMissingLetter(arr) {

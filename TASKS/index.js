@@ -1178,18 +1178,18 @@
 // console.log(findUniqueCharacter("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
 
 // Задача 46
-const busStops = (arr) => {
-let arrPeopleWhoCame =[];
-let arrPeopleWhoCameOut = [];
-let newArr = arr.flat(Infinity)
+// const busStops = (arr) => {
+// let arrPeopleWhoCame =[];
+// let arrPeopleWhoCameOut = [];
+// let newArr = arr.flat(Infinity)
 
-newArr.map((item, index)=> index % 2 === 0 ? arrPeopleWhoCame.push(item): arrPeopleWhoCameOut.push(item))
-let a = arrPeopleWhoCame.reduce((acc, item)=> acc+item)
-let b = arrPeopleWhoCameOut.reduce((acc, item)=> acc+item)
+// newArr.map((item, index)=> index % 2 === 0 ? arrPeopleWhoCame.push(item): arrPeopleWhoCameOut.push(item))
+// let a = arrPeopleWhoCame.reduce((acc, item)=> acc+item)
+// let b = arrPeopleWhoCameOut.reduce((acc, item)=> acc+item)
 
-return a-b
-}
-console.log(busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]));
+// return a-b
+// }
+// console.log(busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]));
 //  Задача 48
 
 // const likes = (arr) => {

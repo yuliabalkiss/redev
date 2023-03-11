@@ -1002,17 +1002,17 @@
 
 
 // Задача 18
-const palindrome = (str) =>  {
-  let arr =  str.split('')
-if(arr.join('') === arr.reverse().join('')){
-    return true
-}else {
-    return false
-}
+// const palindrome = (str) =>  {
+//   let arr =  str.split('')
+// if(arr.join('') === arr.reverse().join('')){
+//     return true
+// }else {
+//     return false
+// }
 
-}
+// }
 
-console.log(palindrome('43291234'))
+// console.log(palindrome('43291234'))
 // Задача 19
 // function countCats(arr) {
 //     let count = 0
@@ -1074,6 +1074,19 @@ console.log(palindrome('43291234'))
 //     return str.split(' ').map((item) => item == find ? replace : item)
 // }
 // console.log(replaceAll('abc', 'X', str))
+
+// Задача 28
+
+// let str = "вишня, груша, слива, груша";
+
+// function removeDuplicate(str) {
+// let arr = str.split(',')
+// let set = new Set(arr)
+// let newString = Array.from(set).join(',')
+// return newString
+// };
+
+// console.log(removeDuplicate(str));
 
 
 // Задача 30
@@ -1203,6 +1216,12 @@ console.log(palindrome('43291234'))
 // return a-b
 // }
 // console.log(busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]));
+
+// Задача 47
+const anagrams = (str,arr) =>{
+ console.log(arr.filter((item)=>item === str ))
+}
+console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
 //  Задача 48
 
 // const likes = (arr) => {

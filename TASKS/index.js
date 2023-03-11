@@ -1000,6 +1000,19 @@
 // }
 // console.log(solition('redevCourses'))
 
+
+// Задача 18
+const palindrome = (str) =>  {
+  let arr =  str.split('')
+if(arr.join('') === arr.reverse().join('')){
+    return true
+}else {
+    return false
+}
+
+}
+
+console.log(palindrome('43291234'))
 // Задача 19
 // function countCats(arr) {
 //     let count = 0

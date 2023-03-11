@@ -990,12 +990,15 @@
 // console.log(arr);
 
 // Задача 17
-const solition = (str) => {
-let letter =  str.split('').find((item)=>item === item.toUpperCase())
-let str2 = str.replace(/[A-Z]/g, '_' + letter.toLowerCase())
-return str2
-}
-console.log(solition('redevCourses'))
+// const solition = (str) => {
+// for(let char of str){
+//     if(char === char.toUpperCase()){
+//          str = str.replace(char, '_' + char.toLowerCase())
+//         }
+// }
+// return str
+// }
+// console.log(solition('redevCourses'))
 
 // Задача 19
 // function countCats(arr) {
@@ -1125,9 +1128,15 @@ console.log(solition('redevCourses'))
 // Задача 40
 // let array = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 7];
 
-// function func(arr) {
+// function func(arr, h) {
+
+// for(let i =0, count = arr.length; i < count; ++i){
+//     let key = h(arr[i])
 
 // }
+
+// }
+
 
 // console.log(func(array))
 
@@ -1167,6 +1176,46 @@ console.log(solition('redevCourses'))
 // }
 
 // console.log(findUniqueCharacter("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
+
+// Задача 46
+const busStops = (arr) => {
+let arrPeopleWhoCame =[];
+let arrPeopleWhoCameOut = [];
+let newArr = arr.flat(Infinity)
+newArr.map((item, index)=> index % 2 === 0 ? arrPeopleWhoCame.push(item): arrPeopleWhoCameOut.push(item))
+let a = arrPeopleWhoCame.reduce((acc, item)=> acc+item)
+let b = arrPeopleWhoCameOut.reduce((acc, item)=> acc+item)
+console.log(arrPeopleWhoCame)
+console.log(arrPeopleWhoCameOut)
+return a-b
+}
+console.log(busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]));
+//  Задача 48
+
+// const likes = (arr) => {
+//      if (arr.length == 0) {
+//         return 'no one like this'
+//     }
+// for(let i = 0; i < arr.length; i++){
+//       if(arr.length === 1){
+//         return `${arr[0]} like this`
+//     }else if(arr.length === 2){
+//         return `${arr[0]} and ${arr[1]} like this`
+//     }else if(arr.length === 3){
+//         return `${arr[0]}, ${arr[1]} and ${arr[2]} like this`
+
+//     }else if(arr.length >=4){
+//         let a = arr.splice(2)
+//         return `${arr[0]}, ${arr[1]} and ${a.length} others like this`
+
+//     } 
+
+// }
+// }
+
+// console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']))
+
+
 
 // Задача 49
 // function findMissingLetter(arr) {

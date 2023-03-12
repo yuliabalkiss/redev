@@ -1003,16 +1003,11 @@
 
 // Задача 18
 // const palindrome = (str) =>  {
-//   let arr =  str.split('')
-// if(arr.join('') === arr.reverse().join('')){
-//     return true
-// }else {
-//     return false
+// let arr =  str.split('')
+// return arr.join('') === arr.reverse().join('')
 // }
 
-// }
-
-// console.log(palindrome('43291234'))
+// console.log(palindrome('43211234'))
 // Задача 19
 // function countCats(arr) {
 //     let count = 0
@@ -1165,7 +1160,31 @@
 
 
 // console.log(func(array))
+// Задача 41
 
+// function sum (arg){
+//     const countSum = function (arg, res){
+//     if(arg === undefined)
+//     return res;
+//         res = (res || 0) + arg
+//         return function (arg){
+//             return countSum(arg,res);
+//         }
+//     }
+//     return countSum(arg)
+// }
+
+
+// console.log(sum(1)(2)(3)())
+
+// function sum (n){
+//     return (f)=> {
+//         n
+//         return f
+//     }
+//     return f
+// }
+// console.log(sum(1))
 
 // Задача 43
 // function maskify(str) {
@@ -1218,10 +1237,10 @@
 // console.log(busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]));
 
 // Задача 47
-const anagrams = (str,arr) =>{
- console.log(arr.filter((item)=>item === str ))
-}
-console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
+// const anagrams = (str,arr) =>{
+//  console.log(arr.filter((item)=>item === str ))
+// }
+// console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
 //  Задача 48
 
 // const likes = (arr) => {
@@ -1251,7 +1270,7 @@ console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
 
 // Задача 49
 // function findMissingLetter(arr) {
-    
+
 
 //     return arr.includes(3)
 
@@ -1261,14 +1280,21 @@ console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
 // console.log(findMissingLetter([1, 2, 3]))
 
 // Задача 50
-// function moveZeros(arr) {
-//     const zeroItems = arr.map((item) => item === 0);
-//     console.log(zeroItems)
+function moveZeros(arr) {
+
+    const zeroItems = arr.filter((item, index) => {
+        if (item === 0) {
+            return arr.splice(item, 1)
 
 
-// }
+        }
 
-// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+    })
+
+    return zeroItems
+}
+
+console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
 
 
 // const arrv = [1, 2, 3]

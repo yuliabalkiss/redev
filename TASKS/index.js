@@ -924,8 +924,13 @@
 // console.log(correctPin('12736'))
 
 // Задача 6
-// Задача 7
 
+// Задача 7
+// let str = 'The world is not what we think it is';
+// String.prototype.toJadenCase =  function(str)  {
+//    return  this.split(' ').map((item)=>item.slice(0,1).toUpperCase()+item.slice(1)).join(' ')
+// }
+// console.log(str.toJadenCase());
 // Задача 8
 // function minMaxItem(arr) {
 //     let newArr = []
@@ -1047,16 +1052,16 @@
 // console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
 
 // Задача 20
-function factorial  (n, res) {
-    res = res || 1
- if(!n){
-    return res
+// function factorial  (n, res) {
+//     res = res || 1
+//  if(!n){
+//     return res
    
- }else{
-    return factorial(n-1, res * n)
- }
-}
-console.log(factorial(5))
+//  }else{
+//     return factorial(n - 1, res * n)
+//  }
+// }
+// console.log(factorial(5))
 // function f (n,res){
 // res =res|| 1
 //     for(let i = 1 ; i<=n; i++){

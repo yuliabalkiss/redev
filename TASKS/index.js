@@ -982,8 +982,23 @@
 // }
 // console.log(getString(5))
 
+// Задача 15
+// function sortStr(str) {
+//     let arr = []
+//     let a = str.split(' ')
+//     for (let i = 0; i < a.length; i++) {
 
 
+//         if (a[i].includes(str.match(/[1-9]/))) {
+//             return [i]
+
+//         }
+//         return arr
+
+//     }
+//     // return a[i]
+// }
+// console.log(sortStr('is2 Thi1s T4est 3a'))
 //  Задача 16
 // const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
 // console.log(reversString('This is an example!'));
@@ -1063,6 +1078,15 @@
 
 // console.log(capitalizeFirstLetter('пример строки'))
 
+// Задача 26
+
+// let str = 'abc def ghi jkl mno pqr stu';
+
+// String.prototype.startsWith = function(start) {
+//     return this.includes(start)
+// };
+
+// console.log(str.startsWith('abc'))
 // Задача 27
 // let str = 'abc def lom abc abc def'
 // const replaceAll = (find, replace, string) => {
@@ -1083,6 +1107,13 @@
 
 // console.log(removeDuplicate(str));
 
+//  Задача 29
+// function unique_letters(str) {
+//     str = new Set(str)
+//     return Array.from(str).join('')
+// };
+
+// console.log(unique_letters('anaconda'))
 
 // Задача 30
 // const alphabetize = str => str.split('').sort().join('')
@@ -1113,6 +1144,15 @@
 //     return str1.toLowerCase() === str2.toLowerCase()
 // };
 
+// Задача 34
+// let str = "Каждый охотник желает знать";
+// let str1 = "скрипт";
+// let str2 = "знать";
+// String.prototype.endsWith = function(substring) {
+// return this.includes(substring)
+// };
+// console.log(str.endsWith(str2))
+
 // console.log(comparison('string', 'StRiNg'))
 // Задача 35
 // let vegetables = ['Капуста', 'Репа', 'Редиска'];
@@ -1122,6 +1162,16 @@
 // }
 // console.log(arrayClone(vegetables))
 
+// Задача 36
+// function colonOdd (num) {
+
+// let str = num.toString().split('')
+// return str
+
+
+// }
+
+// console.log(colonOdd(55639217))
 
 // Задача 37
 // let arr = ["php", "php", "css", "css",
@@ -1259,7 +1309,7 @@
 //         let a = arr.splice(2)
 //         return `${arr[0]}, ${arr[1]} and ${a.length} others like this`
 
-//     } 
+//     }
 
 // }
 // }
@@ -1270,31 +1320,32 @@
 
 // Задача 49
 // function findMissingLetter(arr) {
+//     let alphabet = "abcdefghijklmnopqrstuvwxyz";
+//     let alf = alphabet.split('')
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let value of alf)
+//             if (arr[i] !== value)
+              
 
-
-//     return arr.includes(3)
-
-
+//     }
+//     console.log(arr[i])
+//     return alf
 
 // }
-// console.log(findMissingLetter([1, 2, 3]))
-
+// console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']))
 // Задача 50
-function moveZeros(arr) {
+// function moveZeros(arr) {
 
-    const zeroItems = arr.filter((item, index) => {
-        if (item === 0) {
-            return arr.splice(item, 1)
+//     const zeroItems = arr.filter((item, index) => {
+//         if (item === 0) {
+//             return arr.splice(item, 1)
+//         }
+//     })
 
+//     return zeroItems
+// }
 
-        }
-
-    })
-
-    return zeroItems
-}
-
-console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
 
 
 // const arrv = [1, 2, 3]

@@ -1046,7 +1046,27 @@
 // }
 // console.log(countCats([[0, 1, "^^"], [9, "^^", 2], ["^^", 8, 7]]))
 
+// Задача 20
+function factorial  (n, res) {
+    res = res || 1
+ if(!n){
+    return res
+   
+ }else{
+    return factorial(n-1, res * n)
+ }
+}
+console.log(factorial(5))
+// function f (n,res){
+// res =res|| 1
+//     for(let i = 1 ; i<=n; i++){
+      
+// res = res*i
 
+//     }
+//     return res
+// }
+// console.log(f(5))
 // Задача 21
 // const createDreamTeam = array => {
 //     const arrStrings = array.filter((item) => typeof item === 'string');

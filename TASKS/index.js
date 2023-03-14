@@ -986,7 +986,13 @@
 //     return arr.join(',')
 // }
 // console.log(getString(5))
+// Задача 14
+// const sumMin = (arr) => {
+//  let a =(arr.filter((item)=>item > 0))
+// return 
 
+// }
+// console.log(sumMin([12,423,54,1235,3,15,2,52])) 
 // Задача 15
 // function sortStr(str) {
 //     let arr = []
@@ -1108,7 +1114,7 @@
 // let str = 'abc def ghi jkl mno pqr stu';
 
 // String.prototype.startsWith = function(start) {
-//     return this.includes(start)
+//     return this.substring(0,start.length)===start
 // };
 
 // console.log(str.startsWith('abc'))
@@ -1174,7 +1180,8 @@
 // let str1 = "скрипт";
 // let str2 = "знать";
 // String.prototype.endsWith = function(substring) {
-// return this.includes(substring)
+
+// return this.substr(this.length-substring.length) === substring
 // };
 // console.log(str.endsWith(str2))
 
@@ -1189,9 +1196,9 @@
 
 // Задача 36
 // function colonOdd (num) {
+// num = num.toString()
 
-// let str = num.toString().split('')
-// return str
+// return num.split('').map((item,index,array)=>array[index] % 2 === 1 && array[index+1] %  2 === 1? item + ':' : item).join('')
 
 
 // }

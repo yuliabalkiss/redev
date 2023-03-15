@@ -987,12 +987,18 @@
 // }
 // console.log(getString(5))
 // Задача 14
-// const sumMin = (arr) => {
-//  let a =(arr.filter((item)=>item > 0))
-// return 
+const sumMin = (arr) => {
+    const newArr = arr.filter((item) => item > 0)
+    if (newArr.length >= 4) {
+        newArr.sort((a, b) => a - b)
+    } else {
+        return 'мало положительных чисел'
+    }
 
-// }
-// console.log(sumMin([12,423,54,1235,3,15,2,52])) 
+    return newArr.slice(0, 2).reduce((acc, el) => acc + el)
+
+}
+console.log(sumMin([12, 423, 54, 1235, 3, 15, 2, 52]))
 // Задача 15
 // function sortStr(str) {
 //     let arr = []
@@ -1062,7 +1068,7 @@
 //     res = res || 1
 //  if(!n){
 //     return res
-   
+
 //  }else{
 //     return factorial(n - 1, res * n)
 //  }
@@ -1071,7 +1077,7 @@
 // function f (n,res){
 // res =res|| 1
 //     for(let i = 1 ; i<=n; i++){
-      
+
 // res = res*i
 
 //     }
@@ -1231,17 +1237,16 @@
 // Задача 40
 // let array = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 7];
 
-// function func(arr, h) {
+// function f(arr) {
+//     const countItem = new Set(arr)
 
-// for(let i =0, count = arr.length; i < count; ++i){
-//     let key = h(arr[i])
+//     console.log(countItem.size)
+
 
 // }
 
-// }
 
-
-// console.log(func(array))
+// console.log(f(array))
 // Задача 41
 
 // function sum (arg){
@@ -1267,7 +1272,18 @@
 //     return f
 // }
 // console.log(sum(1))
+//  Задача 42
+// const arrStrings = () => {
+//     counts= 0
+//     for(let value of arguments){
+//         if(arguments){
+//             counts++
+//         }
+//     }
 
+//  console.log(counts)
+// }
+// console.log(arrStrings())
 // Задача 43
 // function maskify(str) {
 //     let numbersItem = str.split('')
@@ -1320,21 +1336,21 @@
 
 // Задача 47
 
-const anagrams = (str,arr) => {
-    str = str.split('').sort().join('');
-    const arrAnagrams = arr.filter((item) => {
-    if(item.split('').sort().join('') === str) {
-        return item
-    }  else {
-        return ''
-    }
-}
-    )   
-  return arrAnagrams  
-}
+// const anagrams = (str,arr) => {
+//     str = str.split('').sort().join('');
+//     const arrAnagrams = arr.filter((item) => {
+//     if(item.split('').sort().join('') === str) {
+//         return item
+//     }  else {
+//         return ''
+//     }
+// }
+//     )
+//   return arrAnagrams
+// }
 
 
-console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa','ddat','dada']))
+// console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa','ddat','dada']))
 //  Задача 48
 
 // const likes = (arr) => {
@@ -1365,15 +1381,9 @@ console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa','ddat','dada']))
 // Задача 49
 // function findMissingLetter(arr) {
 //     let alphabet = "abcdefghijklmnopqrstuvwxyz";
-//     let alf = alphabet.split('')
-//     for (let i = 0; i < arr.length; i++) {
-//         for (let value of alf)
-//             if (arr[i] !== value)
-              
+//     const arrLetters = alphabet.split('').s
 
-//     }
-//     console.log(arr[i])
-//     return alf
+
 
 // }
 // console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']))

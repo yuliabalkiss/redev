@@ -987,18 +987,18 @@
 // }
 // console.log(getString(5))
 // Задача 14
-const sumMin = (arr) => {
-    const newArr = arr.filter((item) => item > 0)
-    if (newArr.length >= 4) {
-        newArr.sort((a, b) => a - b)
-    } else {
-        return 'мало положительных чисел'
-    }
+// const sumMin = (arr) => {
+//     const newArr = arr.filter((item) => item > 0)
+//     if (newArr.length >= 4) {
+//         newArr.sort((a, b) => a - b)
+//     } else {
+//         return 'мало положительных чисел'
+//     }
 
-    return newArr.slice(0, 2).reduce((acc, el) => acc + el)
+//     return newArr.slice(0, 2).reduce((acc, el) => acc + el)
 
-}
-console.log(sumMin([12, 423, 54, 1235, 3, 15, 2, 52]))
+// }
+// console.log(sumMin([12, 423, 54, 1235, 3, 15, 2, 52]))
 // Задача 15
 // function sortStr(str) {
 //     let arr = []

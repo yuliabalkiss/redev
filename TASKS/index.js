@@ -1319,11 +1319,7 @@
 // console.log(busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]));
 
 // Задача 47
-// const anagrams = (str,arr) =>{
-//   str = str.split('').sort().join('') 
-//  let newArr = arr.filter((item) => item.split('').sort().join('') === str)
-  
-//  }
+
 const anagrams = (str,arr) => {
     str = str.split('').sort().join('');
     const arrAnagrams = arr.filter((item) => {

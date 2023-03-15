@@ -1320,9 +1320,25 @@
 
 // Задача 47
 // const anagrams = (str,arr) =>{
-//  console.log(arr.filter((item)=>item === str ))
-// }
-// console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
+//   str = str.split('').sort().join('') 
+//  let newArr = arr.filter((item) => item.split('').sort().join('') === str)
+  
+//  }
+const anagrams = (str,arr) => {
+    str = str.split('').sort().join('');
+    const arrAnagrams = arr.filter((item) => {
+    if(item.split('').sort().join('') === str) {
+        return item
+    }  else {
+        return ''
+    }
+}
+    )   
+  return arrAnagrams  
+}
+
+
+console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa','ddat','dada']))
 //  Задача 48
 
 // const likes = (arr) => {

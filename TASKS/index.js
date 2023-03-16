@@ -1000,22 +1000,26 @@
 // }
 // console.log(sumMin([12, 423, 54, 1235, 3, 15, 2, 52]))
 // Задача 15
+//
+
+
 // function sortStr(str) {
-//     let arr = []
-//     let a = str.split(' ')
-//     for (let i = 0; i < a.length; i++) {
-
-
-//         if (a[i].includes(str.match(/[1-9]/))) {
-//             return [i]
-
+//     const arrNum = str.match(/[1-9]/g).sort()
+//     str = str.split(' ')
+//     let newStr = ''
+//     for (let value of arrNum) {
+//         for (let k of str) {
+//             if (k.includes(value)) {
+//                 newStr += k + ' '
+//             }
 //         }
-//         return arr
 
 //     }
-//     // return a[i]
+//     newStr = newStr.trim()
+//     return newStr
 // }
 // console.log(sortStr('is2 Thi1s T4est 3a'))
+
 //  Задача 16
 // const reversString = (str) => str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
 // console.log(reversString('This is an example!'));
@@ -1254,17 +1258,46 @@
 // console.log(removeDuplicates(arr));
 
 // Задача 38
-// let array1 = [1, 2, 3, 4, 5];
+let array1 = [1, 2, 3, 4, 5];
 
-// let array2 = [4, 5, 6];
+let array2 = [4, 5, 6];
+let array3 = []
+// const sumArray = (arr1, arr2) => {
+//     let num;
+//     if (arr1.length > arr2.length) {
+//         num = arr1.length;
+//     } else {
+//         num = arr2.length
+//     }
+//     for (let i = 0; i < num; i++) {
 
-// const concatArray = (arr1, arr2) => {
-//     const newArr = arr1.map((item, index) => item + arr2[index])
-//     return newArr
+//         if (arr1[i] === 'undefined') {
+//             arr1.push(0);
+//             console.log(arr1[i])
+//         } else if (arr2[i] === 'undefined') {
 
+//             arr2.push(0);
+//             console.log(arr2[i])
+//         }
+//         array3.push(arr1[i] + arr2[i]);
+//     }
+//     return array3
 // }
 
-// console.log(concatArray(array1, array2))
+// function f(arr1, arr2) {
+//     arr1.length > arr2.length ? arr2.length = arr1.length : arr1.length = arr2.length
+//     console.log(arr1)
+//     console.log(arr2)
+//     arr1.filter((item, index, array) => item === "undefined" ? arr1.push(0) : item)
+//     console.log(arr1)
+//     return arr2.filter((item, index, array) => item === "undefined" ?  : item)
+//     console.log(arr2)
+//     return arr1.map((item, index) => item + arr2[index])
+// }
+// console.log(f(array1, array2))
+
+
+
 // Задача 39
 // let arr1 = [1, [2, [3, [4]]]];
 
@@ -1315,17 +1348,23 @@
 // }
 // console.log(sum(1))
 //  Задача 42
-// const arrStrings = () => {
-//     counts= 0
-//     for(let value of arguments){
-//         if(arguments){
-//             counts++
-//         }
-//     }
-
-//  console.log(counts)
+const arrStrings = ([...arg]) => {
+    const newArr = arg.map((item, index, arr) => {
+        item.toLowerCase().split('').sort().join('')
+        if (item === item) {
+            return true
+        } else {
+            return false
+        }
+    })
+    return newArr
+}
+console.log(arrStrings(['кто', "кто", 'кт']))
+// const arr = ['кит', "котt"]
+// function f(array) {
+//     return array.filter((item) => item === item ? item : '---')
 // }
-// console.log(arrStrings())
+// console.log(f(arr))
 // Задача 43
 // function maskify(str) {
 //     let numbersItem = str.split('')
@@ -1421,12 +1460,24 @@
 
 
 // Задача 49
+// const alphabet = "abcdefghijklmnopqrstuvwxyz";
 // function findMissingLetter(arr) {
-//     let alphabet = "abcdefghijklmnopqrstuvwxyz";
-//     const arrLetters = alphabet.split('').s
+//     let arrLetters = alphabet.split('')
+//     arrLetters.length = arr.length
+//     // console.log(arrLetters);
+//     // console.log(arr);
+//     let newArr = []
+//     for (let i = 0; i < arrLetters.length; i++) {
 
+//         for (let key of arr) {
 
+//             if (arrLetters[i] !== key) {
+//                 return arrLetters[i]
+//             }
+//         }
 
+//     }
+//     return newArr
 // }
 // console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']))
 // Задача 50

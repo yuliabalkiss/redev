@@ -1104,7 +1104,37 @@
 // console.log(typeof undefined)
 // console.log(typeof Infinity)
 
+// Задача 22
+function transform(arr) {
+    if (arr.includes('--double-next')) {
+        return arr.map((item, index, array) => item === '--double-next' ? array[index + 1] : item)
+    } else if (arr.includes('--double-prev')) {
+        return arr.map((item, index, array) => item === '--double-prev' ? array[index - 1] : item)
+    } else if (arr.includes('--discard-next')) {
+        arr.map((item, index, array) => item === '--discard-next' ? array.splice(index, 2) : item)
+        return arr
+    } else if (arr.includes('--discard-prev')) {
+        arr.map((item, index, array) => item === '--discard-prev' ? array.splice(index - 1, 2) : item)
+        return arr
+    }
 
+}
+console.log(transform([1, 3, '--double-next', 4]))
+console.log(transform([1, 3, '--double-prev', 4]))
+console.log(transform([1, 3, '--discard-next', 4]))
+console.log(transform([1, 3, '--discard-prev', 4]))
+
+
+// let a = [6, 8, 4, 3, 2,]
+// function f(arr) {
+//     if (a.includes(8)) {
+//         let ind = arr.indexOf(8)
+//         console.log(arr.splice(ind, 1))
+//         console.log(arr)
+//     }
+
+// }
+// console.log(f(a))
 // Задача 24
 // const isUpperCase = (str, character) => str[character] === str[character].toUpperCase() ? true : false
 // console.log(isUpperCase('tasks Java Script', 6))
@@ -1223,6 +1253,18 @@
 
 // console.log(removeDuplicates(arr));
 
+// Задача 38
+// let array1 = [1, 2, 3, 4, 5];
+
+// let array2 = [4, 5, 6];
+
+// const concatArray = (arr1, arr2) => {
+//     const newArr = arr1.map((item, index) => item + arr2[index])
+//     return newArr
+
+// }
+
+// console.log(concatArray(array1, array2))
 // Задача 39
 // let arr1 = [1, [2, [3, [4]]]];
 

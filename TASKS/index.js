@@ -1105,24 +1105,24 @@
 // console.log(typeof Infinity)
 
 // Задача 22
-function transform(arr) {
-    if (arr.includes('--double-next')) {
-        return arr.map((item, index, array) => item === '--double-next' ? array[index + 1] : item)
-    } else if (arr.includes('--double-prev')) {
-        return arr.map((item, index, array) => item === '--double-prev' ? array[index - 1] : item)
-    } else if (arr.includes('--discard-next')) {
-        arr.map((item, index, array) => item === '--discard-next' ? array.splice(index, 2) : item)
-        return arr
-    } else if (arr.includes('--discard-prev')) {
-        arr.map((item, index, array) => item === '--discard-prev' ? array.splice(index - 1, 2) : item)
-        return arr
-    }
+// function transform(arr) {
+//     if (arr.includes('--double-next')) {
+//         return arr.map((item, index, array) => item === '--double-next' ? array[index + 1] : item)
+//     } else if (arr.includes('--double-prev')) {
+//         return arr.map((item, index, array) => item === '--double-prev' ? array[index - 1] : item)
+//     } else if (arr.includes('--discard-next')) {
+//         arr.map((item, index, array) => item === '--discard-next' ? array.splice(index, 2) : item)
+//         return arr
+//     } else if (arr.includes('--discard-prev')) {
+//         arr.map((item, index, array) => item === '--discard-prev' ? array.splice(index - 1, 2) : item)
+//         return arr
+//     }
 
-}
-console.log(transform([1, 3, '--double-next', 4]))
-console.log(transform([1, 3, '--double-prev', 4]))
-console.log(transform([1, 3, '--discard-next', 4]))
-console.log(transform([1, 3, '--discard-prev', 4]))
+// }
+// console.log(transform([1, 3, '--double-next', 4]))
+// console.log(transform([1, 3, '--double-prev', 4]))
+// console.log(transform([1, 3, '--discard-next', 4]))
+// console.log(transform([1, 3, '--discard-prev', 4]))
 
 
 // let a = [6, 8, 4, 3, 2,]

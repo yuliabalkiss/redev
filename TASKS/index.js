@@ -927,12 +927,13 @@
 
 // function printer_error(str) {
 //     if (str.length >= 1 && !str.match(/[0-9]/g)) {
-//         return String(str.match(/[n-z]/ig).length / str.length)
+//         const numError = str.match(/[n-z]/ig).length
+//         return `${numError}/${str.length}`
 //     } else {
 //         return 'неправильные данные!'
 //     }
 // }
-// console.log(printer_error('45aaaxbbbbyyhwawiwjjjwwm'))
+// console.log(printer_error('aaaxbbbbyyhwawiwjjjwwm'))
 // Задача 7
 // let str = 'The world is not what we think it is';
 // String.prototype.toJadenCase =  function(str)  {
@@ -1266,31 +1267,31 @@
 // console.log(removeDuplicates(arr));
 
 // Задача 38
-// let array1 = [1, 2, 3, 4, 5];
+//
 
-// let array2 = [4, 5, 6];
-// let array3 = []
-// const sumArray = (arr1, arr2) => {
-//     let num;
-//     if (arr1.length > arr2.length) {
-//         num = arr1.length;
-//     } else {
-//         num = arr2.length
-//     }
-//     for (let i = 0; i < num; i++) {
+let array1 = [1, 2, 3, 4, 5];
+let array2 = [4, 5, 6];
+let array3 = []
+let newArr = []
+const sumArray = (arr1, arr2) => {
 
-//         if (arr1[i] === 'undefined') {
-//             arr1.push(0);
-//             console.log(arr1[i])
-//         } else if (arr2[i] === 'undefined') {
+    let num;
+    if (arr1.length > arr2.length) {
+        num = arr2.length
+        newArr = arr1.slice(arr2.length)
 
-//             arr2.push(0);
-//             console.log(arr2[i])
-//         }
-//         array3.push(arr1[i] + arr2[i]);
-//     }
-//     return array3
-// }
+    } else if (arr1.length < arr2.length) {
+        num = arr1.length
+        newArr = arr2.slice(arr1.length)
+
+    }
+    for (let i = 0; i < num; i++) {
+        array3.push(arr1[i] + arr2[i])
+    }
+    return array3.concat(newArr)
+}
+console.log(sumArray(array1, array2))
+
 
 // function f(arr1, arr2) {
 //     arr1.length > arr2.length ? arr2.length = arr1.length : arr1.length = arr2.length
@@ -1514,7 +1515,6 @@
 
 //     }
 //     return newArr
-
 
 
 // }

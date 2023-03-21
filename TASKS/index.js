@@ -925,14 +925,14 @@
 
 // Задача 6
 
-function printer_error(str) {
-    if (str.length >= 1 && !str.match(/[0-9]/g)) {
-        return String(str.match(/[n-z]/ig).length / str.length)
-    } else {
-        return 'неправильные данные!'
-    }
-}
-console.log(printer_error('45aaaxbbbbyyhwawiwjjjwwm'))
+// function printer_error(str) {
+//     if (str.length >= 1 && !str.match(/[0-9]/g)) {
+//         return String(str.match(/[n-z]/ig).length / str.length)
+//     } else {
+//         return 'неправильные данные!'
+//     }
+// }
+// console.log(printer_error('45aaaxbbbbyyhwawiwjjjwwm'))
 // Задача 7
 // let str = 'The world is not what we think it is';
 // String.prototype.toJadenCase =  function(str)  {

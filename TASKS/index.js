@@ -1269,41 +1269,31 @@
 // Задача 38
 //
 
-let array1 = [1, 2, 3, 4, 5];
-let array2 = [4, 5, 6];
-let array3 = []
-let newArr = []
-const sumArray = (arr1, arr2) => {
+// let array1 = [1, 2, 3, 4, 5];
+// let array2 = [4, 5, 6];
+// let array3 = []
+// let newArr = []
+// const sumArray = (arr1, arr2) => {
 
-    let num;
-    if (arr1.length > arr2.length) {
-        num = arr2.length
-        newArr = arr1.slice(arr2.length)
+//     let num;
+//     if (arr1.length > arr2.length) {
+//         num = arr2.length
+//         newArr = arr1.slice(arr2.length)
 
-    } else if (arr1.length < arr2.length) {
-        num = arr1.length
-        newArr = arr2.slice(arr1.length)
+//     } else if (arr1.length < arr2.length) {
+//         num = arr1.length
+//         newArr = arr2.slice(arr1.length)
 
-    }
-    for (let i = 0; i < num; i++) {
-        array3.push(arr1[i] + arr2[i])
-    }
-    return array3.concat(newArr)
-}
-console.log(sumArray(array1, array2))
-
-
-// function f(arr1, arr2) {
-//     arr1.length > arr2.length ? arr2.length = arr1.length : arr1.length = arr2.length
-//     console.log(arr1)
-//     console.log(arr2)
-//     arr1.filter((item, index, array) => item === "undefined" ? arr1.push(0) : item)
-//     console.log(arr1)
-//     return arr2.filter((item, index, array) => item === "undefined" ?  : item)
-//     console.log(arr2)
-//     return arr1.map((item, index) => item + arr2[index])
+//     }
+//     for (let i = 0; i < num; i++) {
+//         array3.push(arr1[i] + arr2[i])
+//     }
+//     return array3.concat(newArr)
 // }
-// console.log(f(array1, array2))
+// console.log(sumArray(array1, array2))
+
+
+
 
 
 
@@ -1385,18 +1375,13 @@ console.log(sumArray(array1, array2))
 // }
 // console.log(sum(1))
 //  Задача 42
-// const arrStrings = ([...arg]) => {
-//     const newArr = arg.map((item, index, arr) => {
-//         item.toLowerCase().split('').sort().join('')
-//         if (item === item) {
-//             return true
-//         } else {
-//             return false
-//         }
-//     })
-//     return newArr
-// }
-// console.log(arrStrings(['кто', "кто", 'кт']))
+const arrStrings = ([...arg]) => {
+    const newArr = arg.map((item, index, arr) => item.toLowerCase().split('').sort().join(''))
+    console.log(newArr)
+
+
+}
+console.log(arrStrings(['кто', "кот", 'ток']))
 // const arr = ['кит', "котt"]
 // function f(array) {
 //     return array.filter((item) => item === item ? item : '---')
@@ -1418,6 +1403,7 @@ console.log(sumArray(array1, array2))
 //     }
 //     return numbersItem.join('')
 // }
+
 // console.log(maskify('4556364607935616'))
 
 // Задача 44

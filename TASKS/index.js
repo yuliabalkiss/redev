@@ -1376,17 +1376,24 @@
 // console.log(sum(1))
 //  Задача 42
 const arrStrings = ([...arg]) => {
+    if ([...arg].length <= 1) {
+        return false
+    }
     const newArr = arg.map((item, index, arr) => item.toLowerCase().split('').sort().join(''))
-    console.log(newArr)
+    const firstWord = arg[0]
+
+    for (let i = 1; i < newArr.length; i++) {
+        if (newArr[i] !== firstWord) {
+            return false;
 
 
+        }
+
+    }
+    return true
 }
-console.log(arrStrings(['кто', "кот", 'ток']))
-// const arr = ['кит', "котt"]
-// function f(array) {
-//     return array.filter((item) => item === item ? item : '---')
-// }
-// console.log(f(arr))
+console.log(arrStrings(["кот", "тк", "кТо"]))
+
 // Задача 43
 // function maskify(str) {
 //     let numbersItem = str.split('')

@@ -925,6 +925,14 @@
 
 // Задача 6
 
+function printer_error(str) {
+    if (str.length >= 1 && !str.match(/[0-9]/g)) {
+        return String(str.match(/[n-z]/ig).length / str.length)
+    } else {
+        return 'неправильные данные!'
+    }
+}
+console.log(printer_error('45aaaxbbbbyyhwawiwjjjwwm'))
 // Задача 7
 // let str = 'The world is not what we think it is';
 // String.prototype.toJadenCase =  function(str)  {
@@ -1258,10 +1266,10 @@
 // console.log(removeDuplicates(arr));
 
 // Задача 38
-let array1 = [1, 2, 3, 4, 5];
+// let array1 = [1, 2, 3, 4, 5];
 
-let array2 = [4, 5, 6];
-let array3 = []
+// let array2 = [4, 5, 6];
+// let array3 = []
 // const sumArray = (arr1, arr2) => {
 //     let num;
 //     if (arr1.length > arr2.length) {
@@ -1310,18 +1318,46 @@ let array3 = []
 // console.log(expand(arr2))
 
 // Задача 40
-// let array = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 7];
+// let array = ['a', 'a', 'z', 'z', 'z', 'a', 'z', 'c', 'z',];
 
 // function f(arr) {
-//     const countItem = new Set(arr)
 
-//     console.log(countItem.size)
+//     let map = new Map();
+//     for (let value of arr) {
+//         let counter = map.get(value);
+//         map.set(value, counter ? counter + 1 : 1)
+
+//     }
 
 
 // }
 
 
-// console.log(f(array))
+// function a(arr) {
+//     const obj = {};
+//     let count = 0;
+//     let max = 0;
+//     let el = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         if (obj[arr[i]] != true) {
+//             for (let k = i; k < arr.length; k++) {
+//                 if (arr[i] == arr[k]) {
+//                     count++;
+//                 }
+
+//             }
+//             if (count > max) {
+//                 max = count;
+//                 el = arr[i]
+//             }
+//             count = 0;
+//         }
+//         obj[arr[i]] = true;
+//     }
+//     return el
+// }
+
+// console.log(a(array))
 // Задача 41
 
 // function sum (arg){
@@ -1348,18 +1384,18 @@ let array3 = []
 // }
 // console.log(sum(1))
 //  Задача 42
-const arrStrings = ([...arg]) => {
-    const newArr = arg.map((item, index, arr) => {
-        item.toLowerCase().split('').sort().join('')
-        if (item === item) {
-            return true
-        } else {
-            return false
-        }
-    })
-    return newArr
-}
-console.log(arrStrings(['кто', "кто", 'кт']))
+// const arrStrings = ([...arg]) => {
+//     const newArr = arg.map((item, index, arr) => {
+//         item.toLowerCase().split('').sort().join('')
+//         if (item === item) {
+//             return true
+//         } else {
+//             return false
+//         }
+//     })
+//     return newArr
+// }
+// console.log(arrStrings(['кто', "кто", 'кт']))
 // const arr = ['кит', "котt"]
 // function f(array) {
 //     return array.filter((item) => item === item ? item : '---')
@@ -1478,6 +1514,9 @@ console.log(arrStrings(['кто', "кто", 'кт']))
 
 //     }
 //     return newArr
+
+
+
 // }
 // console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']))
 // Задача 50

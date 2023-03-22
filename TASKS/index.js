@@ -1375,24 +1375,24 @@
 // }
 // console.log(sum(1))
 //  Задача 42
-const arrStrings = ([...arg]) => {
-    if ([...arg].length <= 1) {
-        return false
-    }
-    const newArr = arg.map((item, index, arr) => item.toLowerCase().split('').sort().join(''))
-    const firstWord = arg[0]
+// const arrStrings = ([...arg]) => {
+//     if ([...arg].length <= 1) {
+//         return false
+//     }
+//     const newArr = arg.map((item, index, arr) => item.toLowerCase().split('').sort().join(''))
+//     const firstWord = arg[0]
 
-    for (let i = 1; i < newArr.length; i++) {
-        if (newArr[i] !== firstWord) {
-            return false;
+//     for (let i = 1; i < newArr.length; i++) {
+//         if (newArr[i] !== firstWord) {
+//             return false;
 
 
-        }
+//         }
 
-    }
-    return true
-}
-console.log(arrStrings(["кот", "тк", "кТо"]))
+//     }
+//     return true
+// }
+// console.log(arrStrings(["кот", "тк", "кТо"]))
 
 // Задача 43
 // function maskify(str) {
@@ -1490,26 +1490,22 @@ console.log(arrStrings(["кот", "тк", "кТо"]))
 
 
 // Задача 49
+
+
 // const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
 // function findMissingLetter(arr) {
-//     let arrLetters = alphabet.split('')
-//     arrLetters.length = arr.length
-//     // console.log(arrLetters);
-//     // console.log(arr);
-//     let newArr = []
-//     for (let i = 0; i < arrLetters.length; i++) {
-
-//         for (let key of arr) {
-
-//             if (arrLetters[i] !== key) {
-//                 return arrLetters[i]
-//             }
-//         }
-
+//     if (arr.length < 2) {
+//         return false
 //     }
-//     return newArr
-
-
+//     let newString = arr.join('')
+//     let partStr = alphabet.slice(0, newString.length + 1)
+//     let el = []
+//     for (let i = 0; i < partStr.length; i++) {
+//         if (newString.indexOf(partStr[i]) === -1)
+//             el.push(partStr[i])
+//     }
+//     return el
 // }
 // console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']))
 // Задача 50

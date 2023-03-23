@@ -1087,11 +1087,11 @@
 //  }
 // }
 // console.log(factorial(5))
-// function f (n,res){
-// res =res|| 1
-//     for(let i = 1 ; i<=n; i++){
+// function f(n, res) {
+//     res = res || 1
+//     for (let i = 1; i <= n; i++) {
 
-// res = res*i
+//         res = res * i
 
 //     }
 //     return res
@@ -1148,6 +1148,24 @@
 
 // }
 // console.log(f(a))
+
+// Задача 23
+
+// const chainMaker = {
+//     chain = {},
+//     getLength() {
+//         return this.chain.length;
+
+//     },
+//     addLink() {
+
+//     }
+
+// }
+
+
+
+
 // Задача 24
 // const isUpperCase = (str, character) => str[character] === str[character].toUpperCase() ? true : false
 // console.log(isUpperCase('tasks Java Script', 6))
@@ -1351,13 +1369,13 @@
 // console.log(a(array))
 // Задача 41
 
-// function sum (arg){
-//     const countSum = function (arg, res){
-//     if(arg === undefined)
-//     return res;
+// function sum(arg) {
+//     const countSum = function (arg, res) {
+//         if (arg === undefined)
+//             return res;
 //         res = (res || 0) + arg
-//         return function (arg){
-//             return countSum(arg,res);
+//         return function (arg) {
+//             return countSum(arg, res);
 //         }
 //     }
 //     return countSum(arg)
@@ -1366,8 +1384,8 @@
 
 // console.log(sum(1)(2)(3)())
 
-// function sum (n){
-//     return (f)=> {
+// function sum(n) {
+//     return (f) => {
 //         n
 //         return f
 //     }
@@ -1499,15 +1517,17 @@
 //         return false
 //     }
 //     let newString = arr.join('')
-//     let partStr = alphabet.slice(0, newString.length + 1)
+//     let index = alphabet.indexOf(newString[0]);
+//     let partStr = alphabet.substr(index, newString.length + 1)
 //     let el = []
 //     for (let i = 0; i < partStr.length; i++) {
+
 //         if (newString.indexOf(partStr[i]) === -1)
 //             el.push(partStr[i])
 //     }
 //     return el
 // }
-// console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']))
+// console.log(findMissingLetter(['g', 'h', 'i', 'j', 'l']))
 // Задача 50
 // function moveZeros(arr) {
 

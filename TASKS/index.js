@@ -1153,16 +1153,43 @@
 // Задача 23
 
 // const chainMaker = {
-//     chain = {},
-//     getLength() {
-//         return this.chain.length;
+//     chain: [],
+//     getLength: function () {
+//         this.chain.length;
+//         return this;
+//     },
+//     addLink: function (value) {
+//         if (!value) {
+//             this.chain.push(`()`)
+
+//         } else {
+//             this.chain.push((`(${value})`));
+//         }
+//         return this
+//     },
+//     removeLink: function (position) {
+//         if (typeof position !== 'number' || position > this.chain.length) {
+//             console.log('недопустимая позиция')
+//             return this
+//         } else {
+//             this.chain.splice(position - 1, 1)
+//             return this;
+//         }
+
 
 //     },
-//     addLink() {
+//     reverseChain: function () {
+//         this.chain.reverse();
+//         return this
+//     },
+//     finishChain: function () {
+//         return this.chain.join(' ~~ ');
+//     },
 
-//     }
 
 // }
+
+// console.log(chainMaker.addLink(1).addLink(4).addLink(8).removeLink(6).addLink(3).finishChain())
 
 
 
@@ -1393,6 +1420,7 @@
 //     return f
 // }
 // console.log(sum(1))
+
 //  Задача 42
 // const arrStrings = ([...arg]) => {
 //     if ([...arg].length <= 1) {

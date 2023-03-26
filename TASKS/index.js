@@ -1417,15 +1417,21 @@
 
 
 // console.log(sum(1)(2)(3)())
+function sum(arg1, arg2, arg3) {
+    return arg1 + arg2 + arg3
+}
 
-// function sum(n) {
-//     return (f) => {
-//         n
-//         return f
-//     }
-//     return f
-// }
-// console.log(sum(1))
+function carrySum(f) {
+    return function (arg1) {
+        return function (arg2) {
+            return function (arg3) {
+                return f(arg1, arg2, arg3)
+            };
+        };
+    };
+
+}
+console.log(carrySum(sum)(1)(5)(3))
 
 //  Задача 42
 // const arrStrings = ([...arg]) => {

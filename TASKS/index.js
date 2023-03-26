@@ -1438,20 +1438,13 @@
 //     if ([...arg].length <= 1) {
 //         return false
 //     }
-//     const newArr = arg.map((item, index, arr) => item.toLowerCase().split('').sort().join(''))
-//     const firstWord = arg[0]
+//     const firstWord = arg[0].split('').sort().join('')
 
-//     for (let i = 1; i < newArr.length; i++) {
-//         if (newArr[i] !== firstWord) {
-//             return false;
+//     const newArr = arg.map((item, index, arr) => item.toLowerCase().split('').sort().join('')).find((item) => item !== firstWord) ? false : true
 
-
-//         }
-
-//     }
-//     return true
+//     return newArr
 // }
-// console.log(arrStrings(["кот", "тк", "кТо"]))
+// console.log(arrStrings(["кто", "кто", "тОк"]))
 
 // Задача 43
 // function maskify(str) {

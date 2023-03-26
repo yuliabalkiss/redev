@@ -1088,6 +1088,7 @@
 //  }
 // }
 // console.log(factorial(5))
+// =======================================================
 // function f(n, res) {
 //     res = res || 1
 //     for (let i = 1; i <= n; i++) {
@@ -1098,6 +1099,11 @@
 //     return res
 // }
 // console.log(f(5))
+// ==========================================================
+// function f(n) {
+//     return n > 1 ? n * f(n - 1) : 1
+//     }
+//     console.log(f(5))
 // Задача 21
 // const createDreamTeam = array => {
 //     const arrStrings = array.filter((item) => typeof item === 'string');

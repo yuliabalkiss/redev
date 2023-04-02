@@ -1606,9 +1606,17 @@
 // ];
 
 // console.log(unique(values)); // Hare,Krishna,:-O
-const arr = ["Minsk", 'Grodno', 'Mogilev', ' Brest', 'Vitebsk', 'Gomel'];
 
-let [seven, four, six, one, two, three] = arr;
+
+
+// ==============================Деструктурирующее присваивание ===========================
+// const arr = ["Minsk", 'Grodno', 'Mogilev', ' Brest', 'Vitebsk', 'Gomel'];
+
+
+// let [seven, four, six, ...all] = arr;
+// console.log(seven);
+// console.log(six);
+// console.log(all);
 
 
 // const user = {
@@ -1617,4 +1625,6 @@ let [seven, four, six, one, two, three] = arr;
 //     phone: '796-13-55',
 
 // }
-
+// let { age: myAge, ...rest } = user;
+// console.log(myAge);
+// console.log(rest);

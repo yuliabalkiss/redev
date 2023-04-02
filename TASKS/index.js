@@ -1606,5 +1606,15 @@
 // ];
 
 // console.log(unique(values)); // Hare,Krishna,:-O
+const arr = ["Minsk", 'Grodno', 'Mogilev', ' Brest', 'Vitebsk', 'Gomel'];
 
+let [seven, four, six, one, two, three] = arr;
+
+
+// const user = {
+//     name: "Yulia",
+//     age: 34,
+//     phone: '796-13-55',
+
+// }
 

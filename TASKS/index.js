@@ -1688,10 +1688,10 @@
 // console.log(strJs)
 
 //  ==========================================Object Date=============================================
-let date = new Date();
-let date2 = new Date(Date.parse(date))
-console.log(date);
-console.log(date2);
+// let date = new Date();
+// let date2 = new Date(Date.parse(date))
+// console.log(date);
+// console.log(date2);
 // console.log(data.getFullYear());
 // console.log(data.getMonth());
 // console.log(data.getDate());

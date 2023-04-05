@@ -1628,3 +1628,59 @@
 // let { age: myAge, ...rest } = user;
 // console.log(myAge);
 // console.log(rest);
+
+// let user = {
+//     name: 'John',
+//     years: 30,
+// }
+// let { name, years: age, isAdmin = false } = user;
+// console.log(name);
+// console.log(age);
+// console.log(isAdmin);
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250,
+// };
+// const topSalary = (obj) => {
+//     let max = 0;
+//     let maxName = '';
+//     for (let [name, salary] of Object.entries(obj)) {
+
+//         if (max < salary) {
+//             max = salary;
+//             maxName = name
+
+//         }
+
+//     }
+//     return maxName
+
+// }
+
+// console.log(topSalary(salaries));
+
+// const strJs = JSON.parse(JSON.stringify(salaries))
+// console.log(typeof strJs)
+
+let room = {
+    number: 23
+};
+
+let meetup = {
+    title: "Совещание",
+    occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+    place: room
+};
+// цикличные ссылки
+room.occupiedBy = meetup;
+meetup.self = meetup;
+const strJs = JSON.stringify(meetup, function replacer(key, value) {
+    if (key != '' && value == meetup) {
+        value = undefined
+    }
+    return value
+})
+
+console.log(strJs)

@@ -1661,26 +1661,39 @@
 
 // console.log(topSalary(salaries));
 
+
+// ===============JSON формат=====================================================================================
 // const strJs = JSON.parse(JSON.stringify(salaries))
 // console.log(typeof strJs)
 
-let room = {
-    number: 23
-};
+// let room = {
+//     number: 23
+// };
 
-let meetup = {
-    title: "Совещание",
-    occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
-    place: room
-};
-// цикличные ссылки
-room.occupiedBy = meetup;
-meetup.self = meetup;
-const strJs = JSON.stringify(meetup, function replacer(key, value) {
-    if (key != '' && value == meetup) {
-        value = undefined
-    }
-    return value
-})
+// let meetup = {
+//     title: "Совещание",
+//     occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+//     place: room
+// };
+// // цикличные ссылки
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
+// const strJs = JSON.stringify(meetup, function replacer(key, value) {
+//     if (key != '' && value == meetup) {
+//         value = undefined
+//     }
+//     return value
+// })
 
-console.log(strJs)
+// console.log(strJs)
+
+//  ==========================================Object Date=============================================
+let date = new Date();
+let date2 = new Date(Date.parse(date))
+console.log(date);
+console.log(date2);
+// console.log(data.getFullYear());
+// console.log(data.getMonth());
+// console.log(data.getDate());
+// console.log(data.getHours());
+// console.log(data.getDay());

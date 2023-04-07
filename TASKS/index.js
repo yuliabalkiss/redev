@@ -1607,8 +1607,54 @@
 
 // console.log(unique(values)); // Hare,Krishna,:-O
 
+// const user = {
+//     name: "Yulia",
+//     age: 34,
+//     phone: ' 456834653405',
+//     adress: { country: 'Belarus', city: 'Minsk' },
+//     isman: false,
+// }
 
+// const a = structuredClone(user)
 
+// console.log(a);
+// const user1 = Object.entries(user);
+// const userMap = new Map(user1)
+// userMap.set('one', 1)
+// let a = userMap.get('adress')
+// console.log(user1);
+// console.log(userMap);
+// console.log(a);
+
+const a = {
+    name: 'Bob',
+    age: 35,
+}
+
+// const myUser = new Map(Object.entries(a)); // преобразовываем объект в массив!!!
+// console.log(myUser);
+// console.log(myUser.keys())
+// console.log(myUser.values())
+// console.log(myUser.entries())
+
+// const map = new Map();
+// map
+//     .set('one', 1)
+//     .set('two', 2)
+//     .set('three', 3)
+// console.log(map.get('two'));
+// console.log(map.size)
+// console.log(map.has('two'))
+// map.delete('three')
+// console.log(map.size);
+// console.log(map);
+// const modObj = Object.fromEntries(map)
+// console.log(modObj);
+
+const b = new Set([a])
+console.log(b);
+b.add('name')
+console.log(b);
 // ==============================Деструктурирующее присваивание ===========================
 // const arr = ["Minsk", 'Grodno', 'Mogilev', ' Brest', 'Vitebsk', 'Gomel'];
 

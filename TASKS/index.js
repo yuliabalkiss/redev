@@ -1651,10 +1651,25 @@ const a = {
 // const modObj = Object.fromEntries(map)
 // console.log(modObj);
 
-const b = new Set([a])
-console.log(b);
-b.add('name')
-console.log(b);
+// const b = new Set([a])
+// console.log(b);
+// b.add('name')
+// console.log(b);
+
+// function countWords(str) {
+//     let count = {};
+//     let arr = str.split(' ').map((item) => item.toLowerCase())
+//     // str.split(' ').map((item, index, array) => count[item.toLowerCase()] === undefined ? count[item] = 1 : count[item]++);
+//     for (let el of arr) {
+//         if (count[el] === undefined) {
+//             count[el] = 1;
+//         } else {
+//             count[el]++
+//         }
+//     }
+//     return new Map(Object.entries(count))
+// }
+// console.log(countWords("Я люблю маму, а так же я люблю JavaScript"))
 // ==============================Деструктурирующее присваивание ===========================
 // const arr = ["Minsk", 'Grodno', 'Mogilev', ' Brest', 'Vitebsk', 'Gomel'];
 

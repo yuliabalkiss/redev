@@ -1626,10 +1626,10 @@
 // console.log(userMap);
 // console.log(a);
 
-const a = {
-    name: 'Bob',
-    age: 35,
-}
+// const a = {
+//     name: 'Bob',
+//     age: 35,
+// }
 
 // const myUser = new Map(Object.entries(a)); // преобразовываем объект в массив!!!
 // console.log(myUser);
@@ -1750,11 +1750,26 @@ const a = {
 
 //  ==========================================Object Date=============================================
 // let date = new Date();
-// let date2 = new Date(Date.parse(date))
-// console.log(date);
-// console.log(date2);
-// console.log(data.getFullYear());
-// console.log(data.getMonth());
-// console.log(data.getDate());
-// console.log(data.getHours());
-// console.log(data.getDay());
+// // let date2 = new Date(Date.parse(date))
+// // console.log(date);
+// // console.log(date2);
+// console.log(date.getFullYear());
+// console.log(date.getMonth());
+// console.log(date.getDate());
+// console.log(date.getHours());
+// console.log(date.getDay());
+
+
+// ============================================= __proto__===================
+let user = {   // экземпляр прототипа
+    name: "Pavel"
+};
+
+let admin = {   // прототип
+    isAdmin: true
+};
+
+user.__proto__ = admin; // связь экземпляра с прототипом
+console.log(user.isAdmin); // true
+console.log(user.name)
+

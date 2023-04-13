@@ -1761,15 +1761,40 @@
 
 
 // ============================================= __proto__===================
-let user = {   // экземпляр прототипа
-    name: "Pavel"
-};
+// let user = {   // экземпляр прототипа
+//     name: "Pavel"
+// };
 
-let admin = {   // прототип
-    isAdmin: true
-};
+// let admin = {   // прототип
+//     isAdmin: true
+// };
 
-user.__proto__ = admin; // связь экземпляра с прототипом
-console.log(user.isAdmin); // true
-console.log(user.name)
+// user.__proto__ = admin; // связь экземпляра с прототипом
+// console.log(user.isAdmin); // true
+// console.log(user.name)
+
+// =============================== ЗамыканиЯ===========================
+// Scope - Область видимости
+// Замыкание - это функция внутри другой функции, замыкание даёт вам доступ к Scope (en-US) внешней функции из внутренней функции. 
+// 1.  Функция возвращает новые функции.
+// 2. Возвращаемые функции помнят контекст, где были созданы.
+
+function createFun() {
+    function greeting() {
+        return 'Hello world'
+    }
+    return greeting;
+}
+const func = a => {
+    return function (b) {
+        return a + b
+    }
+
+};
+const myFunc = func(5);
+const myFunc2 = myFunc(4);
+const myFunc3 = myFunc(4);
+console.log(myFunc);
+console.log(myFunc2);
+
 

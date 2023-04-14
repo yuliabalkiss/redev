@@ -1774,27 +1774,94 @@
 // console.log(user.name)
 
 // =============================== ЗамыканиЯ===========================
+// Функциональная область видимости — это область видимости в пределах тела функции.Можно сказать, что она ограничена { и } функции.К переменной b есть доступ только внутри функции scoped.Функциональная область видимости — очень мощный инструмент для разделения кода
 // // Scope - Область видимости
-// Замыкание - это функция внутри другой функции, замыкание даёт вам доступ к Scope (en-US) внешней функции из внутренней функции. 
+// Замыкание - это функция внутри другой функции, замыкание даёт вам доступ к Scope (en-US) внешней функции из внутренней функции.
 // 1.  Функция возвращает новые функции.
 // 2. Возвращаемые функции помнят контекст, где были созданы.
 
-function createFun() {
-    function greeting() {
-        return 'Hello world'
-    }
-    return greeting;
-}
-const func = a => {
-    return function (b) {
-        return a + b
-    }
+// function finedSum(a) {
+//     const c = 5;
+//     return function (b) {
+//         return (a * b) - c;
+//     }
+// }
 
-};
-const myFunc = func(5);
-const myFunc2 = myFunc(4);
-const myFunc3 = myFunc(4);
-console.log(myFunc);
-console.log(myFunc2);
+// const sumOne = finedSum(5);
+// const sumTwo = finedSum(10)
+// console.log(sumTwo(10));
+// console.log(typeof sumOne)
+// console.log(sumOne(3))
 
 
+// function createFun() {
+//     function greeting() {
+//         return 'Hello world'
+//     }
+//     return greeting;
+// }
+// const func = a => {
+//     return function (b) {
+//         return a + b
+//     }
+
+// };
+// const myFunc = func(5);
+// const myFunc2 = myFunc(4);
+// const myFunc3 = myFunc(4);
+// console.log(myFunc);
+// console.log(myFunc2);
+
+
+// =============================Привязка контекста с помощью методов bind(context), call(context), applay(context)===============
+// let user = {
+//     name: 'Yulia',
+//     age: 34,
+//     sayHi: function () {
+//         console.log('Hello')
+//     }
+// };
+// function fn() {
+//     console.log(this.sayHi());
+// }
+// let newFn = fn.bind(user)
+// console.log(newFn())
+
+// =======================================================
+// function askPassword(ok, fail) {
+//     let password = 'rockstar'
+//     if (password == "rockstar") ok();
+//     else fail();
+// }
+
+// let user = {
+//     name: 'Вася',
+
+//     loginOk() {
+//         console.log(`${this.name} logged in`);
+//     },
+
+//     loginFail() {
+//         console.log(`${this.name} failed to log in`);
+//     },
+
+// };
+
+// console.log(askPassword(user.loginOk.bind(user), user.loginFail.bind(user)))
+
+// ===================================================================================
+// function askPassword(ok, fail) {
+//     let password = 'rockstar';
+//     if (password == "rockstar") ok();
+//     else fail();
+// }
+
+// let user = {
+//     name: 'John',
+
+//     login(result) {
+//         console.log(this.name + (result ? ' logged in' : ' failed to log in'));
+//     }
+// };
+
+// console.log(askPassword(user.login.bind(user, true), user.login.bind(user, false))); // ?

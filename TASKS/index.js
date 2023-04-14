@@ -1865,3 +1865,62 @@
 // };
 
 // console.log(askPassword(user.login.bind(user, true), user.login.bind(user, false))); // ?
+
+// ======================================== Pекурсия =====================================
+// Рекурсия - это процесс, когда функция вызывает сама себя
+// Обязательно наличие базового условия
+// Сценарий органиации движения рекурсии
+//  На примере факториала
+// 0! = 1;
+// n! = n * (n-1)!
+// 2! = 1*2 = 2;
+// 3! = 1*2*3 =6;
+// 4! = 1*2*3*4 = 24;
+// function fuctorial(a) {
+//     if (a === 0)
+//         return 1;
+//     return a * fuctorial(a - 1)
+
+// }
+// fuctorial(4) = 4 * fuctorial(3);
+// fuctorial(3) = 3 * fuctorial(2);
+// fuctorial(2) = 2 * fuctorial(1);
+// fuctorial(1) = 1 * fuctorial(0);
+// // Узнали, что фак-л от 0 =1 и далее аодставляем в формулу вычисления
+// fuctorial(0) = 1;
+// fuctorial(1) = 1 * 1 = 1;
+// fuctorial(2) = 1 * 2 =  2;
+// fuctorial(3) = 3 * 2 = 6;
+// fuctorial(4) = 4 * 6 = 24;
+
+// console.log(fuctorial(4))
+// ------------------------------
+// На примере fibonacci
+// fibonacci(0) = 0;
+// fibonacci(1) = 1;
+// fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
+// function fibonacci(n) {
+//     return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2)
+// }
+// console.log(fibonacci(6))
+
+// ------------------------------------
+
+// ======================================== Каррирование============================
+// Каррирование - это уменьшение арности функции (уменьшение числа аргументов).Если начальна яфу-ция будет принимать 3 аргумента, то  кар-нная фу-ция будет принимать только один аргумент и  будет возвращать фу-цию, которая примет второй аргумент и вернет  тоже функцию, которая примет 3-ий аргумент.
+const sum = (x, y, z) => {
+    return x + y + z
+}
+console.log(sum(3, 7, 6))
+
+const carryed = () => {
+    return function (x) {
+        return function (y) {
+            return function (z) {
+                return x + y + z
+            }
+        }
+    }
+}
+const car = carryed(sum)
+console.log(car(3)(7)(6))

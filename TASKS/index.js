@@ -1761,6 +1761,46 @@
 
 
 // ============================================= __proto__===================
+// 1.  false --- false
+// 2.false -- false
+// 3. false --true
+// 4. true---true false!!!
+// 5. true---false
+// 6. true ---false
+// 7. false--true
+// 8. false--(true)
+// 9. Object__proto__Function.prototype
+// 10.Number__proto__Number.prototype
+//-----------------------------------
+// Любой объект создается при помощи функции конструктора (класса   )
+// let man = {} // new Object()
+// let users = [] // new Array()
+// let age = 34 // new Number()(если обращаемся к age как к объекту age.__proto__)
+// // 1. у любого объекта есть свойство __proto__ и оно равно  prototype того класса, с помощью которого создан этот объект !!!!!!!!!!!!!!!!!!!
+// У стрелочной функции нет prototype!!!!
+// 2. Что бы понимать, что за __proto__ ,нужно ТОЧНО знать с помощью какой функции-конструктора (класса) создан данный обхект
+// 3. Каждый prototype - это независимый объект, сам по себе, с определенным набором свойств и методов
+// 4. prototype есть только у класса или функции
+// 5. __proto__ любого объекта ссылается на prototype класса, (функции-конструктора)с помощью которой этот объект был создан
+// let man = {}// man.__proto__
+// let users = [] // users.__proto__
+// let age = 18 // age.__proto__
+// let youtube = 'it-kamasutra' // youtube.__proto__
+// function fn() { } //fn.__proto__
+// let myFn = function () { } // myFn.__proto__
+// let foo = () => { }// foo.__proto__
+// class YouTubeChannel { } // YouTubeChannel.__proto__ (Класс -это функция, синтаксический сахар)
+// let areYouOk = true // areYouOk.__proto__
+
+// class Samurai {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     hello() { console.log(this.name) }
+// }
+// let shogun = new Samurai('Yulia')
+// console.log(shogun.__proto__.__proto__ === Object.prototype);
+
 // let user = {   // экземпляр прототипа
 //     name: "Pavel"
 // };
@@ -1772,6 +1812,33 @@
 // user.__proto__ = admin; // связь экземпляра с прототипом
 // console.log(user.isAdmin); // true
 // console.log(user.name)
+// ======================================= try... catch...===========================
+// Контрукция, позволяющая отлавливать ошибки в блоке кода. Try/catch может обрабатывать только ошибки, которые возникают в корректном коде, он не сработает , если код синтаксически неверен, например(содержит несовпадающее количество скобок)
+// function fn() {
+//     return a
+// }
+// try {
+//     console.log(fn())
+// }
+// catch (error) {
+//     throw new Error(' O Боже, ошибка!')
+// } finally {
+//     console.log('HI-HI')
+// }
+
+// const fnWithError = () => {
+//     throw new Error(' Some error')
+//     // console.log('Hi')
+// }
+// try {
+//     console.log(fnWithError());
+// }
+// catch (error) {
+//     console.error(error)
+// }
+
+
+
 
 // =============================== ЗамыканиЯ===========================
 // Функциональная область видимости — это область видимости в пределах тела функции.Можно сказать, что она ограничена { и } функции.К переменной b есть доступ только внутри функции scoped.Функциональная область видимости — очень мощный инструмент для разделения кода

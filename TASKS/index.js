@@ -1996,7 +1996,7 @@
 // }
 // console.log(sum(3, 7, 6))
 
-// const carryed = () => {
+// const carried = () => {
 //     return function (x) {
 //         return function (y) {
 //             return function (z) {
@@ -2005,5 +2005,5 @@
 //         }
 //     }
 // }
-// const car = carryed(sum)
+// const carriedFn = carried(sum)
 // console.log(car(3)(7)(6))

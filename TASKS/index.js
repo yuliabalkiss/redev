@@ -1606,55 +1606,85 @@
 // // ];
 
 // // console.log(unique(values)); // Hare,Krishna,:-O
+// ----------------------------------------------------------------------------
+// const user = {
+//     name: "Yulia",
+//     age: 34,
+//     phone: ' 456834653405',
+//     adress: { country: 'Belarus', city: 'Minsk' },
+//     isman: false,
+//     sayHi: function () {
+//         return 6
+//     }
+// }
+// console.log(new Map(Object.entries(user)))
+// const map = new Map()
 
-// // const user = {
-// //     name: "Yulia",
-// //     age: 34,
-// //     phone: ' 456834653405',
-// //     adress: { country: 'Belarus', city: 'Minsk' },
-// //     isman: false,
-// // }
+// map.set('firstName', 'Bob')
+//     .set('lastName', 'Robins')
+// console.log(typeof map.keys())
+// console.log(map.values())
+// console.log(map.entries())
+// map.forEach((value, key, map) => console.log(`${key}====${value}`))
 
-// // const a = structuredClone(user)
+// for (let [key, values] of map) {
+//     console.log(`${key}: ${values}`)
+// }
+// map.forEach((key, value) => console.log(`${value}: ${key}`))
+// console.log(map.forEach(element => {
+//     element
+// }))
 
-// // console.log(a);
-// // const user1 = Object.entries(user);
-// // const userMap = new Map(user1)
-// // userMap.set('one', 1)
+// console.log(map)
+// const a = structuredClone(user)
+// console.log(a);
+
+// const user1 = Object.entries(user);
+// const userMap = new Map(user1)
+
+// userMap.set('one', 1)
+// console.log(userMap)
 // // let a = userMap.get('adress')
 // // console.log(user1);
 // // console.log(userMap);
 // // console.log(a);
 
-// // const a = {
-// //     name: 'Bob',
-// //     age: 35,
-// // }
-
+// const a = {
+//     name: 'Bob',
+//     age: 35,
+// }
+// let str = 'Yulia';
+// const [first, second, ...rest] = str
+// console.log(second)
+// console.log(rest)
 // // const myUser = new Map(Object.entries(a)); // преобразовываем объект в массив!!!
 // // console.log(myUser);
 // // console.log(myUser.keys())
 // // console.log(myUser.values())
 // // console.log(myUser.entries())
 
-// // const map = new Map();
-// // map
-// //     .set('one', 1)
-// //     .set('two', 2)
-// //     .set('three', 3)
+// const map = new Map();
+
+// map
+//     .set('one', 1)
+//     .set('two', 2)
+//     .set('three', 3)
 // // console.log(map.get('two'));
 // // console.log(map.size)
 // // console.log(map.has('two'))
 // // map.delete('three')
 // // console.log(map.size);
-// // console.log(map);
-// // const modObj = Object.fromEntries(map)
-// // console.log(modObj);
+// console.log(map);
+// const modObj = Object.fromEntries(map)
+// console.log(modObj);
+// const newArr = [6, 8, 8, 9, 0, 6]
+// const b = new Set(newArr)
 
-// // const b = new Set([a])
-// // console.log(b);
-// // b.add('name')
-// // console.log(b);
+// b.add('name')
+
+// console.log(b.size);
+// console.log(b)
+
 
 // // function countWords(str) {
 // //     let count = {};
@@ -1749,10 +1779,10 @@
 // // console.log(strJs)
 
 // //  ========================================== Object Date =============================================
-// // let date = new Date();
-// // // let date2 = new Date(Date.parse(date))
-// // // console.log(date);
-// // // console.log(date2);
+// let date = new Date();
+// let date2 = new Date(Date.parse(date))
+// console.log(date);
+// console.log(date2);
 // // console.log(date.getFullYear());
 // // console.log(date.getMonth());
 // // console.log(date.getDate());
@@ -1869,16 +1899,16 @@
 // //     }
 // //     return greeting;
 // // }
-// // const func = a => {
-// //     return function (b) {
-// //         return a + b
-// //     }
+// const func = a => {
+//     return function (b) {
+//         return a + b
+//     }
 
-// // };
-// // const myFunc = func(5);
+// };
+// const myFunc = func(5);
 // // const myFunc2 = myFunc(4);
 // // const myFunc3 = myFunc(4);
-// // console.log(myFunc);
+// console.log(myFunc(8));
 // // console.log(myFunc2);
 
 
@@ -1901,7 +1931,7 @@
 
 // Основная разница между методами call() и apply() заключается в том, как они принимают аргументы. Метод call() принимает аргументы в виде списка, а метод apply() принимает аргументы в виде массива.
 
- // В целом, все эти методы позволяют управлять контекстом вызова функции и передавать ей аргументы. Однако, выбор метода зависит от того, как вы хотите передать аргументы - в виде списка или массива, и нужна ли вам возможность вызвать функцию позже с сохранением контекста.
+// В целом, все эти методы позволяют управлять контекстом вызова функции и передавать ей аргументы. Однако, выбор метода зависит от того, как вы хотите передать аргументы - в виде списка или массива, и нужна ли вам возможность вызвать функцию позже с сохранением контекста.
 
 // // ---------------------------------------------------------------
 // // let user = {

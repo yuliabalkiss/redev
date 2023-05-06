@@ -849,7 +849,8 @@
 // //     console.log(item);
 // // })
 
-// // перебор массива и замена первой буквы на заглавную
+// // перебор массива и замена первой буквы на заглавную!!!!!!--------------------------------------------
+
 // // for (let i = 0; i < myArr.length; i++) {
 // //     console.log(myArr[i] = myArr[i][0].toUpperCase() + myArr[i].slice(1).toLowerCase());
 // // }
@@ -2046,3 +2047,20 @@
 // // console.log(car(3)(7)(6))
 
 
+let str = 'hi, my name is YULIA'
+function findIndex(str) {
+    let bigItem = str.match(/[A-Z]/g)
+    let newArr = str.split('')
+    let arr = []
+    for (let i = 0; i < newArr.length; i++) {
+        for (let k = 0; k < bigItem.length; k++) {
+            if (newArr[i] === bigItem[k]) {
+
+                arr.push(newArr[i])
+            }
+        }
+    }
+
+    return arr
+}
+console.log(findIndex(str))

@@ -2047,20 +2047,64 @@
 // // console.log(car(3)(7)(6))
 
 
-let str = 'hi, my name is YULIA'
-function findIndex(str) {
-    let bigItem = str.match(/[A-Z]/g)
-    let newArr = str.split('')
-    let arr = []
-    for (let i = 0; i < newArr.length; i++) {
-        for (let k = 0; k < bigItem.length; k++) {
-            if (newArr[i] === bigItem[k]) {
+// let str = 'hi, my name is YULIA'
+// function findIndex(str) {
+//     let bigItem = str.match(/[A-Z]/g)
+//     let newArr = str.split('')
+//     let arr = []
+//     for (let i = 0; i < newArr.length; i++) {
+//         for (let k = 0; k < bigItem.length; k++) {
+//             if (newArr[i] === bigItem[k]) {
 
-                arr.push(newArr[i])
-            }
-        }
-    }
+//                 arr.push(newArr[i])
+//             }
+//         }
+//     }
 
-    return arr
-}
-console.log(findIndex(str))
+//     return arr
+// }
+// console.log(findIndex(str))
+// const user = {
+//     name: 'Yulia',
+//     age: 34,
+// }
+// const admin = {
+//     isAdmin: true,
+//     sayHi: function () {
+//         console.log('Hi')
+//     }
+// }
+// admin.__proto__ = user
+// Object.setPrototypeOf(admin, user)
+// const newUser = Object.create(user, { job: { get: () => "I am developer" } })
+// console.log(newUser.job);
+// function User(name, age, phone) {
+//     this.name = name;
+//     this.age = age;
+//     this.phone = phone;
+// }
+// User.prototype = admin
+// const userOne = new User('Bob', 26, '73454854');
+
+// console.log(userOne.sayHi())
+// -------------------настройка прототипа----------------
+// function Robot(name, year, owner) {
+//     this.name = name;
+//     this.year = year;
+//     this.owner = owner;
+// }
+// Robot.prototype.maker = 'ObjectsRUS';
+// Robot.prototype.speak = function () { return 'speak' };
+// Robot.prototype.makeCoffee = function () { return 'make coffee' };
+// Robot.prototype.blinkLights = function () { return 'code 4 lights' };
+
+// let robby = new Robot('Robby', 1956, 'Dr.Morbius');
+// let rosie = new Robot('Rosie', 1962, ' George Jetson');
+
+// robby.onOffSwitch = true;
+// robby.makeCoffee = function () { return ' make coffee  in starbucks' }
+
+// rosie.cleanHouse = function () { return 'clean house' }
+// console.log(robby.hasOwnProperty('name'))
+// // console.log(robby.name + ' was made by' + robby.maker + ' in ' + robby.year + ' and is owner by ' + robby.owner)
+// // console.log(robby.makeCoffee())

@@ -2007,7 +2007,7 @@
 // // fuctorial(3) = 3 * fuctorial(2);
 // // fuctorial(2) = 2 * fuctorial(1);
 // // fuctorial(1) = 1 * fuctorial(0);
-// // // Узнали, что фак-л от 0 =1 и далее аодставляем в формулу вычисления
+// // // Узнали, что фак-л от 0 = 1 и далее подставляем в формулу вычисления
 // // fuctorial(0) = 1;
 // // fuctorial(1) = 1 * 1 = 1;
 // // fuctorial(2) = 1 * 2 =  2;
@@ -2029,23 +2029,47 @@
 
 // // ======================================== Каррирование============================
 // // Каррирование - это уменьшение арности функции (уменьшение числа аргументов).Если начальная фу-ция будет принимать 3 аргумента, то  кар-нная фу-ция будет принимать только один аргумент и  будет возвращать фу-цию, которая примет второй аргумент и вернет  тоже функцию, которая примет 3-ий аргумент.
-// // const sum = (x, y, z) => {
-// //     return x + y + z
-// // }
-// // console.log(sum(3, 7, 6))
 
-// // const carried = () => {
-// //     return function (x) {
-// //         return function (y) {
-// //             return function (z) {
-// //                 return x + y + z
-// //             }
-// //         }
-// //     }
-// // }
-// // const carriedFn = carried(sum)
-// // console.log(car(3)(7)(6))
+// -------------------------------------
+//  const sum = (a,b,c) => a + b + c;
+// console.log(sum(3, 3, 4))
 
+// const curry = (a) => (b) => (c) => (a + b + c)
+// console.log(curry(3)(3)(4))
+// ----------------------------------------
+
+// function fn(a, b, c) {
+//     return a + b + c
+// }
+// console.log(fn(3, 6, 4));
+
+// function carry(a) {
+//     return function (b) {
+//         return function (c) {
+//             return fn(a, b, c) // return (a + b + c)
+//         }
+//     }
+// }
+// console.log(carry(3));
+// console.log(carry(3)(6));
+// console.log(carry(3)(6)(4));
+// ------------------------------------------------
+// Пример Паши
+// function sum(a, b, c) {
+//     return a + b + c
+// }
+// function currySum(func) {
+//     return function (a) {
+//         return function (b) {
+//             return function (c) {
+//                 return func(a, b, c)
+//             }
+//         }
+//     }
+// }
+
+// const curriedSum = currySum(sum);
+// console.log(curriedSum(2)(4)(2));
 
 // let str = 'hi, my name is YULIA'
 // function findIndex(str) {
@@ -2108,3 +2132,6 @@
 // console.log(robby.hasOwnProperty('name'))
 // // console.log(robby.name + ' was made by' + robby.maker + ' in ' + robby.year + ' and is owner by ' + robby.owner)
 // // console.log(robby.makeCoffee())
+
+
+// 

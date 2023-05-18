@@ -1997,6 +1997,7 @@
 // // 2! = 1*2 = 2;
 // // 3! = 1*2*3 =6;
 // // 4! = 1*2*3*4 = 24;
+// // 5! = 1*2*3*4*5 = 120;
 // // function fuctorial(a) {
 // //     if (a === 0)
 // //         return 1;
@@ -2027,6 +2028,17 @@
 
 // // ------------------------------------
 
+// function fuctorial(n) {
+//     return n ? n * fuctorial(n - 1) : 1
+// }
+
+// fuctorial(5) = 5 * fuctorial(4) => 120
+// fuctorial(4) = 4 * fuctorial(3) => 24
+// fuctorial(3) = 3 * fuctorial(2) => 6
+// fuctorial(2) = 2 * fuctorial(1) => 2
+// fuctorial(1) = 1 * fuctorial(0) => 1
+// fuctorial(0) = 1
+// console.log(fuctorial(5));
 // // ======================================== Каррирование============================
 // // Каррирование - это уменьшение арности функции (уменьшение числа аргументов).Если начальная фу-ция будет принимать 3 аргумента, то  кар-нная фу-ция будет принимать только один аргумент и  будет возвращать фу-цию, которая примет второй аргумент и вернет  тоже функцию, которая примет 3-ий аргумент.
 
@@ -2094,8 +2106,8 @@
 // }
 // const admin = {
 //     isAdmin: true,
-//     sayHi: function () {
-//         console.log('Hi')
+//     sayHi() {
+//         return('Hi')
 //     }
 // }
 // admin.__proto__ = user
@@ -2133,5 +2145,118 @@
 // // console.log(robby.name + ' was made by' + robby.maker + ' in ' + robby.year + ' and is owner by ' + robby.owner)
 // // console.log(robby.makeCoffee())
 
+// -----------------------------------------
+// function Person(firstName, lastName, born) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.born = born;
+// }
+// Person.prototype.age = function () {
+//     var now= new Date();
+//     return now.getFullYear() = this.born;
+// }
+// var iam = new Person('Yulia', 'Balkis', 1989)
 
-// 
+// Map. В чем особенность? Какие свойства и методы есть? Как перебрать?
+
+
+// Set. В чем особенность? Какие свойства и методы есть? Как перебрать?
+// Пример деструктурирующего присваивания (ДП)?
+// В каких случаях используется ДП?
+// Как присвоить значение по умолчанию в ДП?
+// Как записываются остаточные параметры?
+// Что такое Date()? Для чего используется?
+// Какие методы есть у Date()?
+// Что такое JSON?
+// Метод JSON.stringify(). Когда используется?
+// Метод JSON.parse(). Когда используется?
+// Для чего нужен прототип?
+// Как присвоить прототип объекту?
+// Что такое __proto__?
+// Каким типом может быть значение __proto__ ?
+// Как работает this для прототипов объекта?
+// Как задать прототип конструктору?
+
+// Встроеные прототипы у объектов
+// Прототипы у примитивов. Пример
+// Откуда у примитивов взялись методы и свойства?
+// Для чего try…catch?
+// Что содержит объект ошибки?
+// Для чего используется объект ошибки?
+// throw. Для чего?
+// Блок finally? Для чего? Когда выполняется?
+// В чем особенность .call()? Написать пример
+// В чем особенность .bind()? Написать пример
+// В чем особенность .apply()? Написать пример
+// Написать пример замыкания
+// Написать пример рекурсии
+// Написать пример каррирования
+
+
+// function sum(a, b, c) {
+//     return a + b + c
+// }
+// console.log(sum(3, 7, 4));
+// function currySum(fn) {
+//     return function (a) {
+//         return function (b) {
+//             return function (c) {
+//                 return fn(a, b, c)
+//             }
+//         }
+//     }
+// }
+// const curriedFn = currySum(sum)
+// console.log(curriedFn(4)(3)(7))
+
+
+// const person = {
+//     name: 'Yulia',
+//     age: 34,
+//     phone: '2435345435',
+//     isMan: false,
+// }
+// const map = new Map(Object.entries(person))
+// console.log(map);
+// map.set('isAdmin', false)
+//     .set('lastName', "Balkis")
+
+// console.log(map.values());
+// for ([key, value] of map) {
+//     console.log(`${key}____${value}`)
+// }
+
+// const result = map.forEach((value, key) => console.log(`${key}++++${value}`))
+// console.log(result)
+
+// const arr = [1, 4, 5, 5, 4, 1, 'Hi']
+// const set = new Set(arr)
+// set.add(68)
+//     .add(1)
+//     .add('Yulia')
+//     .add(false)
+
+// console.log(set);
+// for (let value of set) {
+//     console.log(value)
+// }
+// set.forEach((value) => console.log(value))
+// function f(array) {
+//     return Array.from(new Set(array))
+
+// }
+// console.log(f(arr))
+
+// ---------------------------------------- Class----------------------------------------
+
+//создание класса
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+    method1() { console.log(this.name) }
+    method2() { }
+
+}
+const person = new User('Bob')
+console.log(person)

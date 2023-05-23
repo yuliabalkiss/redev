@@ -2249,14 +2249,196 @@
 
 // ---------------------------------------- Class----------------------------------------
 
-//создание класса
-class User {
-    constructor(name) {
-        this.name = name;
-    }
-    method1() { console.log(this.name) }
-    method2() { }
+//создание класса/ основные блоки
+// 1. При вызове new User создается объект c  базовыми свойствами( isAdmin=false) оперделено перед constructor
+// 2. автоматически вызывается метод constructor, расширяется объект (добовляется новое свойство name и перезаписывается свойство isAdmin = true)
+// 3. в prototype записываются методы (method1/method2)
+// class User {
+//     isAdmin = false;
+//     constructor(name) {
+//         this.isAdmin = true;
+//         this.name = name;
+//     }
+//     method1() {
+//         console.log('Hello')
+//     }
+//     method2() {
+//         console.log('Hi')
+//     }
 
-}
-const person = new User('Bob')
-console.log(person)
+// }
+// const person = new User('Bob') // создаем объект \ экземпляр класса User
+// // console.log(person.isAdmin);// true
+
+//---------------------------------------------------------
+
+// class Animal {
+//     // через static записываются персональные свойства и методы для класса, они так же НАСЛЕДУЮТСЯ от класса к классу!!!
+//     static printName = ' Это  свойство класса Animal';
+//     static method3() {
+//         console.log(this.name)
+//     }
+//     constructor(name) {
+//         this.name = name;
+//         this.speed = 0;
+//     }
+//     run(speed) {
+//         this.speed = speed;
+//         console.log(`${this.name} бежит со скоростью ${this.speed}`);
+//     }
+//     stop() {
+//         this.speed = 0;
+//         console.log('Животное остановилось!');
+//     }
+
+// }
+
+// class Rabbit extends Animal {
+//     // если мы не записали constructor() в ручную, то
+//     //  в момент наследования("под копотом") такая запись создается сама и все свойства наследуются от родителя(т.е в данном примере constructor() берется от Animal)
+//     //    constructor(...arg) {
+//     //     super(...arg)
+//     // }
+//     //расширяем функционал у объекта rabbit
+//     constructor(name, age) {
+//         super(name)// означает, что наследуемся от родительского свойства
+//         this.age = age// добавили новое свойство age, тем самым мы расширили функционал класса Rabbit по отношению к классу Animal
+//     }
+
+//     hide() {
+//         console.log('Я спрятался');
+//     }
+//     stop() {
+//         super.stop(); //
+//         this.hide()
+//     }
+// }
+
+
+// const rabbit = new Rabbit('Кролик', 7)
+// // console.log(rabbit.run(5));
+// // console.log(Rabbit.printName); /////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// // console.log(Rabbit instanceof Animal);//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// // --------------------------------------------------------
+// // //  Создание приватных и защищенных методов и свойств для класса
+// class CoffeeMachine {
+//     _waterAmount = 0; // _waterAmount -защищенное свойство( договоренность между разрабами), может использоваться вне  класса СoffeeMachine
+//     // #waterAmount -  приватное свойство, такая запись ЗАПРЕЩАЕТ извне  использовать данное свойство или метод, только внутри класса!!!
+//     constructor(power) {
+//         this.power = power
+//     }
+//     set addWatter(value) { // с помощью set  добавили сеттер
+//         this._waterAmount += value;
+//     }
+//     get waterAmount() {
+//         return this._waterAmount;
+//     }
+//     createCoffee() {
+//         if (this._waterAmount >= 200) {
+//             this._waterAmount -= 200
+//             console.log("Готова одна чашка кофе! ");
+//         } else {
+//             console.log('Залейте воду');
+//         }
+//     }
+// }
+// class newClass extends CoffeeMachine {
+
+// }
+// const coffeeMachine = new CoffeeMachine(100)
+// coffeeMachine.addWatter = 1000;
+// console.log(coffeeMachine.createCoffee());
+// console.log(coffeeMachine instanceof CoffeeMachine)//  проверка является ли объект экземпляром класса
+// console.log(newClass instanceof CoffeeMachine)
+
+
+// class Rabbit extends Object {
+//     super() {
+//         this.name = name
+//     }
+// }
+
+// let rabbit = new Rabbit("Кроль");
+
+// console.log(rabbit.hasOwnProperty('name')); // Ошибка
+//--------------------------------------------------------------------------------
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+
+//     }
+
+//     run(speed) {
+//         this.speed = speed
+//         return `${this.name} бежит со скоростью ${this.speed} км/ч`;
+//     }
+// }
+
+
+// class Rabbit extends Animal {
+//     constructor(name, age) {
+//         super(name)
+//         this.age = age;
+//     }
+//     get age() {
+//         return this._age
+//     }
+//     set age(value) {
+//         return this._age = value
+//     }
+
+//     run(speed) {
+
+//         return (` ${super.run(speed)}. Животному - ${this.age} лет`)
+//     }
+// }
+// const rabbit = new Rabbit('Кролик', 8)
+// console.log(rabbit.run(6))
+// ---------------------------------------------------------------------------------
+// class MyCustomError {
+//     constructor(error) {
+//         this.error = error;
+//     }
+//     showError() {
+//         throw new Error('Ошибка,  проверьте данные!')
+//     }
+// }
+
+
+
+
+// class Student extends MyCustomError {
+//     constructor(error, name, age) {
+//         super(error)
+//         this.name = name;
+//         this.age = age;
+//     }
+//     set age(value) {
+//         if (Number.isInteger(value) && value > 18 && value < 65) {
+//             return this._age = value
+//         } else {
+//             return `${super.showError()}`
+//         }
+//     }
+//     get age() {
+//         return this._age;
+//     }
+
+// }
+
+// const person = new Student("Yulia")
+
+// console.dir(person.age(18))
+
+
+const people = [
+    { name: 'Bob', age: 5, isMan: true, },
+    { name: 'Yulia', age: 34, isMan: false, },
+    { name: 'Rita', age: 15, isMan: false, },
+    { name: 'Alice', age: 18, isMan: false, },
+    { name: 'B', age: 26, isMan: true, }
+
+]
+const json = JSON.stringify(people)
+console.log(json);

@@ -2409,36 +2409,186 @@
 
 
 // class Student extends MyCustomError {
-//     constructor(error, name, age) {
+//     isMan = true
+//     createDate = '20/03/2023'
+
+//     constructor(name, age) {
 //         super(error)
-//         this.name = name;
-//         this.age = age;
+//         this.#name = name;
+//         this.#age = { min: 18, max: 65 };
+
 //     }
 //     set age(value) {
-//         if (Number.isInteger(value) && value > 18 && value < 65) {
-//             return this._age = value
+//         const { min, max } = this.#age
+//         if (min >= value || max <= value) {
+//             return this.#age = value
 //         } else {
 //             return `${super.showError()}`
 //         }
 //     }
 //     get age() {
-//         return this._age;
+//         return this.#age;
+//     }
+
+//     get name() {
+//         return this.#name;
+//     }
+//     set name(value) {
+//         if (value.length > 2 && value.length <= 15) {
+//             return this.#name = value
+//         } else {
+//             return `${super.showError()}`
+//         }
 //     }
 
 // }
+// const people = [
+//     { name: 'Bob', age: 5, isMan: true, },
+//     { name: 'Yulia', age: 34, isMan: false, },
+//     { name: 'Rita', age: 15, isMan: false, },
+//     { name: 'Alice', age: 18, isMan: false, },
+//     { name: 'B', age: 26, isMan: true, }
 
-// const person = new Student("Yulia")
+// ]
+// const json = JSON.stringify(people);
+// const [{ name:name, age: age, isMan: isMan }] = people
 
-// console.dir(person.age(18))
+// const person = new Student(name, age, isMan);
+// console.log(person);
 
 
-const people = [
-    { name: 'Bob', age: 5, isMan: true, },
-    { name: 'Yulia', age: 34, isMan: false, },
-    { name: 'Rita', age: 15, isMan: false, },
-    { name: 'Alice', age: 18, isMan: false, },
-    { name: 'B', age: 26, isMan: true, }
 
-]
-const json = JSON.stringify(people)
-console.log(json);
+
+
+
+// console.log(json);
+// ================================================================
+class Er {
+    constructor(error) {
+        this.error = error
+    }
+    getError() {
+        throw new Error('Oops')
+    }
+}
+class One {
+    constructor(firstName) {
+        this.firstName = firstName
+    }
+    getDate() {
+        return new Date()
+    }
+}
+
+const user = [{ name: 'Bob' }, { name: 'Y' }]
+const json = JSON.parse(JSON.stringify(user))
+const [{ name: firstName }] = json
+
+const person = new One(firstName)
+console.log(person.firstName);
+
+
+// ===============================================================
+
+// ------------------------------------- Задания из учебника---------------------------------
+// class Rectangle {
+//     constructor(width, height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+//     getArea() {
+//         return this.width * this.height
+//     }
+// }
+// const rectangle = new Rectangle(10, 10)
+
+// --------------------------------------
+// class Square extends Rectangle {
+//     constructor(sideLength) {
+//         super()
+//         this.sideLength = sideLength;
+//     }
+//     getArea() {
+//         return this.sideLength ** 2
+//     }
+// }
+// const square = new Square(50)
+// console.log(square.getArea());
+
+// -------------------------------------
+// class Teacher {
+//     student = []
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     gradeStudent(student, grade) {
+
+//         this.student.push(this.grade)
+//         return `${this.name}: ${student} `
+//     }
+
+// }
+// const teacher = new Teacher('Yulia')
+// console.log(teacher.gradeStudent(8));
+// -----------------------------------------
+// class BanckAccount {
+
+//     constructor(balance, ownerName) {
+//         this.balance = balance;
+//         this.ownerName = ownerName;
+//     }
+//     deposit(amount) {
+//         return this.balance += amount
+
+//     }
+//     withdrow(amount) {
+//         return this.balance -= amount
+//     }
+//     getBalance() {
+//         return this.balance
+//     }
+// }
+// const account = new BanckAccount(5, "bob")
+// --------------------------------------------
+//  с защищенным свойством tax
+// class Product {
+
+//     constructor(name, price) {
+
+//         this.name = name;
+//         this.price = price;
+//         this._tax = 10;
+//     }
+//     get tax() {
+
+//         return this._tax
+//     }
+//     set tax(value) {
+
+//         this._tax = value
+//     }
+//     priceWithTax() {
+//         console.log(this.price + (this.price * this._tax / 100))
+//     }
+// }
+// const product = new Product('Egg', 12)
+
+// console.log(product.priceWithTax());
+
+// ---------------
+// class Product {
+//     #tax = 10
+//     constructor(name, price) {
+
+//         this.name = name;
+//         this.price = price;
+
+//     }
+
+//     priceWithTax() {
+//         console.log(this.price + (this.price * this.#tax / 100))
+//     }
+// }
+// const product = new Product('Egg', 12)
+
+// console.log(product.priceWithTax());

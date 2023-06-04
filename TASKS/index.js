@@ -2317,8 +2317,7 @@
 
 // const rabbit = new Rabbit('Кролик', 7)
 // // console.log(rabbit.run(5));
-// // console.log(Rabbit.printName); /////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// // console.log(Rabbit instanceof Animal);//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// //
 // // --------------------------------------------------------
 // // //  Создание приватных и защищенных методов и свойств для класса
 // class CoffeeMachine {
@@ -2396,96 +2395,85 @@
 // const rabbit = new Rabbit('Кролик', 8)
 // console.log(rabbit.run(6))
 // ---------------------------------------------------------------------------------
-// class MyCustomError {
-//     constructor(error) {
-//         this.error = error;
-//     }
-//     showError() {
-//         throw new Error('Ошибка,  проверьте данные!')
-//     }
-// }
-
-
-
-
-// class Student extends MyCustomError {
-//     isMan = true
-//     createDate = '20/03/2023'
-
-//     constructor(name, age) {
-//         super(error)
-//         this.#name = name;
-//         this.#age = { min: 18, max: 65 };
-
-//     }
-//     set age(value) {
-//         const { min, max } = this.#age
-//         if (min >= value || max <= value) {
-//             return this.#age = value
-//         } else {
-//             return `${super.showError()}`
-//         }
-//     }
-//     get age() {
-//         return this.#age;
-//     }
-
-//     get name() {
-//         return this.#name;
-//     }
-//     set name(value) {
-//         if (value.length > 2 && value.length <= 15) {
-//             return this.#name = value
-//         } else {
-//             return `${super.showError()}`
-//         }
-//     }
-
-// }
-// const people = [
-//     { name: 'Bob', age: 5, isMan: true, },
-//     { name: 'Yulia', age: 34, isMan: false, },
-//     { name: 'Rita', age: 15, isMan: false, },
-//     { name: 'Alice', age: 18, isMan: false, },
-//     { name: 'B', age: 26, isMan: true, }
-
-// ]
-// const json = JSON.stringify(people);
-// const [{ name:name, age: age, isMan: isMan }] = people
-
-// const person = new Student(name, age, isMan);
-// console.log(person);
-
-
-
-
-
-
-// console.log(json);
-// ================================================================
-class Er {
-    constructor(error) {
-        this.error = error
+// наследоване от класса Error
+class MyCustomError extends Error {
+    constructor(message) {
+        super(message)
+        this.name = 'MyError';
     }
-    getError() {
-        throw new Error('Oops')
-    }
-}
-class One {
-    constructor(firstName) {
-        this.firstName = firstName
-    }
-    getDate() {
-        return new Date()
-    }
+
 }
 
-const user = [{ name: 'Bob' }, { name: 'Y' }]
-const json = JSON.parse(JSON.stringify(user))
-const [{ name: firstName }] = json
+class Student {
+    //  создание класса Studdent с валидацией
+    #validAge = { min: 18, max: 65 }
+    #validGender = ["male", "female"];
+    constructor(name, age, isMan, createdData) {
+        if (name.length < 2 || name.length > 16) {
+            throw new MyCustomError('Невалидное значение имени!')
+        }
 
-const person = new One(firstName)
-console.log(person.firstName);
+        this.name = name;
+        if (isNaN(age) || age < this.#validAge.min || age > this.#validAge.max) {
+            throw new MyCustomError('Невалидное значение возраста!')
+        }
+        this.age = age;
+
+        if (typeof isMan !== 'boolean') {
+            throw new MyCustomError('Невалидное значение пола!')
+        }
+        this.isMan = isMan;
+
+        if (!(createdData instanceof Date)) {
+            throw new MyCustomError('Невалидное значение даты!')
+        }
+        this.createdData = createdData;
+
+    }
+
+
+    567
+
+    showInfo() {
+        const gender = this.isMan ? 'male' : 'femail'
+        const newDataForm = Array.from(this.createdData).join('').replace(/[/]/ig, '-')
+        return `${this.name}, ${this.age}, ${gender}, ${newDataForm}`
+    }
+
+}
+
+
+
+// Создаем массив с данными о студентах
+const peopleData = [
+    { name: 'Bob', age: 5, isMan: true, createdData: "30/05/2023" },
+    { name: 'Yulia', age: 34, isMan: false, createdData: "30/05/2023" },
+    { name: 'Rita', age: 15, isMan: false, createdData: "30/05/2023" },
+    { name: 'Alice', age: 18, isMan: false, createdData: "30/05/2023" },
+    { name: 'B', age: 26, isMan: true, createdData: "30/05/2023" }
+
+]
+
+const students = peopleData.map(({ name, age, isMan, createdData }) => {
+    try {
+        return new Student(name, age, isMan, new Date(createdData));
+    } catch (error) {
+        console.error(`Error creating student ${name}: ${error.message}`);
+        return null;
+    }
+}).filter(student => student !== null);
+
+console.log(students);
+
+
+
+
+
+
+
+
+
+
 
 
 // ===============================================================
@@ -2592,3 +2580,4 @@ console.log(person.firstName);
 // const product = new Product('Egg', 12)
 
 // console.log(product.priceWithTax());
+// -----------------------------------------------------------

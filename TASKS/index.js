@@ -2396,6 +2396,7 @@
 // console.log(rabbit.run(6))
 // ---------------------------------------------------------------------------------
 // наследоване от класса Error
+
 class MyCustomError extends Error {
     constructor(message) {
         super(message)
@@ -2424,52 +2425,62 @@ class Student {
         }
         this.isMan = isMan;
 
-        if (!(createdData instanceof Date)) {
+        if (!isValidDate(createdData)) {
             throw new MyCustomError('Невалидное значение даты!')
         }
-        this.createdData = createdData;
+        this.createdData = createdData
 
     }
 
-
-    567
-
     showInfo() {
-        const gender = this.isMan ? 'male' : 'femail'
-        const newDataForm = Array.from(this.createdData).join('').replace(/[/]/ig, '-')
+        const gender = this.isMan ? this.#validGender[0] : this.#validGender[1]
+        const newDataForm = isValidDate(this.createdData)
         return `${this.name}, ${this.age}, ${gender}, ${newDataForm}`
     }
 
 }
 
 
+function isValidDate(val) {
+    const dataString = val.split('/')
+    const [day, month, year] = dataString;
 
-// Создаем массив с данными о студентах
+    const validData = new Date(year, month, day)
+
+    if (isNaN(validData.getTime())) {
+        return false
+    } else {
+        return `${day}-${month}-${year}`
+    }
+}
+
+
+// // Создаем массив с данными о студентах
 const peopleData = [
-    { name: 'Bob', age: 5, isMan: true, createdData: "30/05/2023" },
-    { name: 'Yulia', age: 34, isMan: false, createdData: "30/05/2023" },
-    { name: 'Rita', age: 15, isMan: false, createdData: "30/05/2023" },
-    { name: 'Alice', age: 18, isMan: false, createdData: "30/05/2023" },
+    { name: 'Bob', age: 40, isMan: true, createdData: "04/05/2023" },
+    { name: 'Yulia', age: 3, isMan: false, createdData: "30/05/2023" },
+    { name: 'Rita', age: 19, isMan: 'no', createdData: "30/05/2023" },
+    { name: 'Alice', age: 21, isMan: false, createdData: "13/05/2023" },
     { name: 'B', age: 26, isMan: true, createdData: "30/05/2023" }
 
 ]
+// деструктуризация
 
 const students = peopleData.map(({ name, age, isMan, createdData }) => {
     try {
-        return new Student(name, age, isMan, new Date(createdData));
+        return new Student(name, age, isMan, createdData)
     } catch (error) {
-        console.error(`Error creating student ${name}: ${error.message}`);
-        return null;
+        console.log(`Ошибка в данных студента ${name}: ${error.message}`)
+        return null
     }
-}).filter(student => student !== null);
-
+}).filter(item => item !== null).forEach(item => {
+    console.log(item.showInfo())
+})
 console.log(students);
 
 
 
-
-
-
+// ==========================================================
 
 
 
@@ -2580,4 +2591,52 @@ console.log(students);
 // const product = new Product('Egg', 12)
 
 // console.log(product.priceWithTax());
-// -----------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Данный код представляет класс`Student`, который имеет конструктор и метод`showInfo()`.
+
+// Конструктор принимает аргумент`createdDate`, который должен быть датой в формате "день/месяц/год".Перед созданием объекта класса`Student`, проверяется корректность формата даты с помощью функции`isValidDate()`.Если дата не соответствует заданному формату, выбрасывается исключение с сообщением "Invalid date format".Если же дата корректна, она сохраняется в свойстве `createdDate` объекта.
+
+//     Метод `showInfo()` возвращает строку с информацией о дате создания студента.Для форматирования даты используется функция`formatDate()`, которая принимает строку с датой в формате "день/месяц/год" и возвращает строку в формате "день-месяц-год".
+
+// Также в коде есть функция`isValidDate()`, которая проверяет корректность формата даты и её существование.Функция использует регулярное выражение для проверки формата даты, а затем создает объект `Date` и проверяет его корректность.Если дата не соответствует заданному формату или не существует, функция возвращает`false`, иначе - `true`.
+
+// Пример использования класса `Student` показывает, как создать объект класса и вызвать метод`showInfo()`, который вернет строку с информацией о дате создания студента в заданном формате.
+// class Student {
+//     constructor(createdDate) {
+//         if (!isValidDate(createdDate)) {
+//             throw new Error('Invalid date format');
+//         }
+//         this.createdDate = createdDate;
+//     }
+
+//     showInfo() {
+//         const formattedDate = formatDate(this.createdDate);
+//         return `Student created on ${formattedDate}`;
+//     }
+// }
+
+// function isValidDate(dateString) {
+//     const regex = /^\d{2}\/\d{2}\/\d{4}$/;
+//     if (!regex.test(dateString)) {
+//         return false;
+//     }
+
+//     const [day, month, year] = dateString.split('/');
+//     const date = new Date(year, month - 1, day);
+//     if (isNaN(date.getTime())) {
+//         return false;
+//     }
+
+//     return true;
+// }
+
+// function formatDate(dateString) {
+//     const [day, month, year] = dateString.split('/');
+//     return `${day}-${month}-${year}`;
+// }
+
+// // Пример использования:
+// const student = new Student('31/12/2021');
+// console.log(student.showInfo()); // Student created on 31-12-2021
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

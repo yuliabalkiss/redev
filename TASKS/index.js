@@ -2442,26 +2442,35 @@ class Student {
 
 
 function isValidDate(val) {
-    const dataString = val.split('/')
-    const [day, month, year] = dataString;
+    if (typeof val == 'string') {
+        const dataString = val.split('/')
+        const [day, month, year] = dataString;
+        const isValidData = new Date(year, month - 1, day)
 
-    const validData = new Date(year, month, day)
+        const isValidDay = isValidData.getDate();
+        const isValidMonth = isValidData.getMonth();
+        const isValidYear = isValidData.getFullYear();
 
-    if (isNaN(validData.getTime())) {
-        return false
+        if (isValidDay === +day && isValidMonth === +month - 1 && isValidYear === +year) {
+            return `${isValidDay < 10 ? '0' : ''}${isValidDay}-${isValidMonth + 1 < 10 ? '0' : ''}${isValidMonth + 1}-${isValidYear}`
+        }
+        else {
+            return false
+        }
     } else {
-        return `${day}-${month}-${year}`
+        throw new MyCustomError('Проверьте формат вводимой даты!')
     }
+
 }
 
 
 // // Создаем массив с данными о студентах
 const peopleData = [
-    { name: 'Bob', age: 40, isMan: true, createdData: "04/05/2023" },
+    { name: 'Bob', age: 40, isMan: true, createdData: 9 },
     { name: 'Yulia', age: 3, isMan: false, createdData: "30/05/2023" },
-    { name: 'Rita', age: 19, isMan: 'no', createdData: "30/05/2023" },
-    { name: 'Alice', age: 21, isMan: false, createdData: "13/05/2023" },
-    { name: 'B', age: 26, isMan: true, createdData: "30/05/2023" }
+    { name: 'Rita', age: 19, isMan: false, createdData: "30/05/2023" },
+    { name: 'Alice', age: 21, isMan: false, createdData: "15/05/2023" },
+    { name: 'V', age: 26, isMan: true, createdData: "15/05/2023" }
 
 ]
 // деструктуризация
@@ -2481,8 +2490,6 @@ console.log(students);
 
 
 // ==========================================================
-
-
 
 
 

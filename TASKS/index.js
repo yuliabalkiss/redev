@@ -2397,95 +2397,95 @@
 // ---------------------------------------------------------------------------------
 // наследоване от класса Error
 
-class MyCustomError extends Error {
-    constructor(message) {
-        super(message)
-        this.name = 'MyError';
-    }
+// class MyCustomError extends Error {
+//     constructor(message) {
+//         super(message)
+//         this.name = 'MyError';
+//     }
 
-}
+// }
 
-class Student {
-    //  создание класса Studdent с валидацией
-    #validAge = { min: 18, max: 65 }
-    #validGender = ["male", "female"];
-    constructor(name, age, isMan, createdData) {
-        if (name.length < 2 || name.length > 16) {
-            throw new MyCustomError('Невалидное значение имени!')
-        }
+// class Student {
+//     //  создание класса Studdent с валидацией
+//     #validAge = { min: 18, max: 65 }
+//     #validGender = ["male", "female"];
+//     constructor(name, age, isMan, createdData) {
+//         if (name.length < 2 || name.length > 16) {
+//             throw new MyCustomError('Невалидное значение имени!')
+//         }
 
-        this.name = name;
-        if (isNaN(age) || age < this.#validAge.min || age > this.#validAge.max) {
-            throw new MyCustomError('Невалидное значение возраста!')
-        }
-        this.age = age;
+//         this.name = name;
+//         if (isNaN(age) || age < this.#validAge.min || age > this.#validAge.max) {
+//             throw new MyCustomError('Невалидное значение возраста!')
+//         }
+//         this.age = age;
 
-        if (typeof isMan !== 'boolean') {
-            throw new MyCustomError('Невалидное значение пола!')
-        }
-        this.isMan = isMan;
+//         if (typeof isMan !== 'boolean') {
+//             throw new MyCustomError('Невалидное значение пола!')
+//         }
+//         this.isMan = isMan;
 
-        if (!isValidDate(createdData)) {
-            throw new MyCustomError('Невалидное значение даты!')
-        }
-        this.createdData = createdData
+//         if (!isValidDate(createdData)) {
+//             throw new MyCustomError('Невалидное значение даты!')
+//         }
+//         this.createdData = createdData
 
-    }
+//     }
 
-    showInfo() {
-        const gender = this.isMan ? this.#validGender[0] : this.#validGender[1]
-        const newDataForm = isValidDate(this.createdData)
-        return `${this.name}, ${this.age}, ${gender}, ${newDataForm}`
-    }
+//     showInfo() {
+//         const gender = this.isMan ? this.#validGender[0] : this.#validGender[1]
+//         const newDataForm = isValidDate(this.createdData)
+//         return `${this.name}, ${this.age}, ${gender}, ${newDataForm}`
+//     }
 
-}
-
-
-function isValidDate(val) {
-    if (typeof val == 'string') {
-        const dataString = val.split('/')
-        const [day, month, year] = dataString;
-        const isValidData = new Date(year, month - 1, day)
-
-        const isValidDay = isValidData.getDate();
-        const isValidMonth = isValidData.getMonth();
-        const isValidYear = isValidData.getFullYear();
-
-        if (isValidDay === +day && isValidMonth === +month - 1 && isValidYear === +year) {
-            return `${isValidDay < 10 ? '0' : ''}${isValidDay}-${isValidMonth + 1 < 10 ? '0' : ''}${isValidMonth + 1}-${isValidYear}`
-        }
-        else {
-            return false
-        }
-    } else {
-        throw new MyCustomError('Проверьте формат вводимой даты!')
-    }
-
-}
+// }
 
 
-// // Создаем массив с данными о студентах
-const peopleData = [
-    { name: 'Bob', age: 40, isMan: true, createdData: 9 },
-    { name: 'Yulia', age: 3, isMan: false, createdData: "30/05/2023" },
-    { name: 'Rita', age: 19, isMan: false, createdData: "30/05/2023" },
-    { name: 'Alice', age: 21, isMan: false, createdData: "15/05/2023" },
-    { name: 'V', age: 26, isMan: true, createdData: "15/05/2023" }
+// function isValidDate(val) {
+//     if (typeof val == 'string') {
+//         const dataString = val.split('/')
+//         const [day, month, year] = dataString;
+//         const isValidData = new Date(year, month - 1, day)
 
-]
-// деструктуризация
+//         const isValidDay = isValidData.getDate();
+//         const isValidMonth = isValidData.getMonth();
+//         const isValidYear = isValidData.getFullYear();
 
-const students = peopleData.map(({ name, age, isMan, createdData }) => {
-    try {
-        return new Student(name, age, isMan, createdData)
-    } catch (error) {
-        console.log(`Ошибка в данных студента ${name}: ${error.message}`)
-        return null
-    }
-}).filter(item => item !== null).forEach(item => {
-    console.log(item.showInfo())
-})
-console.log(students);
+//         if (isValidDay === +day && isValidMonth === +month - 1 && isValidYear === +year) {
+//             return `${isValidDay < 10 ? '0' : ''}${isValidDay}-${isValidMonth + 1 < 10 ? '0' : ''}${isValidMonth + 1}-${isValidYear}`
+//         }
+//         else {
+//             return false
+//         }
+//     } else {
+//         throw new MyCustomError('Проверьте формат вводимой даты!')
+//     }
+
+// }
+
+
+// // // Создаем массив с данными о студентах
+// const peopleData = [
+//     { name: 'Bob', age: 40, isMan: true, createdData: 9 },
+//     { name: 'Yulia', age: 3, isMan: false, createdData: "30/05/2023" },
+//     { name: 'Rita', age: 19, isMan: false, createdData: "30/05/2023" },
+//     { name: 'Alice', age: 21, isMan: false, createdData: "15/05/2023" },
+//     { name: 'V', age: 26, isMan: true, createdData: "15/05/2023" }
+
+// ]
+// // деструктуризация
+
+// const students = peopleData.map(({ name, age, isMan, createdData }) => {
+//     try {
+//         return new Student(name, age, isMan, createdData)
+//     } catch (error) {
+//         console.log(`Ошибка в данных студента ${name}: ${error.message}`)
+//         return null
+//     }
+// }).filter(item => item !== null).forEach(item => {
+//     console.log(item.showInfo())
+// })
+// console.log(students);
 
 
 
@@ -2647,3 +2647,72 @@ console.log(students);
 // console.log(student.showInfo()); // Student created on 31-12-2021
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// 1. Создается пустой объект {}
+// 2. Вызывается функция, this = {}
+// 3.{} связывается с прототипом
+// 4. Функция автоматически возвращает {}
+
+
+// class User {
+//     #name
+//     constructor(name, age) {
+//         this.#name = name
+//         this.age = age
+//     }
+//     get name() {
+//         return this.#name
+//     }
+//     sayHi() {
+//         return `${this.name} ${this.age} ${this.isAdmin} `
+//     }
+// }
+
+
+// class User2 extends User {
+//     constructor(name, age, isAdmin) {
+//         super(name, age)
+//         this.isAdmin = isAdmin
+
+//     }
+//     sayHello() {
+//         console.log(`Привет, ${super.sayHi()}`)
+//     }
+// }
+// const person = new User2('Yulia', 34, false)
+// console.log(person.sayHello())
+// ======================================================callback=========================================
+// Задания из учебника
+// function sumNumders(a, b, callback) {
+//     let result = a + b
+//     callback(result)
+// }
+// function fn(result) {
+//     console.log(result)
+// }
+// console.log(sumNumders(3, 8, fn))
+// ________________________________________________________
+// function dataGenerator(firstName, lastName, callback) {
+//     let result = `${firstName} ${lastName}: `
+//     callback(result)
+// }
+
+// function fn1(val) {
+//     console.log(val + 34)
+// }
+// console.log(dataGenerator('Yulia', 'Balkis', fn1))
+// ----------------------------------------------------------
+// const arr1 = [1, 3, 4, 56, 767, 89]
+// function findSum(arr, callback) {
+//     const sum = arr.map((item) => {
+//         callback(item)
+//         return item
+//     })
+
+//     return sum
+
+// }
+// function fn2(val) {
+//     console.log(val)
+// }
+// console.log(findSum(arr1, fn2))
+// -------------------------------------

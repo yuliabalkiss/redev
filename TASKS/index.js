@@ -2716,3 +2716,50 @@
 // }
 // console.log(findSum(arr1, fn2))
 // -------------------------------------
+// const str = ['Yulia', 'Rita', 'Alice', 'Oleg']
+// function strToUpperCase(arr, callback) {
+//     const newStr = arr.map((item) => {
+//         callback(item)
+//         return item
+//     })
+//     return newStr
+// }
+// function fn3(val) {
+//     console.log(val.toUpperCase())
+// }
+// console.log(strToUpperCase(str, fn3))
+
+// -----------------------------------
+
+// const arrNum = [1, 2, 4, 6, 7, 8, 9, 5]
+// function findEvenNum(arr, callback) {
+//     const evenNum = arr.filter((item) => {
+//         return callback(item) % 2 === 0
+
+//     })
+//     return evenNum
+// }
+// function fn4(val) {
+//     return val
+// }
+// console.log(findEvenNum(arrNum, fn4))
+// --------------------------------------------------
+// const arrObj = [
+//     { name: "Yulia", age: 34 },
+//     { name: "Rita", age: 15 },
+//     { name: "Alice" }
+// ]
+// function checkAge(arr, callback) {
+//     const valAge = arr.filter((item) => {
+//         return callback(item)
+
+//     })
+//     return valAge
+// }
+// function fn5(val) {
+//     if (val.age) {
+//         console.log(val.age)
+//     }
+// }
+// console.log(checkAge(arrObj, fn5))
+// -----------------------------------------------------

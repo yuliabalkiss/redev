@@ -2812,3 +2812,19 @@
 //   В этом примере мы создаем новый Promise, который выполняет асинхронную операцию(запрос к API).Мы используем метод fetch для отправки GET - запроса на сервер и получения данных в формате JSON.Если запрос выполнен успешно, мы вызываем функцию resolve и передаем полученные данные.Если запрос не удался, мы вызываем функцию reject и передаем ошибку.
 
 //   Затем мы обрабатываем результат Promise с помощью методов then и catch. Если Promise выполнен успешно, метод then вызывается с переданными данными.Если Promise завершается с ошибкой, вызывается метод catch с переданной ошибкой.
+
+// function findSum(a, b) {
+//     return new Promise((resolve, reject) => {
+//         if (typeof a !== 'number' || typeof b !== 'number') {
+//             reject(new Error(' Oppps!'))
+//         } else {
+//             setTimeout(() => resolve(a + b), 1000)
+//         }
+//     })
+// }
+
+// findSum('i', 6)
+//     .then(result => console.log(result))
+//     .catch(error => console.log(error.message))
+
+

@@ -2842,11 +2842,34 @@ Promise.allSettled(promises)
 
 // =========================================
 
+// const promise1 = new Promise(resolve => setTimeout(() => resolve(1), 2000));
+// const promise2 = new Promise(resolve => setTimeout(() => resolve(2), 1000));
+// const promise3 = new Promise(resolve => setTimeout(() => resolve(3), 3000));
+
+// const result = Promise.race([promise1, promise2, promise3]);
+
+// result.then(data => console.log(data));
+// =======================================================
+
 const promise1 = new Promise(resolve => setTimeout(() => resolve(1), 2000));
 const promise2 = new Promise(resolve => setTimeout(() => resolve(2), 1000));
 const promise3 = new Promise(resolve => setTimeout(() => resolve(3), 3000));
 
-const result = Promise.race([promise1, promise2, promise3]);
+const result = Promise.all([promise1, promise2, promise3]);
 
-result.then(data => console.log(data));
-// =======================================================
+result.then(data => console.log(data)); // [1, 2, 3]
+
+
+// =========================================================
+// Напиши функцию, которая получает на вход два числа и возвращает Promise, который разрешается через 1 секунду с результатом суммы этих чисел. Если одно из чисел не является числом, Promise должен быть отклонен с ошибкой.
+function sum(a, b) {
+    return new Promise((resolve, reject) => {
+        if (typeof a !== "number" || typeof b !== "number") {
+            reject(new Error("One or both arguments are not numbers"));
+        } else {
+            setTimeout(() => {
+                resolve(a + b);
+            }, 1000);
+        }
+    });
+}

@@ -2828,7 +2828,7 @@
 //     .then(result => console.log(result))
 //     .catch(error => console.log(error.message))
 
-
+// ============================================
 const promises = [
     Promise.resolve('Promise 1 resolved'),
     Promise.reject('Promise 2 rejected'),
@@ -2839,3 +2839,13 @@ Promise.allSettled(promises)
     .then(results => {
         console.log(results);
     });
+
+// =========================================
+
+const promise1 = new Promise(resolve => setTimeout(() => resolve(1), 2000));
+const promise2 = new Promise(resolve => setTimeout(() => resolve(2), 1000));
+const promise3 = new Promise(resolve => setTimeout(() => resolve(3), 3000));
+
+const result = Promise.race([promise1, promise2, promise3]);
+
+result.then(data => console.log(data)); 

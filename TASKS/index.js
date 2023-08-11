@@ -2829,3 +2829,13 @@
 //     .catch(error => console.log(error.message))
 
 
+const promises = [
+    Promise.resolve('Promise 1 resolved'),
+    Promise.reject('Promise 2 rejected'),
+    Promise.resolve('Promise 3 resolved')
+];
+
+Promise.allSettled(promises)
+    .then(results => {
+        console.log(results);
+    });

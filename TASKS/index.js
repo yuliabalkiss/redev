@@ -2848,4 +2848,5 @@ const promise3 = new Promise(resolve => setTimeout(() => resolve(3), 3000));
 
 const result = Promise.race([promise1, promise2, promise3]);
 
-result.then(data => console.log(data)); 
+result.then(data => console.log(data));
+// =======================================================

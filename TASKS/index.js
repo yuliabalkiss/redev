@@ -2876,3 +2876,28 @@ function sum(a, b) {
 
 // ===================================================
 // Напиши функцию getUser(id), которая возвращает промис, который разрешается (resolve) пользователем с заданным идентификатором, или отклоняется с ошибкой, если пользователь не найден.
+// function getUser(id) {
+//     return new Promise((resolve, reject) => {
+//         // здесь должен быть код для поиска пользователя по id
+//         const user = users.find(user => user.id === id);
+//         if (user) {
+//             resolve(user);
+//         } else {
+//             reject(new Error("User not found"));
+//         }
+//     });
+// }
+
+// ================================
+// Напиши функцию delayedGreeting(name, delay), которая будет возвращать Promise, который будет разрешаться (resolve) через заданный промежуток времени delay и выводить на экран приветствие Hello, ${name}!.Ошибка в коде!!!!!!!!!!
+// function delayedGreeting(name, delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (name) {
+//                 resolve(Hello, ${name}!)
+//               } else {
+//                 reject(new Error("Name is not provided"));
+//               }
+//         }, delay);
+//     });
+// }

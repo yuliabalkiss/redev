@@ -2860,21 +2860,21 @@ const result = Promise.all([promise1, promise2, promise3]);
 result.then(data => console.log(data)); // [1, 2, 3]
 
 
-// =========================================================
+// =========================================================!
 // Напиши функцию, которая получает на вход два числа и возвращает Promise, который разрешается через 1 секунду с результатом суммы этих чисел. Если одно из чисел не является числом, Promise должен быть отклонен с ошибкой.
-function sum(a, b) {
-    return new Promise((resolve, reject) => {
-        if (typeof a !== "number" || typeof b !== "number") {
-            reject(new Error("One or both arguments are not numbers"));
-        } else {
-            setTimeout(() => {
-                resolve(a + b);
-            }, 1000);
-        }
-    });
-}
+// function sum(a, b) {
+//     return new Promise((resolve, reject) => {
+//         if (typeof a !== "number" || typeof b !== "number") {
+//             reject(new Error("One or both arguments are not numbers"));
+//         } else {
+//             setTimeout(() => {
+//                 resolve(a + b);
+//             }, 1000);
+//         }
+//     });
+// }
 
-// ===================================================
+// ===================================================!
 // Напиши функцию getUser(id), которая возвращает промис, который разрешается (resolve) пользователем с заданным идентификатором, или отклоняется с ошибкой, если пользователь не найден.
 // function getUser(id) {
 //     return new Promise((resolve, reject) => {
@@ -2888,7 +2888,7 @@ function sum(a, b) {
 //     });
 // }
 
-// ================================
+// ================================!
 // Напиши функцию delayedGreeting(name, delay), которая будет возвращать Promise, который будет разрешаться (resolve) через заданный промежуток времени delay и выводить на экран приветствие Hello, ${name}!.Ошибка в коде!!!!!!!!!!
 // function delayedGreeting(name, delay) {
 //     return new Promise((resolve, reject) => {
@@ -2901,5 +2901,14 @@ function sum(a, b) {
 //         }, delay);
 //     });
 // }
-
+// =====================================!
 // Напиши функцию sumNumbers, которая принимает два числа a и b и callback - функцию.Функция должна сложить числа a и b и передать результат в callback - функцию которая выведет результат в консоль.
+
+// function sumNumbers(a, b, callback) {
+//     const result = a + b;
+//     callback(result);
+//   }
+  
+//   sumNumbers(3, 5, function(result) {
+//     console.log(result);
+//   }); // выводит в консоль 8

@@ -2914,3 +2914,14 @@ result.then(data => console.log(data)); // [1, 2, 3]
 //   }); // выводит в консоль 8
 
 // Напиши функцию, которая принимает массив строк и callback - функцию, а затем вызывает переданную callback - функцию для каждой строки в массиве.Сallback - функция должна преобразовывать строку в верхний регистр и выводить ее в консоль.
+// function processStrings(arr, callback) {
+//     arr.forEach(function(str) {
+//       const upperCaseStr = str.toUpperCase();
+//       callback(upperCaseStr);
+//     });
+//   }
+  
+//   const strings = ['hello', 'world', 'javascript'];
+//   processStrings(strings, function(str) {
+//     console.log(str);
+//   }); // Выводит в консоль: HELLO WORLD JAVASCRIPT

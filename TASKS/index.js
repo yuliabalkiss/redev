@@ -2925,3 +2925,5 @@ result.then(data => console.log(data)); // [1, 2, 3]
 //   processStrings(strings, function(str) {
 //     console.log(str);
 //   }); // Выводит в консоль: HELLO WORLD JAVASCRIPT
+
+// Напиши функцию, которая принимает массив чисел и callback-функцию, а затем вызывает переданную callback-функцию для каждого элемента в массиве. Сallback-функция должна проверять, является ли число четным, и выводить его в консоль, если это так.

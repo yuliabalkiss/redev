@@ -2908,7 +2908,9 @@ result.then(data => console.log(data)); // [1, 2, 3]
 //     const result = a + b;
 //     callback(result);
 //   }
-  
+
 //   sumNumbers(3, 5, function(result) {
 //     console.log(result);
 //   }); // выводит в консоль 8
+
+// Напиши функцию, которая принимает массив строк и callback - функцию, а затем вызывает переданную callback - функцию для каждой строки в массиве.Сallback - функция должна преобразовывать строку в верхний регистр и выводить ее в консоль.

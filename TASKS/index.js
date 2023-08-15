@@ -2941,3 +2941,20 @@ result.then(data => console.log(data)); // [1, 2, 3]
 //   }); // Выводит в консоль: 2 4 6
 
 // Напиши функцию, которая принимает массив объектов и callback-функцию, а затем вызывает переданную callback-функцию для каждого объекта в массиве. Сallback-функция должна проверять, есть ли у объекта свойство "age" и выводить его значение в консоль, если это так.
+// function processObjects(arr, callback) {
+//     arr.forEach(function(obj) {
+//       callback(obj);
+//     });
+//   }
+  
+//   const people = [
+//     { name: "John", age: 25 },
+//     { name: "Jane", gender: "female" },
+//     { name: "Bob", age: 40 }
+//   ];
+  
+//   processObjects(people, function(obj) {
+//     if(obj.age) {
+//       console.log(obj.age);
+//     }
+//   }); // Выводит в консоль: 25 40

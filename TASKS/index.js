@@ -2927,3 +2927,15 @@ result.then(data => console.log(data)); // [1, 2, 3]
 //   }); // Выводит в консоль: HELLO WORLD JAVASCRIPT
 
 // Напиши функцию, которая принимает массив чисел и callback-функцию, а затем вызывает переданную callback-функцию для каждого элемента в массиве. Сallback-функция должна проверять, является ли число четным, и выводить его в консоль, если это так.
+// function processNumbers(arr, callback) {
+//     arr.forEach(function(num) {
+//       if(num % 2 === 0) {
+//         callback(num);
+//       }
+//     });
+//   }
+  
+//   const numbers = [1, 2, 3, 4, 5, 6];
+//   processNumbers(numbers, function(num) {
+//     console.log(num);
+//   }); // Выводит в консоль: 2 4 6

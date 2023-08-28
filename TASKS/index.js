@@ -3038,3 +3038,23 @@ Promise.allSettled(promises)
 //         console.log("error: ", error);
 //     }
 // }
+// =================
+// const editOrder = {
+//     city: "Brest",
+// }
+
+// const sendPatchRequest = async () => {
+//     try {
+//         const response = await fetch('URL', {
+//             method: "PATCH",
+//             headers: {
+//                 Authorization: "Bearer token"
+//             },
+//             body: JSON.stringify(editOrder)
+//         });
+//         const data = await response.json();
+//         console.log("data: ", data);
+//     } catch (error) {
+//         console.log("error: ", error);
+//     }
+// }

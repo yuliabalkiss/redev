@@ -2977,3 +2977,19 @@ result.then(data => console.log(data)); // [1, 2, 3]
 // for (let i = 0; i < 2; i++) {
 //   console.log(i);
 // }
+
+// console.log(1);
+
+// setTimeout(() => console.log(2), 1000);
+
+// console.log(3);
+
+// new Promise((res) => res(4)).then((data) => console.log(data));
+
+// setTimeout(() => console.log(5), 2000);
+
+// Promise.resolve(6).then((data) => console.log(data));
+
+// new Promise((res) => setTimeout(() => res(7), 3000)).then((data) =>
+//   console.log(data)
+// );

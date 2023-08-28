@@ -2958,3 +2958,22 @@ result.then(data => console.log(data)); // [1, 2, 3]
 //       console.log(obj.age);
 //     }
 //   }); // Выводит в консоль: 25 40
+// =========================================================
+
+// setTimeout(() => console.log(5), 0);
+
+// new Promise((res) => res(1)).then((data) => console.log(data));
+
+// setTimeout(() => console.log(2), 1000);
+
+// Promise.resolve(3).then((data) => console.log(data));
+
+// console.log(4);
+
+// new Promise((res) => setTimeout(() => res(7), 2000)).then((data) =>
+//   console.log(data)
+// );
+
+// for (let i = 0; i < 2; i++) {
+//   console.log(i);
+// }

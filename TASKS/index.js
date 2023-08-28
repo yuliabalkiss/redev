@@ -2851,13 +2851,13 @@ Promise.allSettled(promises)
 // result.then(data => console.log(data));
 // =======================================================
 
-const promise1 = new Promise(resolve => setTimeout(() => resolve(1), 2000));
-const promise2 = new Promise(resolve => setTimeout(() => resolve(2), 1000));
-const promise3 = new Promise(resolve => setTimeout(() => resolve(3), 3000));
+// const promise1 = new Promise(resolve => setTimeout(() => resolve(1), 2000));
+// const promise2 = new Promise(resolve => setTimeout(() => resolve(2), 1000));
+// const promise3 = new Promise(resolve => setTimeout(() => resolve(3), 3000));
 
-const result = Promise.all([promise1, promise2, promise3]);
+// const result = Promise.all([promise1, promise2, promise3]);
 
-result.then(data => console.log(data)); // [1, 2, 3]
+// result.then(data => console.log(data)); // [1, 2, 3]
 
 
 // =========================================================!
@@ -2993,3 +2993,26 @@ result.then(data => console.log(data)); // [1, 2, 3]
 // new Promise((res) => setTimeout(() => res(7), 3000)).then((data) =>
 //   console.log(data)
 // );
+
+// ===========================
+// const order = {
+//     item: ['Peperoni'],
+//     city: "Minsk",
+//     telNumber: "+375291231231"
+// }
+
+// const sendPostRequest = async () => {
+//     try {
+//         const response = await fetch('URL', {
+//             method: "POST",
+//             headers: {
+//                 Authorization: "Bearer token"
+//             },
+//             body: JSON.stringify(order)
+//         });
+//         const data = await response.json();
+//         console.log("data: ", data);
+//     } catch (error) {
+//         console.log("error: ", error);
+//     }
+// }

@@ -3061,7 +3061,7 @@ Promise.allSettled(promises)
 // // async function asyncFunction() {
 //     return 1;
 // }
-
+// ===========================================
 // asyncFunction().then(d => console.log(d))
 
 // // это тоже самое что и этот код
@@ -3069,4 +3069,5 @@ Promise.allSettled(promises)
 // const promise = new Promise(resolve => resolve(1));
 
 // promise.then(d => console.log(d))
+// =============================================
 

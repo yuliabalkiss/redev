@@ -3185,4 +3185,14 @@ Promise.allSettled(promises)
 //         console.log(error);
 //     }
 // }
+// OPTIONS
+// const sendOptionsRequest = async () => {
+    // try {
+    //     const response = await fetch('URL', {
+    //         method: 'OPTIONS'
+    //     });
+    //     console.log(response);
+    // } catch (error) {
+    //     console.log(error);
+    // }
 

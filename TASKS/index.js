@@ -3070,4 +3070,16 @@ Promise.allSettled(promises)
 
 // promise.then(d => console.log(d))
 // =============================================
+// const promise = new Promise((resolve, reject) => {
+//     reject("Error")
+//   });
 
+// async function asyncFunction() {
+//   try {
+//    const data = await promise;
+// 	 console.log(data); // если бы не было ошибки, выполнился бы console.log(data)
+//   } catch (error) {
+//     console.log(error);// "Error"
+//   }
+// }
+// ==============================================

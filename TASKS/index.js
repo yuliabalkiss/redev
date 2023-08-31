@@ -3175,5 +3175,14 @@ Promise.allSettled(promises)
 //     }
 // }
 // HEAD
-// 
+// const sendHeadRequest = async () => {
+//     try {
+//         const response = await fetch('URL', {
+//             method: 'HEAD'
+//         });
+//         console.log(response);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 

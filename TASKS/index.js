@@ -3096,5 +3096,27 @@ Promise.allSettled(promises)
 // }
 
 // POST
+// const order = {
+//     item: ['Peperoni'],
+//     city: "Minsk",
+//     telNumber: "+375291231231"
+// }
 
+// const sendPostRequest = async () => {
+//     try {
+//         const response = await fetch('URL', {
+//             method: "POST",
+//             headers: {
+//                 Authorization: "Bearer token"
+//             },
+//             body: JSON.stringify(order)
+//         });
+//         const data = await response.json();
+//         console.log("data: ", data);
+//     } catch (error) {
+//         console.log("error: ", error);
+//     }
+// }
+// PUT
+// 
 

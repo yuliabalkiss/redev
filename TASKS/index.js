@@ -3058,3 +3058,15 @@ Promise.allSettled(promises)
 //         console.log("error: ", error);
 //     }
 // }
+// // async function asyncFunction() {
+//     return 1;
+// }
+
+// asyncFunction().then(d => console.log(d))
+
+// // это тоже самое что и этот код
+
+// const promise = new Promise(resolve => resolve(1));
+
+// promise.then(d => console.log(d))
+

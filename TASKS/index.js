@@ -3160,5 +3160,20 @@ Promise.allSettled(promises)
 //     }
 // }
 // DELETE
+// const sendDeleteRequest = async () => {
+//     try {
+//         const response = await fetch('URL', {
+//             method: "DELETE",
+//             headers: {
+//                 Authorization: "Bearer token"
+//             }
+//         });
+//         const data = await response.json();
+//         console.log("data: ", data);
+//     } catch (error) {
+//         console.log("error: ", error);
+//     }
+// }
+// HEAD
 // 
 

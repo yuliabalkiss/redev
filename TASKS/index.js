@@ -3118,5 +3118,27 @@ Promise.allSettled(promises)
 //     }
 // }
 // PUT
-// 
+// const editOrder = {
+//     item: ['Peperoni'],
+//     city: "Brest",
+//     telNumber: "+375291231231"
+// }
+
+// const sendPutRequest = async () => {
+//     try {
+//         const response = await fetch('URL', {
+//             method: "PUT",
+//             headers: {
+//                 Authorization: "Bearer token"
+//             },
+//             body: JSON.stringify(editOrder)
+//         });
+//         const data = await response.json();
+//         console.log("data: ", data);
+//     } catch (error) {
+//         console.log("error: ", error);
+//     }
+// }
+// PATCH
+
 
